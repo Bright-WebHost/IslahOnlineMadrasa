@@ -332,7 +332,7 @@ export const CurriculumPage: React.FC<CurriculumPageProps> = ({
       />
 
       {/* 2. STATS & ARCHITECTURAL SUMMARY STRIP (Minimal & scannable) */}
-      <section className="relative -mt-6 sm:-mt-8 z-20 max-w-6xl mx-auto px-4 sm:px-6">
+      {/* <section className="relative -mt-6 sm:-mt-8 z-20 max-w-6xl mx-auto px-4 sm:px-6">
         <div className="rounded-2xl sm:rounded-3xl bg-white/95 backdrop-blur-md p-4 sm:p-6 shadow-[0_16px_36px_rgba(8,45,123,0.08)] border border-[#082D7B]/10 grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 divide-y sm:divide-y-0 sm:divide-x divide-[#082D7B]/8 text-center">
           <div className="pt-2 sm:pt-0">
             <span className=" text-2xl sm:text-3xl font-bold text-[#082D7B]">6 Pillars</span>
@@ -351,7 +351,7 @@ export const CurriculumPage: React.FC<CurriculumPageProps> = ({
             <p className="text-[11px] sm:text-xs text-slate-500 mt-0.5">Parent Reports</p>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* ============================================================== */}
       {/* 3. IMAGES SCROLLING SECTION ANIMATIONS (Continuous Marquee)     */}

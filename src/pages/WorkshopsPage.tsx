@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { motion } from 'motion/react';
 import {
   Sparkles,
   Calendar,
@@ -173,102 +174,93 @@ export const WorkshopsPage: React.FC<WorkshopsPageProps> = ({
       />
 
       {/* 2. SECTION 1: INTRODUCTION */}
-      <section className="relative py-16 sm:py-24 bg-[#FBF9F5] overflow-hidden">
-        <HeroBgPattern opacity={0.03} />
+      <section className="relative py-16 sm:py-24 bg-white overflow-hidden">
+        <HeroBgPattern opacity={0.02} />
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 xl:gap-14 items-center">
             
-            {/* Left Narrative (7 cols) */}
-            <div className="lg:col-span-7">
-              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#082D7B]/8 border border-[#082D7B]/15 text-xs text-[#082D7B] font-semibold mb-4">
-                <Sparkles className="w-3.5 h-3.5 text-[#C9A45C]" />
-                <span className="uppercase tracking-widest text-[10px] sm:text-[11px]">Enrichment & Activities</span>
-              </div>
+            {/* Left Narrative / Title (Col 1: 4 cols) */}
+            <div className="lg:col-span-4 flex flex-col justify-center">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+                className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#E8EDF9] border border-[#CCD8F0] text-xs text-[#082D7B] font-semibold mb-6 shadow-xs w-fit"
+              >
+                <Sparkles className="w-3.5 h-3.5 text-[#082D7B]" />
+                <span className="uppercase tracking-widest text-[10.5px] sm:text-[11px] font-bold text-[#082D7B]">
+                  Enrichment & Activities
+                </span>
+              </motion.div>
 
-              <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-[#082D7B] leading-tight tracking-tight mb-6">
-                Making Islamic Learning Enjoyable, Memorable & Engaging
-              </h2>
-
-              <p className="font-sans text-base sm:text-lg text-[#334155] leading-relaxed mb-6 font-normal">
-                Children learn best when they are active participants rather than silent listeners. While regular classes establish systematic study, our workshops and extracurricular activities create high-energy moments of excitement and healthy camaraderie.
-              </p>
-
-              <p className="font-sans text-sm sm:text-base text-[#475569] leading-relaxed mb-8">
-                Through interactive quiz bowls, peer speech presentations, creative habit challenges, and seasonal intensives, students develop pride in their Islamic heritage and look forward to every event with genuine enthusiasm.
-              </p>
-
-              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8">
-                <div className="p-4 rounded-xl bg-white border border-[#082D7B]/10 shadow-sm">
-                  <div className="w-9 h-9 rounded-lg bg-[#082D7B]/10 flex items-center justify-center text-[#082D7B] mb-2 font-bold font-mono">
-                    50+
-                  </div>
-                  <h4 className="font-bold text-xs text-[#082D7B] mb-1">Interactive Events</h4>
-                  <p className="text-[11px] text-[#64748B]">Conducted across the academic year</p>
-                </div>
-
-                <div className="p-4 rounded-xl bg-white border border-[#082D7B]/10 shadow-sm">
-                  <div className="w-9 h-9 rounded-lg bg-[#0D2D72]/10 flex items-center justify-center text-[#0D2D72] mb-2 font-bold font-mono">
-                    100%
-                  </div>
-                  <h4 className="font-bold text-xs text-[#0D2D72] mb-1">Active Participation</h4>
-                  <p className="text-[11px] text-[#64748B]">Every child gets a stage to shine</p>
-                </div>
-
-                <div className="p-4 rounded-xl bg-white border border-[#082D7B]/10 shadow-sm">
-                  <div className="w-9 h-9 rounded-lg bg-[#0568BD]/10 flex items-center justify-center text-[#0568BD] mb-2 font-bold font-mono">
-                    12+
-                  </div>
-                  <h4 className="font-bold text-xs text-[#0568BD] mb-1">Global Countries</h4>
-                  <p className="text-[11px] text-[#64748B]">Students collaborating worldwide</p>
-                </div>
-              </div>
-
-              <div className="flex flex-wrap items-center gap-4">
-                <button
-                  onClick={() => navigate('/student-achievements')}
-                  className="inline-flex items-center gap-2.5 px-6 py-3.5 rounded-full text-sm font-bold text-white bg-[#082D7B] hover:bg-[#062360] transition-all shadow-md active:scale-95 cursor-pointer"
-                >
-                  <span>Explore Student Achievements</span>
-                  <ArrowRight className="w-4 h-4" />
-                </button>
-
-                <button
-                  onClick={onOpenWhatsApp}
-                  className="inline-flex items-center gap-2 px-6 py-3.5 rounded-full text-sm font-semibold text-[#082D7B] bg-white hover:bg-[#082D7B]/5 border border-[#082D7B]/20 transition-all cursor-pointer"
-                >
-                  <MessageCircle className="w-4 h-4 text-[#25D366]" />
-                  <span>Enquire About Upcoming Workshops</span>
-                </button>
-              </div>
+              <motion.h2
+                initial={{ opacity: 0, y: 35 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.75, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
+                className="text-3xl sm:text-4xl lg:text-[36px] xl:text-[42px] font-extrabold text-[#082D7B] leading-[1.16] tracking-tight"
+              >
+                Making Islamic<br />
+                Learning<br />
+                <span className="whitespace-nowrap">Enjoyable,</span><br />
+                <span className="whitespace-nowrap">Memorable &</span><br />
+                Engaging
+              </motion.h2>
             </div>
 
-            {/* Right Image Graphic (5 cols) */}
-            <div className="lg:col-span-5">
-              <div className="relative">
-                <div className="absolute -inset-2 bg-gradient-to-r from-[#082D7B]/15 to-[#C9A45C]/20 rounded-3xl blur-xl" />
-                
-                <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-white bg-white">
-                  <img
-                    src="https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=900&q=80"
-                    alt="Students actively participating in online Islamic quiz challenge"
-                    className="w-full h-80 sm:h-96 object-cover"
-                    loading="lazy"
-                  />
-                  <div className="p-6 bg-gradient-to-b from-white to-[#F8F6F0]">
-                    <div className="flex items-center justify-between text-xs text-[#64748B] mb-2 font-mono">
-                      <span>WEEKEND INTENSIVE</span>
-                      <span className="text-[#C9A45C] font-semibold">ALL LEVELS</span>
-                    </div>
-                    <h3 className="font-serif text-lg font-bold text-[#082D7B] mb-1">
-                      Collaborative Learning Without Borders
-                    </h3>
-                    <p className="text-xs text-[#64748B] leading-relaxed">
-                      Children connect with fellow Muslim peers from Dubai, Riyadh, London, Toronto, and Doha—sharing their love for the Qur'an.
-                    </p>
+            {/* Center Arched Image (Col 2: 4 cols) */}
+            <div className="lg:col-span-4 flex justify-center items-center py-4 lg:py-0">
+              <motion.div
+                initial={{ opacity: 0, y: 90 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-40px" }}
+                transition={{ duration: 0.95, delay: 0.15, ease: [0.16, 1, 0.3, 1] }}
+                className="relative"
+              >
+                {/* Outer delicate gold oval/capsule frame */}
+                <div className="relative w-[265px] sm:w-[295px] lg:w-[315px] xl:w-[330px] h-[385px] sm:h-[435px] lg:h-[465px] xl:h-[485px] rounded-full p-2.5 sm:p-3 border-[1.5px] border-[#C5A059] bg-transparent shadow-xs transition-transform duration-500 hover:scale-[1.02]">
+                  {/* Inner clipped image container */}
+                  <div className="w-full h-full rounded-full overflow-hidden bg-[#F0EDE6] shadow-sm relative group">
+                    <img
+                      src="/assets/img/HomeAbout Us.webp"
+                      alt="Muslim student learning enthusiastically in online Islamic workshop"
+                      className="w-full h-full object-cover object-[center_30%] transition-transform duration-700 group-hover:scale-105"
+                      loading="eager"
+                    />
                   </div>
                 </div>
-              </div>
+              </motion.div>
+            </div>
+
+            {/* Right Narrative Paragraphs (Col 3: 4 cols) */}
+            <div className="lg:col-span-4 flex flex-col justify-center">
+              <motion.div
+                initial={{ opacity: 0, y: 35 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8, delay: 0.25, ease: [0.22, 1, 0.36, 1] }}
+                className="space-y-6 text-[#475569] text-sm sm:text-base lg:text-[15.5px] xl:text-[16px] leading-relaxed"
+              >
+                <motion.p
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.65, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
+                >
+                  Children learn best when they are active participants rather than silent listeners. While regular classes establish systematic study, our workshops and extracurricular activities create high-energy moments of excitement and healthy camaraderie.
+                </motion.p>
+
+                <motion.p
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.65, delay: 0.45, ease: [0.22, 1, 0.36, 1] }}
+                >
+                  Children learn best when they are active participants rather than silent listeners. While regular classes establish systematic study, our workshops and extracurricular activities create high-energy moments of excitement and healthy camaraderie.
+                </motion.p>
+              </motion.div>
             </div>
 
           </div>
@@ -284,7 +276,7 @@ export const WorkshopsPage: React.FC<WorkshopsPageProps> = ({
               <Calendar className="w-3.5 h-3.5 text-[#C9A45C]" />
               <span className="uppercase tracking-widest text-[10px] sm:text-[11px]">Special Programmes</span>
             </div>
-            <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-[#082D7B] leading-tight tracking-tight mb-4">
+            <h2 className=" text-3xl sm:text-4xl lg:text-5xl font-bold text-[#082D7B] leading-tight tracking-tight mb-4">
               Featured Islamic Workshops
             </h2>
             <p className="text-sm sm:text-base text-[#475569] leading-relaxed">
@@ -312,10 +304,10 @@ export const WorkshopsPage: React.FC<WorkshopsPageProps> = ({
 
                 <div className="p-6 sm:w-7/12 flex flex-col justify-between">
                   <div>
-                    <div className="text-xs font-serif text-[#C9A45C] font-bold mb-1">
+                    <div className="text-xs  text-[#C9A45C] font-bold mb-1">
                       {ws.arabic}
                     </div>
-                    <h3 className="font-serif text-xl font-bold text-[#082D7B] mb-2.5">
+                    <h3 className=" text-xl font-bold text-[#082D7B] mb-2.5">
                       {ws.title}
                     </h3>
                     <p className="text-xs text-[#475569] leading-relaxed mb-4">
@@ -348,7 +340,7 @@ export const WorkshopsPage: React.FC<WorkshopsPageProps> = ({
       </section>
 
       {/* 4. SECTION 3: STUDENT PRESENTATIONS */}
-      <section className="relative py-16 sm:py-24 bg-[#FBF9F5] overflow-hidden">
+      {/* <section className="relative py-16 sm:py-24 bg-[#FBF9F5] overflow-hidden">
         <HeroBgPattern opacity={0.03} />
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -358,7 +350,7 @@ export const WorkshopsPage: React.FC<WorkshopsPageProps> = ({
               <Mic className="w-3.5 h-3.5 text-[#C9A45C]" />
               <span className="uppercase tracking-widest text-[10px] sm:text-[11px]">Public Speaking & Voice</span>
             </div>
-            <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-[#082D7B] leading-tight tracking-tight mb-4">
+            <h2 className=" text-3xl sm:text-4xl lg:text-5xl font-bold text-[#082D7B] leading-tight tracking-tight mb-4">
               Student-Led Presentations
             </h2>
             <p className="text-sm sm:text-base text-[#475569] leading-relaxed">
@@ -376,7 +368,7 @@ export const WorkshopsPage: React.FC<WorkshopsPageProps> = ({
                   <span className="text-[10px] font-mono font-bold px-2.5 py-1 rounded-full bg-[#082D7B]/10 text-[#082D7B] uppercase mb-4 inline-block">
                     {pres.tag}
                   </span>
-                  <h3 className="font-serif text-lg font-bold text-[#082D7B] mb-2">
+                  <h3 className=" text-lg font-bold text-[#082D7B] mb-2">
                     {pres.title}
                   </h3>
                   <p className="text-xs text-[#64748B] leading-relaxed">
@@ -393,7 +385,7 @@ export const WorkshopsPage: React.FC<WorkshopsPageProps> = ({
           </div>
 
         </div>
-      </section>
+      </section> */}
 
       {/* 5. SECTION 4: COMPETITIONS & QUIZZES */}
       <section className="relative py-16 sm:py-24 bg-white border-t border-[#082D7B]/10">
@@ -404,7 +396,7 @@ export const WorkshopsPage: React.FC<WorkshopsPageProps> = ({
               <Trophy className="w-3.5 h-3.5 text-[#C9A45C]" />
               <span className="uppercase tracking-widest text-[10px] sm:text-[11px]">Friendly Challenges</span>
             </div>
-            <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-[#082D7B] leading-tight tracking-tight mb-4">
+            <h2 className=" text-3xl sm:text-4xl lg:text-5xl font-bold text-[#082D7B] leading-tight tracking-tight mb-4">
               Competitions & Knowledge Quizzes
             </h2>
             <p className="text-sm sm:text-base text-[#475569] leading-relaxed">
@@ -428,7 +420,7 @@ export const WorkshopsPage: React.FC<WorkshopsPageProps> = ({
                     <span className="text-[#082D7B] font-semibold">{comp.metric}</span>
                   </div>
 
-                  <h3 className="font-serif text-xl font-bold text-[#082D7B] mb-3">
+                  <h3 className=" text-xl font-bold text-[#082D7B] mb-3">
                     {comp.title}
                   </h3>
 
@@ -448,7 +440,7 @@ export const WorkshopsPage: React.FC<WorkshopsPageProps> = ({
       </section>
 
       {/* 6. SECTION 5: PRACTICAL LEARNING */}
-      <section className="relative py-16 sm:py-24 bg-[#082D7B] text-white overflow-hidden">
+      {/* <section className="relative py-16 sm:py-24 bg-[#082D7B] text-white overflow-hidden">
         <HeroBgPattern isDark opacity={0.06} />
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -458,7 +450,7 @@ export const WorkshopsPage: React.FC<WorkshopsPageProps> = ({
               <Heart className="w-3.5 h-3.5" />
               <span className="uppercase tracking-widest text-[10px] sm:text-[11px]">Practical Experience</span>
             </div>
-            <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-white leading-tight tracking-tight mb-4">
+            <h2 className=" text-3xl sm:text-4xl lg:text-5xl font-bold text-white leading-tight tracking-tight mb-4">
               Participation-Based Practical Learning
             </h2>
             <p className="text-sm sm:text-base text-white/80 leading-relaxed">
@@ -471,7 +463,7 @@ export const WorkshopsPage: React.FC<WorkshopsPageProps> = ({
               <div className="w-12 h-12 rounded-full bg-[#C9A45C]/20 text-[#C9A45C] flex items-center justify-center mb-4">
                 <CheckCircle2 className="w-6 h-6" />
               </div>
-              <h3 className="font-serif text-xl font-bold mb-2">Live Virtual Salah Checks</h3>
+              <h3 className=" text-xl font-bold mb-2">Live Virtual Salah Checks</h3>
               <p className="text-xs sm:text-sm text-white/80 leading-relaxed">
                 One-on-one camera sessions where teachers observe the student performing Wudu and Salah step-by-step, gently correcting posture and pronunciations.
               </p>
@@ -481,7 +473,7 @@ export const WorkshopsPage: React.FC<WorkshopsPageProps> = ({
               <div className="w-12 h-12 rounded-full bg-[#C9A45C]/20 text-[#C9A45C] flex items-center justify-center mb-4">
                 <Heart className="w-6 h-6" />
               </div>
-              <h3 className="font-serif text-xl font-bold mb-2">Family Charity Initiatives</h3>
+              <h3 className=" text-xl font-bold mb-2">Family Charity Initiatives</h3>
               <p className="text-xs sm:text-sm text-white/80 leading-relaxed">
                 Encouraging young learners to create homemade Sadaqah jars, help pack food for the needy, and participate in community goodwill projects with parents.
               </p>
@@ -491,7 +483,7 @@ export const WorkshopsPage: React.FC<WorkshopsPageProps> = ({
               <div className="w-12 h-12 rounded-full bg-[#C9A45C]/20 text-[#C9A45C] flex items-center justify-center mb-4">
                 <Award className="w-6 h-6" />
               </div>
-              <h3 className="font-serif text-xl font-bold mb-2">Sunnah Deeds Trackers</h3>
+              <h3 className=" text-xl font-bold mb-2">Sunnah Deeds Trackers</h3>
               <p className="text-xs sm:text-sm text-white/80 leading-relaxed">
                 Interactive weekly activity sheets rewarding simple Sunnah acts: saying Bismillah before meals, greeting with Salam, and showing respect to siblings.
               </p>
@@ -499,7 +491,7 @@ export const WorkshopsPage: React.FC<WorkshopsPageProps> = ({
           </div>
 
         </div>
-      </section>
+      </section> */}
 
       {/* 7. SECTION 6: PHOTO & VIDEO HIGHLIGHTS GALLERY */}
       <section className="relative py-16 sm:py-24 bg-white border-t border-[#082D7B]/10">
@@ -510,7 +502,7 @@ export const WorkshopsPage: React.FC<WorkshopsPageProps> = ({
               <Camera className="w-3.5 h-3.5 text-[#C9A45C]" />
               <span className="uppercase tracking-widest text-[10px] sm:text-[11px]">Visual Gallery</span>
             </div>
-            <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-[#082D7B] leading-tight tracking-tight mb-4">
+            <h2 className=" text-3xl sm:text-4xl lg:text-5xl font-bold text-[#082D7B] leading-tight tracking-tight mb-4">
               Moments From Our Workshops & Events
             </h2>
             <p className="text-sm sm:text-base text-[#475569] leading-relaxed">
@@ -537,7 +529,7 @@ export const WorkshopsPage: React.FC<WorkshopsPageProps> = ({
                   <span className="text-[10px] font-mono uppercase px-2.5 py-0.5 rounded-full bg-white/20 backdrop-blur-md border border-white/30 w-fit mb-2">
                     {item.tag}
                   </span>
-                  <h3 className="font-serif text-lg font-bold leading-tight mb-1">
+                  <h3 className=" text-lg font-bold leading-tight mb-1">
                     {item.title}
                   </h3>
                   <p className="text-xs text-white/80">
@@ -561,7 +553,7 @@ export const WorkshopsPage: React.FC<WorkshopsPageProps> = ({
             <span className="uppercase tracking-widest text-[10px] sm:text-xs">Celebrate Success</span>
           </div>
 
-          <h2 className="font-serif text-3xl sm:text-5xl font-bold tracking-tight mb-6 leading-tight">
+          <h2 className=" text-3xl sm:text-5xl font-bold tracking-tight mb-6 leading-tight">
             See How Our Students Excel in Recitation & Islamic Knowledge
           </h2>
 

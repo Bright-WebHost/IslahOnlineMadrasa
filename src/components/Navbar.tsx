@@ -102,7 +102,7 @@ export const Navbar: React.FC<NavbarProps> = ({
                   islah
                 </span>
                 <span className="font-mono text-[6px] sm:text-[7px] text-[#082D7B] font-medium tracking-wide leading-none mt-1">
-                  Online Madrasa
+                  INTERNATIONAL ACADEMY
                 </span>
               </a>
 
@@ -187,7 +187,7 @@ export const Navbar: React.FC<NavbarProps> = ({
                         islah
                       </span>
                       <span className="font-mono text-[6px] sm:text-[7px] text-[#082D7B] font-medium tracking-wide leading-none mt-1">
-                        Online Madrasa
+                        INTERNATIONAL ACADEMY
                       </span>
                     </a>
                   </div>

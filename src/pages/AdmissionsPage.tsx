@@ -14,6 +14,7 @@ import {
 import { InnerBanner } from '../components/InnerBanner';
 import { HeroBgPattern } from '../components/IslamicPattern';
 import { MADRASA_CONFIG } from '../data/madrasaData';
+import { FinalCta } from '../components/FinalCta';
 
 interface AdmissionsPageProps {
   onOpenTrialModal: (courseName?: string) => void;

@@ -61,7 +61,7 @@ export const HomePage: React.FC<HomePageProps> = ({
       <TrustStrip />
 
       {/* 4. Why Islah */}
-      <WhyIslah onOpenTrialModal={() => onOpenTrialModal()} />
+      {/* <WhyIslah onOpenTrialModal={() => onOpenTrialModal()} /> */}
 
       {/* 5. Vision & Mission */}
       {/* <VisionMission /> */}

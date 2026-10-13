@@ -170,7 +170,7 @@ export const AboutSection: React.FC<AboutSectionProps> = ({
                     //   </div>
                     // </div> */}
                     <div className='rounded-xl overflow-hidden'>
-                      <img src="/assets/img/about-s.webp" alt="" />
+                      <img src="/assets/img/HomeAbout Us.webp" alt="" />
                     </div>
                   {/* ); */}
                 {/* // })} */}
