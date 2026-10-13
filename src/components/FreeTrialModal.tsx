@@ -42,7 +42,7 @@ export const FreeTrialModal: React.FC<FreeTrialModalProps> = ({
 
   const openDirectWhatsAppBooking = () => {
     const message = encodeURIComponent(
-      `As-salamu alaykum Islah Online Madrasa,\n\nI would like to book a Free Trial Class for my child:\n- Child Name: ${childName || 'Not specified'}\n- Age: ${childAge} years old\n- Desired Course: ${selectedCourse}\n- Preferred Time: ${preferredTiming}\n- Parent Name: ${parentName || 'Parent'}\n\nPlease share available slots. Jazakum Allahu Khayran!`
+      `As-salamu alaykum Islah International Academy,\n\nI would like to book a Free Trial Class for my child:\n- Child Name: ${childName || 'Not specified'}\n- Age: ${childAge} years old\n- Desired Course: ${selectedCourse}\n- Preferred Time: ${preferredTiming}\n- Parent Name: ${parentName || 'Parent'}\n\nPlease share available slots. Jazakum Allahu Khayran!`
     );
     window.open(`https://wa.me/${MADRASA_CONFIG.phoneNumber}?text=${message}`, '_blank');
   };

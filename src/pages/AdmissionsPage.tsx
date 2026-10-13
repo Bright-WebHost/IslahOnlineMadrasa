@@ -39,18 +39,18 @@ export const AdmissionsPage: React.FC<AdmissionsPageProps> = ({
   const [isSubmitted, setIsSubmitted] = useState(false);
 
   useEffect(() => {
-    document.title = "Online Madrasa Admission for Kids | Islah Online Madrasa";
+    document.title = "Online Madrasa Admission for Kids | Islah International Academy";
     window.scrollTo({ top: 0, behavior: 'instant' });
   }, []);
 
-  
+
 
   const handleFormSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     const fullName = `${firstName} ${lastName}`.trim() || 'Parent';
     const fullContact = `${countryCode} ${contactNumber}`.trim();
     const formattedMsg = encodeURIComponent(
-      `As-salamu alaykum. I would like to enquire about admission at Islah Online Madrasa:\n` +
+      `As-salamu alaykum. I would like to enquire about admission at Islah International Academy:\n` +
       `• Parent Name: ${fullName}\n` +
       `• Email: ${email || 'Not provided'}\n` +
       `• Contact: ${fullContact}\n` +
@@ -65,7 +65,7 @@ export const AdmissionsPage: React.FC<AdmissionsPageProps> = ({
 
   return (
     <div className="min-h-screen bg-[#FBF9F5] text-[#151918]">
-      
+
       {/* 1. HERO INNER BANNER */}
       <InnerBanner
         title="Contact Us & Admissions"
@@ -76,11 +76,11 @@ export const AdmissionsPage: React.FC<AdmissionsPageProps> = ({
       {/* 2. CENTERPIECE: CONTACT & ADMISSION ENQUIRY CARD (MATCHING REFERENCE UI) */}
       <section className="relative py-12 sm:py-16 px-4 sm:px-6 lg:px-8 -mt-10 sm:-mt-14 z-20">
         <div className="max-w-6xl mx-auto">
-          
+
           {/* Main Container Card */}
           <div className="bg-white rounded-3xl sm:rounded-[36px] p-6 sm:p-10 lg:p-12 shadow-[0_10px_40px_rgba(8,45,123,0.08)] border border-gray-100">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-stretch">
-              
+
               {/* Left Column: Form (7 cols) */}
               <div className="lg:col-span-7 flex flex-col justify-between">
                 <div>
@@ -260,7 +260,7 @@ export const AdmissionsPage: React.FC<AdmissionsPageProps> = ({
 
                   {/* 3 Info Cards Stack */}
                   <div className="space-y-3.5 mb-8">
-                    
+
                     {/* 1. Hotlines */}
                     <a
                       href={`tel:${MADRASA_CONFIG.phoneNumber}`}
@@ -376,7 +376,7 @@ export const AdmissionsPage: React.FC<AdmissionsPageProps> = ({
         </div>
       </section>
 
-     
+
 
     </div>
   );

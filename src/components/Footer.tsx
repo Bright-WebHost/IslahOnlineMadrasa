@@ -37,9 +37,8 @@ export const Footer: React.FC<FooterProps> = ({ onOpenWhatsApp, onOpenTrialModal
 
   return (
     <footer
-      className={`relative bg-[#061430] text-[#F6F1E7] pb-6 rounded-t-[22px] sm:rounded-t-[48px] lg:rounded-t-[56px] border-t border-white/10 overflow-hidden shadow-[0_-20px_50px_rgba(8,42,97,0.25)] ${
-        isHome ? 'pt-42 sm:pt-40 lg:pt-44' : 'pt-16 sm:pt-20 lg:pt-24'
-      }`}
+      className={`relative bg-[#061430] text-[#F6F1E7] pb-6 rounded-t-[22px] sm:rounded-t-[48px] lg:rounded-t-[56px] border-t border-white/10 overflow-hidden shadow-[0_-20px_50px_rgba(8,42,97,0.25)] ${isHome ? 'pt-42 sm:pt-40 lg:pt-44' : 'pt-16 sm:pt-20 lg:pt-24'
+        }`}
     >
       {/* Islamic Background Pattern */}
       <HeroBgPattern isDark opacity={0.04} />
@@ -56,11 +55,11 @@ export const Footer: React.FC<FooterProps> = ({ onOpenWhatsApp, onOpenTrialModal
               href="/"
               onClick={(e) => handleLink(e, '/')}
               className="flex items-center gap-3.5 mb-5 group cursor-pointer"
-              aria-label="Islah Online Madrasa"
+              aria-label="Islah International Academy"
             >
               <img
                 src="/assets/img/iom-star-logo.webp"
-                alt="Islah Online Madrasa"
+                alt="Islah International Academy"
                 className="w-14 h-14 sm:w-16 sm:h-16 object-contain drop-shadow-[0_4px_14px_rgba(0,0,0,0.3)] transition-transform duration-300 group-hover:scale-105 select-none"
               />
               <div className="flex flex-col text-left select-none">
@@ -68,13 +67,13 @@ export const Footer: React.FC<FooterProps> = ({ onOpenWhatsApp, onOpenTrialModal
                   islah
                 </span>
                 <span className="font-mono text-[8px] sm:text-[9px] text-[#C9A45C] font-semibold tracking-widest uppercase leading-none mt-1">
-                  Online Madrasa
+                  International Academy
                 </span>
               </div>
             </a>
 
             <p className="text-xs sm:text-sm text-white/70 max-w-sm leading-relaxed mb-6 font-sans">
-              Islah Online Madrasa provides structured online Quran and authentic Islamic education for children, helping students learn, grow, and build a strong foundation in Deen.
+              Islah International Academy provides structured online Quran and authentic Islamic education for children, helping students learn, grow, and build a strong foundation in Deen.
             </p>
 
             {/* <div className="text-xs text-[#C9A45C] font-mono mb-6 bg-white/5 border border-white/10 px-3 py-1.5 rounded-md inline-block">
@@ -207,7 +206,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenWhatsApp, onOpenTrialModal
 
         {/* Bottom Bar */}
         <div className="pt-4 flex flex-col sm:flex-row items-center justify-between text-xs text-white/50 font-sans gap-4">
-          <p>© {new Date().getFullYear()} Islah Online Madrasa. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} Islah International Academy. All rights reserved.</p>
 
           <div className="flex items-center gap-6">
             {/* <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>

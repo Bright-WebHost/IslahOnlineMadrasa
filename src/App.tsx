@@ -57,7 +57,7 @@ export default function App() {
 
   const handleOpenWhatsApp = () => {
     const message = encodeURIComponent(
-      "As-salamu alaykum, I would like to enquire about online Quran and Islamic classes at Islah Online Madrasa."
+      "As-salamu alaykum, I would like to enquire about online Quran and Islamic classes at Islah International Academy."
     );
     window.open(`https://wa.me/${MADRASA_CONFIG.phoneNumber}?text=${message}`, '_blank');
   };

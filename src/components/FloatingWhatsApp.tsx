@@ -19,7 +19,7 @@ export const FloatingWhatsApp: React.FC<FloatingWhatsAppProps> = ({ onOpenTrialM
   ];
 
   const handleSend = (text: string) => {
-    const finalMessage = encodeURIComponent(text || "As-salamu alaykum, I would like to learn more about Islah Online Madrasa.");
+    const finalMessage = encodeURIComponent(text || "As-salamu alaykum, I would like to learn more about Islah International Academy.");
     window.open(`https://wa.me/${clientNumber}?text=${finalMessage}`, '_blank');
     setIsOpen(false);
   };
@@ -42,7 +42,7 @@ export const FloatingWhatsApp: React.FC<FloatingWhatsAppProps> = ({ onOpenTrialM
               </div>
               <div>
                 <h4 className="font-semibold text-sm leading-tight">
-                  Islah Online Madrasa
+                  Islah International Academy
                 </h4>
                 <p className="text-[11px] text-white/80">
                   Admissions Team · Typically replies in minutes
@@ -68,7 +68,7 @@ export const FloatingWhatsApp: React.FC<FloatingWhatsAppProps> = ({ onOpenTrialM
                 As-salamu alaykum wa rahmatullah!
               </p>
               <p className="leading-relaxed text-[#151918]/80">
-                Welcome to Islah Online Madrasa. How may we assist you with your child's Islamic education journey today?
+                Welcome to Islah International Academy. How may we assist you with your child's Islamic education journey today?
               </p>
               <span className="text-[9px] text-[#151918]/40 block text-right mt-1">
                 Just now
@@ -154,7 +154,7 @@ export const FloatingWhatsApp: React.FC<FloatingWhatsAppProps> = ({ onOpenTrialM
         <button
           onClick={() => setIsOpen(!isOpen)}
           className="relative inline-flex items-center gap-2.5 px-3 py-3 bg-[#0D2D72] hover:bg-[#20bd5a] text-white rounded-full shadow-xl hover:shadow-2xl transition-all cursor-pointer font-medium text-xs sm:text-sm active:scale-95"
-          aria-label="Contact Islah Online Madrasa on WhatsApp"
+          aria-label="Contact Islah International Academy on WhatsApp"
         >
           <MessageCircle className="w-5 h-5 fill-current" />
           {/* <span className="hidden sm:inline font-semibold">Chat on WhatsApp</span> */}

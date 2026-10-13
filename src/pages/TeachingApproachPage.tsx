@@ -37,7 +37,7 @@ export const TeachingApproachPage: React.FC<TeachingApproachPageProps> = ({
   const [activeTrajectory, setActiveTrajectory] = useState<number>(2);
 
   useEffect(() => {
-    document.title = "Our Online Islamic Teaching Approach | Islah Online Madrasa";
+    document.title = "Our Online Islamic Teaching Approach | Islah International Academy";
     window.scrollTo({ top: 0, behavior: 'instant' });
   }, []);
 
@@ -322,8 +322,8 @@ export const TeachingApproachPage: React.FC<TeachingApproachPageProps> = ({
               const cardBg = isDarkNavy
                 ? "bg-[#0B2A68]"
                 : isMediumBlue
-                ? "bg-[#0E6AD8]"
-                : "bg-[#ADC6EB]";
+                  ? "bg-[#0E6AD8]"
+                  : "bg-[#ADC6EB]";
 
               const innerBorder = isLightBlue
                 ? "border-[#0B2A68]/30"
@@ -520,13 +520,12 @@ export const TeachingApproachPage: React.FC<TeachingApproachPageProps> = ({
                     <motion.div
                       whileHover={{ scale: 1.12 }}
                       whileTap={{ scale: 0.95 }}
-                      className={`w-10 h-10 sm:w-12 sm:h-12 rounded-full flex items-center justify-center font-mono text-xs sm:text-sm font-bold transition-all duration-300 ${
-                        isActive
+                      className={`w-10 h-10 sm:w-12 sm:h-12 rounded-full flex items-center justify-center font-mono text-xs sm:text-sm font-bold transition-all duration-300 ${isActive
                           ? "bg-[#DFBA74] text-[#082D7B] shadow-lg shadow-[#DFBA74]/30 ring-4 ring-[#DFBA74]/25 scale-110"
                           : isPast
-                          ? "bg-white text-[#082D7B] shadow-sm"
-                          : "bg-[#0A2F7D] border border-white/20 text-white/60 hover:border-white/50"
-                      }`}
+                            ? "bg-white text-[#082D7B] shadow-sm"
+                            : "bg-[#0A2F7D] border border-white/20 text-white/60 hover:border-white/50"
+                        }`}
                     >
                       {stage.step}
                     </motion.div>

@@ -48,7 +48,7 @@ export const SocialSection: React.FC = () => {
               Community & Media
             </span>
             <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl text-[#082D7B] font-normal tracking-tight text-balance">
-              Life at Islah Online Madrasa
+              Life at Islah International Academy
             </h2>
             <p className="font-sans text-sm sm:text-base text-[#151918]/70 mt-3">
               Explore recitation snippets, teacher insights, and weekly parenting reminders across our media channels.

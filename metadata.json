@@ -1,6 +1,8 @@
 {
-  "name": "Islah Online Madrasa",
+  "name": "Islah International Academy",
   "description": "Premium online Quran and authentic Islamic education for children and families. Quran, Sunnah, character building, and individual attention.",
   "requestFramePermissions": [],
-  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
 }

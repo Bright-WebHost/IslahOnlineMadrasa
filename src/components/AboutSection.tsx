@@ -1,11 +1,11 @@
 import React, { useRef } from 'react';
 import { motion, useScroll, useTransform, useSpring } from 'motion/react';
-import { 
-  Award, 
-  Globe, 
-  Home, 
-  GraduationCap, 
-  ArrowRight, 
+import {
+  Award,
+  Globe,
+  Home,
+  GraduationCap,
+  ArrowRight,
   Sparkles,
   MessageCircle
 } from 'lucide-react';
@@ -72,7 +72,7 @@ export const AboutSection: React.FC<AboutSectionProps> = ({
     >
       <HeroBgPattern />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        
+
         {/* Animated Expanding Minimal Card */}
         <motion.div
           style={{
@@ -92,7 +92,7 @@ export const AboutSection: React.FC<AboutSectionProps> = ({
           />
 
           <div className="relative z-10 px-6 py-8 sm:px-10 sm:py-10 lg:px-12 lg:py-12">
-            
+
             {/* Top Pill & Calligraphy */}
             <div className="flex items-center justify-between gap-4 mb-6 pb-4 border-b border-white/10">
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 backdrop-blur-sm border border-[#C9A45C]/40 text-[#DFBA74] text-xs font-semibold">
@@ -110,11 +110,11 @@ export const AboutSection: React.FC<AboutSectionProps> = ({
 
             {/* Split Minimal Content Layout */}
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
-              
+
               {/* Left Column: Narrative (7 cols) */}
               <div className="lg:col-span-7 flex flex-col justify-center">
                 <span className="text-xs uppercase tracking-[0.2em] text-[#C9A45C] font-semibold block mb-2">
-                  About Islah Online Madrasa
+                  About Islah International Academy
                 </span>
 
                 <h2 className="text-2xl sm:text-2xl lg:text-3xl text-white font-bold leading-snug mb-4">
@@ -124,7 +124,7 @@ export const AboutSection: React.FC<AboutSectionProps> = ({
 
                 <div className="space-y-3 text-sm sm:text-base text-white/85 leading-relaxed font-sans font-light mb-6">
                   <p>
-                    <strong className="text-white font-medium">Islah Online Madrasa is now entering its 9th successful academic year.</strong> Started with the intention of providing quality Islamic education to children living in GCC countries and other parts of the world, we understand the lifestyle, academic schedules, and circumstances of families.
+                    <strong className="text-white font-medium">Islah International Academy is now entering its 9th successful academic year.</strong> Started with the intention of providing quality Islamic education to children living in GCC countries and other parts of the world, we understand the lifestyle, academic schedules, and circumstances of families.
                   </p>
                   <p>
                     We developed an accessible online madrasa where children receive systematic learning alongside regular schooling—right from the comfort of their homes, mentored by professional teachers who have completed <span className="text-[#DFBA74] font-normal">formal Islamic studies</span> and subject training.
@@ -133,18 +133,18 @@ export const AboutSection: React.FC<AboutSectionProps> = ({
 
                 {/* Concise Action Buttons */}
                 <div className="flex flex-wrap items-center gap-3 pt-2">
-                  
-                    <button
-                      onClick={(e) => {
-                        e.preventDefault();
-                        navigate('/about');
-                      }}
-                      className="inline-flex items-center gap-2 px-5 py-2.5 rounded-md bg-[#C9A45C] hover:bg-[#DFBA74] text-[#082D7B] font-semibold text-xs sm:text-sm transition-all shadow cursor-pointer active:scale-98"
-                    >
-                      <span>About Us</span>
-                      <ArrowRight className="w-3.5 h-3.5 text-[#082D7B]" />
-                    </button>
-                  
+
+                  <button
+                    onClick={(e) => {
+                      e.preventDefault();
+                      navigate('/about');
+                    }}
+                    className="inline-flex items-center gap-2 px-5 py-2.5 rounded-md bg-[#C9A45C] hover:bg-[#DFBA74] text-[#082D7B] font-semibold text-xs sm:text-sm transition-all shadow cursor-pointer active:scale-98"
+                  >
+                    <span>About Us</span>
+                    <ArrowRight className="w-3.5 h-3.5 text-[#082D7B]" />
+                  </button>
+
                 </div>
               </div>
 
@@ -152,9 +152,9 @@ export const AboutSection: React.FC<AboutSectionProps> = ({
               <div className="lg:col-span-5 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-3">
                 {/* {HIGHLIGHTS.map((item, index) => {
                   const Icon = item.icon; */}
-                  {/* return (
+                {/* return (
                     // <div */}
-                    {/* //   key={index}
+                {/* //   key={index}
                     //   className="flex items-start gap-3.5 p-3.5 sm:p-4 rounded-xl bg-white/[0.05] hover:bg-white/[0.08] border border-white/10 hover:border-[#C9A45C]/40 transition-colors"
                     // >
                     //   <div className="w-9 h-9 rounded-lg bg-[#C9A45C]/15 border border-[#C9A45C]/25 text-[#DFBA74] flex items-center justify-center shrink-0 mt-0.5">
@@ -169,10 +169,10 @@ export const AboutSection: React.FC<AboutSectionProps> = ({
                     //     </p>
                     //   </div>
                     // </div> */}
-                    <div className='rounded-xl overflow-hidden'>
-                      <img src="/assets/img/HomeAbout Us.webp" alt="" />
-                    </div>
-                  {/* ); */}
+                <div className='rounded-xl overflow-hidden'>
+                  <img src="/assets/img/HomeAbout Us.webp" alt="" />
+                </div>
+                {/* ); */}
                 {/* // })} */}
               </div>
 

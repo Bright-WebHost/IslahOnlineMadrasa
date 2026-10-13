@@ -271,7 +271,7 @@ export const StudentAchievementsPage: React.FC<StudentAchievementsPageProps> = (
             {/* Visual Display Composition */}
             <div className="relative w-full max-w-[960px] mx-auto">
               <div className="flex items-start">
-                
+
                 {/* Left Area: Top Header + Rounded Blue Card */}
                 <div className="flex-1 min-w-0 pr-2 sm:pr-3 md:pr-5">
                   {/* Top Outline Header: BUILDING CONFIDENCE */}
@@ -294,7 +294,7 @@ export const StudentAchievementsPage: React.FC<StudentAchievementsPageProps> = (
                   <div className="relative z-10 w-full aspect-[834/336] rounded-[18px] xs:rounded-[24px] sm:rounded-[32px] md:rounded-[36px] overflow-hidden shadow-xs ">
                     <img
                       src="/assets/img/confidence-blue-card.png"
-                      alt="Islah Online Madrasa Study Desk with Laptop, Books, and Graduation Cap"
+                      alt="Islah International Academy Study Desk with Laptop, Books, and Graduation Cap"
                       className="w-full h-full object-cover select-none"
                       loading="eager"
                     />
@@ -332,7 +332,7 @@ export const StudentAchievementsPage: React.FC<StudentAchievementsPageProps> = (
 
             {/* Bottom Statement Narrative in Live Typography */}
             <p className="mt-2 sm:mt-3 md:mt-3 text-center text-[#082D7B] font-medium text-xs xs:text-sm sm:text-[15.5px] md:text-[16.5px] leading-relaxed max-w-[900px] mx-auto px-4 font-sans">
-              At Islah Online Madrasa, achievements are not measured simply by trophies or test percentages. We celebrate every child who overcomes a stutter to articulate a difficult Arabic letter, every student who memorises their first Surah, and every young Muslim who begins praying five times daily with devotion.
+              At Islah International Academy, achievements are not measured simply by trophies or test percentages. We celebrate every child who overcomes a stutter to articulate a difficult Arabic letter, every student who memorises their first Surah, and every young Muslim who begins praying five times daily with devotion.
             </p>
 
           </motion.div>
@@ -646,7 +646,7 @@ export const StudentAchievementsPage: React.FC<StudentAchievementsPageProps> = (
               Real Experiences From Families Worldwide
             </h2>
             {/* <p className="font-sans text-xs sm:text-sm text-[#475569] mt-2.5 leading-relaxed">
-              Read how Islah Online Madrasa is helping families across the GCC, UK, US, and beyond nurture strong faith at home.
+              Read how Islah International Academy is helping families across the GCC, UK, US, and beyond nurture strong faith at home.
             </p> */}
           </div>
 
@@ -672,9 +672,8 @@ export const StudentAchievementsPage: React.FC<StudentAchievementsPageProps> = (
                       zIndex,
                       rotate: isActive ? 0 : config.mobileRotation,
                     }}
-                    className={`relative w-full rounded-[26px] p-5 sm:p-6 text-white cursor-pointer transition-all duration-300 shadow-[0_14px_36px_rgba(0,0,0,0.28)] border border-white/15 select-none ${
-                      index > 0 ? '-mt-14 xs:-mt-16' : ''
-                    } ${isActive ? 'scale-[1.03] ring-2 ring-white/40 shadow-[0_22px_50px_rgba(0,0,0,0.45)]' : 'hover:scale-[1.01]'}`}
+                    className={`relative w-full rounded-[26px] p-5 sm:p-6 text-white cursor-pointer transition-all duration-300 shadow-[0_14px_36px_rgba(0,0,0,0.28)] border border-white/15 select-none ${index > 0 ? '-mt-14 xs:-mt-16' : ''
+                      } ${isActive ? 'scale-[1.03] ring-2 ring-white/40 shadow-[0_22px_50px_rgba(0,0,0,0.45)]' : 'hover:scale-[1.01]'}`}
                   >
                     {/* Top Header: 5 Stars + Brand Pill with Chevron */}
                     <div className="flex items-center justify-between gap-2 mb-3">
@@ -763,9 +762,8 @@ export const StudentAchievementsPage: React.FC<StudentAchievementsPageProps> = (
                       transformOrigin: 'bottom center',
                       zIndex: isHovered ? 50 : index + 10,
                     }}
-                    className={`relative w-[255px] xl:w-[270px] h-[340px] rounded-3xl p-6 lg:p-7 flex flex-col justify-between text-white cursor-pointer transition-shadow duration-300 shadow-[0_12px_32px_rgba(0,0,0,0.25)] hover:shadow-[0_25px_50px_rgba(0,0,0,0.45)] border border-white/10 ${
-                      hasHover && !isHovered ? 'opacity-90' : 'opacity-100'
-                    }`}
+                    className={`relative w-[255px] xl:w-[270px] h-[340px] rounded-3xl p-6 lg:p-7 flex flex-col justify-between text-white cursor-pointer transition-shadow duration-300 shadow-[0_12px_32px_rgba(0,0,0,0.25)] hover:shadow-[0_25px_50px_rgba(0,0,0,0.45)] border border-white/10 ${hasHover && !isHovered ? 'opacity-90' : 'opacity-100'
+                      }`}
                   >
                     {/* Top Header: 5 Stars + Brand Pill */}
                     <div className="flex items-center justify-between gap-2">

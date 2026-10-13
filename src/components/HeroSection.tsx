@@ -22,7 +22,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
       <img
         className="absolute top-0 left-0 right-0 h-full w-full object-cover object-[78%_center] sm:object-center select-none pointer-events-none"
         src="/assets/img/Golden Arch, Mosque Skyline, and Lanterns.png"
-        alt="Islah Online Madrasa"
+        alt="Islah International Academy"
       />
 
       {/* Mobile-Only Contrast Gradient on Left (Desktop is untouched) */}
@@ -51,7 +51,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
               </span>
               <span className="h-3.5 w-px bg-[#c9a45c]/80" aria-hidden="true" />
               <span className="text-[8px] sm:text-xs uppercase tracking-[0.22em] text-[#C9A45C] font-semibold">
-                Islah Online Madrasa
+                Islah International Academy
               </span>
             </div>
 
@@ -121,7 +121,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
             </span>
             <span className="h-3.5 w-px bg-[#c9a45c]/80" aria-hidden="true" />
             <span className=" text-[8px] uppercase tracking-[0.22em] text-[#C9A45C] font-semibold">
-              Islah Online Madrasa
+              Islah International Academy
             </span>
           </div>
 
@@ -146,7 +146,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
               className="inline-flex items-center justify-center gap-1.5 px-6 py-2.5 text-xs font-bold text-[#061838] bg-[#F3A867] hover:bg-white active:scale-[0.98] rounded-[10px] transition-all shadow-md cursor-pointer whitespace-nowrap"
             >
               <span>Book a Free Trial</span>
-                <ArrowRight className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#082D7B] shrink-0" />
+              <ArrowRight className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#082D7B] shrink-0" />
             </button>
 
             <button
@@ -155,7 +155,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
               className="inline-flex items-center justify-center gap-1.5 px-6 py-2.5 text-xs font-bold text-[#061838] bg-white hover:bg-[#F3A867] active:scale-[0.98] rounded-[10px] transition-all shadow-md cursor-pointer whitespace-nowrap"
             >
               <span>Explore Courses</span>
-                <ArrowRight className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#082D7B] shrink-0" />
+              <ArrowRight className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#082D7B] shrink-0" />
             </button>
           </div>
 

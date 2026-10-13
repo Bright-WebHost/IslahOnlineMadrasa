@@ -1,6 +1,6 @@
-# Islah Online Madrasa 🕌
+# Islah International Academy 🕌
 
-A modern, responsive, and beautifully designed web application for **Islah Online Madrasa** — an online Islamic educational institution providing structured Quran recitation with Tajweed, Hifz, authentic Islamic studies, and Arabic language for children globally.
+A modern, responsive, and beautifully designed web application for **Islah International Academy** — an online Islamic educational institution providing structured Quran recitation with Tajweed, Hifz, authentic Islamic studies, and Arabic language for children globally.
 
 ---
 
@@ -103,4 +103,4 @@ islah-online-madrasa/
 
 ## 📄 License
 
-All rights reserved © Islah Online Madrasa.
+All rights reserved © Islah International Academy.

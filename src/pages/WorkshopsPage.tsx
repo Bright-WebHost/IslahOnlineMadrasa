@@ -33,7 +33,7 @@ export const WorkshopsPage: React.FC<WorkshopsPageProps> = ({
   const [activeFilter, setActiveFilter] = useState<'all' | 'workshops' | 'competitions' | 'presentations'>('all');
 
   useEffect(() => {
-    document.title = "Islamic Workshops & Student Activities | Islah Online Madrasa";
+    document.title = "Islamic Workshops & Student Activities | Islah International Academy";
     window.scrollTo({ top: 0, behavior: 'instant' });
   }, []);
 
@@ -165,7 +165,7 @@ export const WorkshopsPage: React.FC<WorkshopsPageProps> = ({
 
   return (
     <div className="min-h-screen bg-[#FBF9F5] text-[#151918]">
-      
+
       {/* 1. HERO INNER BANNER */}
       <InnerBanner
         title="Learning Beyond the Classroom"
@@ -179,7 +179,7 @@ export const WorkshopsPage: React.FC<WorkshopsPageProps> = ({
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 xl:gap-14 items-center">
-            
+
             {/* Left Narrative / Title (Col 1: 4 cols) */}
             <div className="lg:col-span-4 flex flex-col justify-center">
               <motion.div
@@ -270,7 +270,7 @@ export const WorkshopsPage: React.FC<WorkshopsPageProps> = ({
       {/* 3. SECTION 2: ISLAMIC WORKSHOPS */}
       <section className="relative py-16 sm:py-24 bg-white border-t border-[#082D7B]/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          
+
           <div className="text-center max-w-3xl mx-auto mb-16">
             <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#082D7B]/8 border border-[#082D7B]/15 text-xs text-[#082D7B] font-semibold mb-3">
               <Calendar className="w-3.5 h-3.5 text-[#C9A45C]" />
@@ -390,7 +390,7 @@ export const WorkshopsPage: React.FC<WorkshopsPageProps> = ({
       {/* 5. SECTION 4: COMPETITIONS & QUIZZES */}
       <section className="relative py-16 sm:py-24 bg-white border-t border-[#082D7B]/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          
+
           <div className="text-center max-w-3xl mx-auto mb-16">
             <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#082D7B]/8 border border-[#082D7B]/15 text-xs text-[#082D7B] font-semibold mb-3">
               <Trophy className="w-3.5 h-3.5 text-[#C9A45C]" />
@@ -496,7 +496,7 @@ export const WorkshopsPage: React.FC<WorkshopsPageProps> = ({
       {/* 7. SECTION 6: PHOTO & VIDEO HIGHLIGHTS GALLERY */}
       <section className="relative py-16 sm:py-24 bg-white border-t border-[#082D7B]/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          
+
           <div className="text-center max-w-3xl mx-auto mb-14">
             <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#082D7B]/8 border border-[#082D7B]/15 text-xs text-[#082D7B] font-semibold mb-3">
               <Camera className="w-3.5 h-3.5 text-[#C9A45C]" />

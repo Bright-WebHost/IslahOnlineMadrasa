@@ -32,7 +32,7 @@ export const HomePage: React.FC<HomePageProps> = ({
   onSelectTestimonial,
 }) => {
   useEffect(() => {
-    document.title = "Islah Online Madrasa | Online Quran & Islamic Education";
+    document.title = "Islah International Academy | Online Quran & Islamic Education";
   }, []);
 
   const handleExploreCourses = () => {

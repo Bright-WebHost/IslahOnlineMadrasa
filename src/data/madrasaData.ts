@@ -54,14 +54,14 @@ export interface FaqItem {
 }
 
 export const MADRASA_CONFIG = {
-  name: "Islah Online Madrasa",
+  name: "Islah International Academy",
   domain: "www.islahonlinemadrasa.com",
   phoneDisplay: "[CLIENT PHONE NUMBER]",
   phoneNumber: "447000000000", // Placeholder for wa.me link
   emailDisplay: "admissions@islahonlinemadrasa.com",
   whatsappBaseUrl: "https://wa.me/447000000000",
   instagramPlaceholder: "[INSTAGRAM URL - @islahonlinemadrasa]",
-  youtubePlaceholder: "[YOUTUBE URL - Islah Online Madrasa]",
+  youtubePlaceholder: "[YOUTUBE URL - Islah International Academy]",
   establishedYear: "[ESTABLISHED YEAR]",
   studentsCount: "[NUMBER OF STUDENTS]",
   teachersCount: "[NUMBER OF TEACHERS]",
@@ -471,7 +471,7 @@ export const TESTIMONIALS: Testimonial[] = [
     parentName: "Sister Fatima R.",
     childInfo: "Mother of a 6-year-old beginner",
     location: "Texas, United States",
-    content: "As parents living in the West, establishing a strong Islamic foundation for our children is our highest priority. Islah Online Madrasa provided that safe, respectful, and structured environment. The admission process over WhatsApp was refreshingly simple.",
+    content: "As parents living in the West, establishing a strong Islamic foundation for our children is our highest priority. Islah International Academy provided that safe, respectful, and structured environment. The admission process over WhatsApp was refreshingly simple.",
     keyHighlight: "Safe, respectful environment that fits modern family schedules."
   },
   {

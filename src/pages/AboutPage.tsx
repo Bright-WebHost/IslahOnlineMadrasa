@@ -37,7 +37,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({
 
   // Set SEO document title
   useEffect(() => {
-    document.title = "About Islah Online Madrasa | Our Story, Vision & Mission";
+    document.title = "About Islah International Academy | Our Story, Vision & Mission";
     window.scrollTo({ top: 0, behavior: 'instant' });
   }, []);
 
@@ -139,7 +139,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({
 
   return (
     <div className="min-h-screen bg-[#FBF9F5] text-[#151918]">
-      
+
       {/* ============================================================== */}
       {/* 1. HERO INNER BANNER                                           */}
       {/* ============================================================== */}
@@ -157,10 +157,10 @@ export const AboutPage: React.FC<AboutPageProps> = ({
 
         <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-12 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-8 xl:gap-12 items-center">
-            
+
             {/* Left Story Column (Arch + Content) - 7 cols on lg */}
             <div className="lg:col-span-7 flex flex-col md:flex-row items-center md:items-center gap-6 sm:gap-8 lg:gap-8 xl:gap-10">
-              
+
               {/* Mobile Only: Horizontal Decorative Arch & Horizontal Animated "OUR STORY" */}
               <div className="flex md:hidden items-center justify-start w-full mb-3 select-none">
                 <div className="relative inline-flex items-center h-[52px] sm:h-[60px] pl-3 pr-4">
@@ -174,7 +174,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({
                   />
 
                   {/* Horizontal "OUR STORY" Text */}
-                  <div 
+                  <div
                     aria-label="OUR STORY"
                     className="relative z-10 flex items-center font-sans font-black text-2xl sm:text-3xl tracking-[0.2em] uppercase select-none"
                   >
@@ -199,9 +199,8 @@ export const AboutPage: React.FC<AboutPageProps> = ({
                           delay: 0.15 + idx * 0.06,
                           ease: [0.22, 1, 0.36, 1],
                         }}
-                        className={`inline-block transition-colors ${
-                          item.inArch ? 'text-white drop-shadow-xs' : 'text-[#BAC7D6]'
-                        }`}
+                        className={`inline-block transition-colors ${item.inArch ? 'text-white drop-shadow-xs' : 'text-[#BAC7D6]'
+                          }`}
                       >
                         {item.char === ' ' ? '\u00A0' : item.char}
                       </motion.span>
@@ -222,7 +221,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({
                 />
 
                 {/* Vertical "OUR STORY" Text with One-by-One Letter Animation */}
-                <div 
+                <div
                   aria-label="OUR STORY"
                   className="relative z-10 -rotate-90 whitespace-nowrap flex items-center select-none font-sans font-black text-4xl sm:text-5xl lg:text-[52px] tracking-[0.24em] uppercase"
                 >
@@ -247,9 +246,8 @@ export const AboutPage: React.FC<AboutPageProps> = ({
                         delay: 0.18 + idx * 0.08,
                         ease: [0.22, 1, 0.36, 1],
                       }}
-                      className={`inline-block transition-colors ${
-                        item.inArch ? 'text-white drop-shadow-xs' : 'text-[#BAC7D6]'
-                      }`}
+                      className={`inline-block transition-colors ${item.inArch ? 'text-white drop-shadow-xs' : 'text-[#BAC7D6]'
+                        }`}
                     >
                       {item.char === ' ' ? '\u00A0' : item.char}
                     </motion.span>
@@ -279,7 +277,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({
                   transition={{ duration: 0.65, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
                   className="font-sans font-bold text-2xl sm:text-3xl lg:text-[36px] xl:text-[40px] text-[#082D7B] leading-[1.22] tracking-tight mb-5"
                 >
-                  Why Islah Online Madrasa Was Established
+                  Why Islah International Academy Was Established
                 </motion.h2>
 
                 {/* Paragraphs with Staggered Entrance */}
@@ -290,7 +288,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({
                     viewport={{ once: true }}
                     transition={{ duration: 0.5, delay: 0.2 }}
                   >
-                    Islah Online Madrasa was founded with a singular, urgent mission:{" "}
+                    Islah International Academy was founded with a singular, urgent mission:{" "}
                     <strong className="text-[#082D7B] font-bold">
                       to provide children with an authentic, structured, and joyful Islamic education that harmonizes with their modern academic lives.
                     </strong>
@@ -382,7 +380,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({
               >
                 <img
                   src="/assets/img/about-story.webp"
-                  alt="Classical Islamic books in traditional arched alcove at Islah Online Madrasa"
+                  alt="Classical Islamic books in traditional arched alcove at Islah International Academy"
                   className="w-full h-auto object-cover object-center block"
                   loading="eager"
                 />
@@ -401,13 +399,13 @@ export const AboutPage: React.FC<AboutPageProps> = ({
         <HeroBgPattern opacity={0.025} />
 
         {/* Ambient atmospheric lighting */}
-        <div 
-          className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[720px] h-[360px] bg-gradient-to-r from-[#082D7B]/5 via-[#C9A45C]/10 to-[#082D7B]/5 rounded-full blur-3xl pointer-events-none" 
+        <div
+          className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[720px] h-[360px] bg-gradient-to-r from-[#082D7B]/5 via-[#C9A45C]/10 to-[#082D7B]/5 rounded-full blur-3xl pointer-events-none"
           aria-hidden="true"
         />
 
         <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-12 relative z-10">
-          
+
           {/* Section Header */}
           <div className="text-center max-w-3xl mx-auto mb-16 sm:mb-20">
             <motion.div
@@ -446,7 +444,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({
 
           {/* Interactive Journey Roadmap UI */}
           <div className="relative">
-            
+
             {/* Desktop Horizontal Connecting Rail */}
             <div className="hidden lg:block absolute top-[48px] left-[10%] right-[10%] h-[3px] bg-gradient-to-r from-[#082D7B]/15 via-[#C9A45C]/40 to-[#082D7B]/20 rounded-full z-0">
               <motion.div
@@ -475,13 +473,12 @@ export const AboutPage: React.FC<AboutPageProps> = ({
                       ease: [0.22, 1, 0.36, 1],
                     }}
                     onClick={() => setSelectedMilestone(idx)}
-                    className={`relative rounded-3xl p-6 sm:p-7 flex flex-col justify-between transition-all duration-300 cursor-pointer group ${
-                      milestone.isCurrent
+                    className={`relative rounded-3xl p-6 sm:p-7 flex flex-col justify-between transition-all duration-300 cursor-pointer group ${milestone.isCurrent
                         ? "bg-gradient-to-b from-white via-white to-[#FDFBF7] border-2 border-[#C9A45C] shadow-xl hover:shadow-2xl hover:-translate-y-2"
                         : isSelected
-                        ? "bg-white border-2 border-[#082D7B] shadow-xl hover:-translate-y-2"
-                        : "bg-white/95 backdrop-blur-xs border border-[#082D7B]/12 hover:border-[#C9A45C]/60 hover:shadow-xl hover:-translate-y-2"
-                    }`}
+                          ? "bg-white border-2 border-[#082D7B] shadow-xl hover:-translate-y-2"
+                          : "bg-white/95 backdrop-blur-xs border border-[#082D7B]/12 hover:border-[#C9A45C]/60 hover:shadow-xl hover:-translate-y-2"
+                      }`}
                   >
                     {/* Watermark of the Era year in corner */}
                     <span className="absolute top-4 right-5 font-sans font-black text-4xl sm:text-5xl text-[#082D7B]/5 select-none pointer-events-none group-hover:text-[#C9A45C]/15 transition-colors">
@@ -494,13 +491,12 @@ export const AboutPage: React.FC<AboutPageProps> = ({
                         <div className="flex items-center gap-3">
                           {/* Station Medal Pin */}
                           <div
-                            className={`w-11 h-11 rounded-2xl flex items-center justify-center transition-all duration-300 shadow-xs ${
-                              milestone.isCurrent
+                            className={`w-11 h-11 rounded-2xl flex items-center justify-center transition-all duration-300 shadow-xs ${milestone.isCurrent
                                 ? "bg-[#082D7B] text-[#C9A45C] ring-4 ring-[#C9A45C]/25"
                                 : isSelected
-                                ? "bg-[#082D7B] text-white ring-4 ring-[#082D7B]/15"
-                                : "bg-[#EAF0FC] text-[#082D7B] group-hover:bg-[#082D7B] group-hover:text-white"
-                            }`}
+                                  ? "bg-[#082D7B] text-white ring-4 ring-[#082D7B]/15"
+                                  : "bg-[#EAF0FC] text-[#082D7B] group-hover:bg-[#082D7B] group-hover:text-white"
+                              }`}
                           >
                             <Icon className="w-5 h-5 transition-transform duration-300 group-hover:scale-110" />
                           </div>
@@ -569,9 +565,9 @@ export const AboutPage: React.FC<AboutPageProps> = ({
             <HeroBgPattern isDark opacity={0.06} />
 
             <div className="relative z-10 flex flex-col lg:flex-row items-center justify-between gap-6 sm:gap-8"> */}
-              
-              {/* Left stats counter */}
-              {/* <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 sm:gap-8 w-full lg:w-auto text-center sm:text-left">
+
+          {/* Left stats counter */}
+          {/* <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 sm:gap-8 w-full lg:w-auto text-center sm:text-left">
                 <div>
                   <div className="font-serif text-2xl sm:text-3xl font-bold text-[#DFBA74]">
                     9th Year
@@ -609,8 +605,8 @@ export const AboutPage: React.FC<AboutPageProps> = ({
                 </div>
               </div> */}
 
-              {/* Right CTA Button */}
-              {/* <div className="shrink-0 flex items-center gap-3 w-full sm:w-auto justify-center">
+          {/* Right CTA Button */}
+          {/* <div className="shrink-0 flex items-center gap-3 w-full sm:w-auto justify-center">
                 <button
                   onClick={onOpenWhatsApp}
                   className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-6 py-3.5 rounded-full text-xs font-bold text-[#082D7B] bg-[#C9A45C] hover:bg-white hover:text-[#082D7B] transition-all shadow-md cursor-pointer whitespace-nowrap"
@@ -621,7 +617,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({
                 </button>
               </div> */}
 
-            {/* </div>
+          {/* </div>
           </motion.div> */}
 
         </div>
@@ -634,7 +630,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({
         <HeroBgPattern isDark opacity={0.06} />
 
         <div className="max-w-[1240px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          
+
           {/* Subtle Section Header */}
           {/* <div className="text-center max-w-2xl mx-auto mb-12 sm:mb-16">
             <motion.div
@@ -664,7 +660,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({
           {/* Two-Card Outer Frame matching reference image */}
           <div className="rounded-[32px] sm:rounded-[44px] p-2.5 sm:p-4 bg-[#051C4D]/70 border border-white/12 shadow-2xl backdrop-blur-xs">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-3 sm:gap-4 lg:gap-5 items-stretch">
-              
+
               {/* 1. MISSION CARD (Left, Deep Navy) */}
               <motion.div
                 initial={{ opacity: 0, x: -35 }}
@@ -675,7 +671,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({
               >
                 {/* Inner Inset Border Frame */}
                 <div className="relative rounded-[20px] sm:rounded-[26px] border border-[#BACCE8]/20 p-6 sm:p-8 lg:p-10 flex flex-col justify-between min-h-[360px] sm:min-h-[420px] lg:min-h-[460px] h-full overflow-hidden">
-                  
+
                   {/* Mission Paragraph */}
                   <p className="relative z-10 font-sans text-xs sm:text-[13.5px] lg:text-[15px] text-[#BACCE8] leading-[1.75] max-w-md select-text">
                     We envision young Muslim generations who hold the Holy Qur'an deeply in their hearts, follow the authentic Sunnah with conviction, and embody noble prophetic character that protects their moral compass wherever life takes them.
@@ -710,7 +706,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({
               >
                 {/* Inner Inset Border Frame */}
                 <div className="relative rounded-[20px] sm:rounded-[26px] border border-[#0A2663]/25 p-6 sm:p-8 lg:p-10 flex flex-col justify-between min-h-[360px] sm:min-h-[420px] lg:min-h-[460px] h-full overflow-hidden">
-                  
+
                   {/* Vision Paragraph */}
                   <p className="relative z-10 font-sans text-xs sm:text-[13.5px] lg:text-[15px] text-[#0A2663] leading-[1.75] max-w-md font-medium select-text">
                     Our vision is to nurture confident Muslim children through authentic Islamic education, strong Aqeedah, practical daily Islamic habits, and engaging online classrooms that make learning meaningful, joyful, and impactful.
@@ -896,7 +892,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({
           </div> */}
         </div>
       </section>
-      
+
 
     </div>
   );

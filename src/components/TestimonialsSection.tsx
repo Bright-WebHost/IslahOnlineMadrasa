@@ -36,7 +36,7 @@ export const TestimonialsSection: React.FC<TestimonialsSectionProps> = ({ onPlay
             </span>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl text-[#082D7B] font-bold tracking-tight text-balance">
               What Parents Say <br />
-              <span className="">About Islah Online Madrasa</span>
+              <span className="">About Islah International Academy</span>
             </h2>
             <p className="font-sans text-sm sm:text-base text-[#151918]/70 mt-3">
               Real reflections from families who entrust their children's Qur'an journey to our instructors.

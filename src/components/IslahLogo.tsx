@@ -49,14 +49,14 @@ export const IslahLogo: React.FC<IslahLogoProps> = ({
       <div className={`inline-flex items-center justify-center select-none ${className}`}>
         <img
           src="/logo-badge.svg"
-          alt="Islah Online Madrasa"
+          alt="Islah International Academy"
           className={`${badgeSizes[size]} object-contain drop-shadow-[0_4px_12px_rgba(8,45,123,0.12)] transition-transform duration-300 group-hover:scale-105`}
         />
       </div>
     );
   }
 
-  // Re-creation of the official Islah Online Madrasa icon:
+  // Re-creation of the official Islah International Academy icon:
   // Open book + pen nib + graduation cap
   const emblemSvg = (
     <svg
@@ -64,7 +64,7 @@ export const IslahLogo: React.FC<IslahLogoProps> = ({
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       className={`${iconSizes[size]} shrink-0 transition-transform duration-300 group-hover:scale-105`}
-      aria-label="Islah Online Madrasa Emblem"
+      aria-label="Islah International Academy Emblem"
     >
       {/* Graduation Cap atop the fountain pen */}
       <path
@@ -171,7 +171,7 @@ export const IslahLogo: React.FC<IslahLogoProps> = ({
             className={`font-sans font-extrabold uppercase tracking-[0.24em] ${textSizes[size].title}`}
             style={{ color: primaryColor }}
           >
-            ISLAH 
+            ISLAH
           </span>
           <span
             className={`font-sans font-bold uppercase ${textSizes[size].sub}`}

@@ -55,14 +55,13 @@ export const Navbar: React.FC<NavbarProps> = ({
     <>
       {/* Floating Header Wrapper */}
       <header
-        className={`fixed left-0 right-0 z-50 px-3 sm:px-6 pointer-events-none transition-all duration-300 ${
-          isScrolled ? 'top-2 sm:top-3.5' : 'top-3 sm:top-5'
-        }`}
+        className={`fixed left-0 right-0 z-50 px-3 sm:px-6 pointer-events-none transition-all duration-300 ${isScrolled ? 'top-2 sm:top-3.5' : 'top-3 sm:top-5'
+          }`}
       >
         <div className="max-w-7xl mx-auto flex items-center justify-center">
           {/* Main Capsule Navbar Assembly */}
           <div className="relative pointer-events-auto flex items-center w-full">
-            
+
             {/* 1. Left Islamic 8-Pointed Star Logo Badge (Overhanging Capsule) */}
             <a
               href="/"
@@ -71,22 +70,21 @@ export const Navbar: React.FC<NavbarProps> = ({
                 navigate('/');
               }}
               className="group relative z-20 shrink-0 -mr-4 sm:-mr-5 focus-visible:outline-2 focus-visible:outline-[#082D7B] rounded-full transition-transform duration-300 hover:scale-105 cursor-pointer"
-              aria-label="Islah Online Madrasa Home"
+              aria-label="Islah International Academy Home"
             >
               <img
                 src="/assets/img/iom-star-logo.webp"
-                alt="Islah Online Madrasa"
+                alt="Islah International Academy"
                 className="w-20 h-20 sm:w-22 sm:h-22 md:w-24 md:h-24 object-contain drop-shadow-[0_4px_14px_rgba(8,45,123,0.18)] select-none"
               />
             </a>
 
             {/* 2. White Capsule Pill Body (Only right side rounded) */}
             <div
-              className={`flex-1 min-h-[52px] sm:min-h-[54px] bg-white/95 backdrop-blur-md rounded-r-full rounded-l-none border border-l-0 border-[#082D7B]/12 pl-6 sm:pl-8 pr-2.5 sm:pr-3 py-1.5 sm:py-2 flex items-center justify-between gap-3 sm:gap-6 transition-all duration-300 ${
-                isScrolled
+              className={`flex-1 min-h-[52px] sm:min-h-[54px] bg-white/95 backdrop-blur-md rounded-r-full rounded-l-none border border-l-0 border-[#082D7B]/12 pl-6 sm:pl-8 pr-2.5 sm:pr-3 py-1.5 sm:py-2 flex items-center justify-between gap-3 sm:gap-6 transition-all duration-300 ${isScrolled
                   ? 'shadow-[0_12px_36px_-6px_rgba(8,45,123,0.12)] border-[#082D7B]/20'
                   : 'shadow-[0_4px_24px_rgba(0,0,0,0.06)]'
-              }`}
+                }`}
             >
               {/* Brand Typography Lockup (Beside logo with bit gap) */}
               <a
@@ -96,7 +94,7 @@ export const Navbar: React.FC<NavbarProps> = ({
                   navigate('/');
                 }}
                 className="flex flex-col text-left select-none shrink-0 group focus-visible:outline-none cursor-pointer"
-                aria-label="Islah Online Madrasa"
+                aria-label="Islah International Academy"
               >
                 <span className="font-sans font-bold text-2xl sm:text-xl md:text-2xl tracking-tight text-[#082D7B] group-hover:text-[#2563EB] transition-colors leading-none">
                   islah
@@ -116,11 +114,10 @@ export const Navbar: React.FC<NavbarProps> = ({
                       key={link.label}
                       href={link.to}
                       onClick={(e) => handleLinkClick(e, link.to)}
-                      className={`relative font-medium transition-colors duration-200 whitespace-nowrap py-1 cursor-pointer ${
-                        isActive
+                      className={`relative font-medium transition-colors duration-200 whitespace-nowrap py-1 cursor-pointer ${isActive
                           ? 'text-[#082D7B] font-bold'
                           : 'text-[#334155] hover:text-[#082D7B]'
-                      }`}
+                        }`}
                     >
                       {link.label}
                       {isActive && (
@@ -175,13 +172,13 @@ export const Navbar: React.FC<NavbarProps> = ({
                   <div className="flex items-center gap-3">
                     <img
                       src="/assets/img/iom-star-logo.webp"
-                      alt="Islah Online Madrasa"
+                      alt="Islah International Academy"
                       className="w-12 h-12 object-contain"
                     />
                     <a
                       href="/home"
                       className="flex flex-col text-left select-none shrink-0 group focus-visible:outline-none cursor-pointer"
-                      aria-label="Islah Online Madrasa"
+                      aria-label="Islah International Academy"
                     >
                       <span className="font-sans font-bold text-2xl sm:text-xl md:text-2xl tracking-tight text-[#082D7B] group-hover:text-[#2563EB] transition-colors leading-none">
                         islah
@@ -210,11 +207,10 @@ export const Navbar: React.FC<NavbarProps> = ({
                         key={link.label}
                         href={link.to}
                         onClick={(e) => handleLinkClick(e, link.to)}
-                        className={`px-4 py-2.5 rounded-xl text-sm font-medium transition-colors flex items-center justify-between cursor-pointer ${
-                          isActive
+                        className={`px-4 py-2.5 rounded-xl text-sm font-medium transition-colors flex items-center justify-between cursor-pointer ${isActive
                             ? 'bg-[#082D7B]/10 text-[#082D7B] font-bold'
                             : 'text-[#334155] hover:text-[#082D7B] hover:bg-[#082D7B]/5'
-                        }`}
+                          }`}
                       >
                         <span>{link.label}</span>
                         <ArrowRight className={`w-3.5 h-3.5 ${isActive ? 'text-[#C9A45C]' : 'opacity-40'}`} />
