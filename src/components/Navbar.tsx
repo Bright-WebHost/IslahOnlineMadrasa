@@ -40,8 +40,8 @@ export const Navbar: React.FC<NavbarProps> = ({
     { key: 'about', label: 'About Us', to: '/about' },
     { key: 'curriculum', label: 'Our Curriculum', to: '/curriculum' },
     { key: 'teaching-approach', label: 'Teaching Approach', to: '/teaching-approach' },
-    { key: 'workshops', label: 'Workshops', to: '/workshops' },
-    { key: 'student-achievements', label: 'Achievements', to: '/student-achievements' },
+    // { key: 'workshops', label: 'Workshops', to: '/workshops' },
+    // { key: 'student-achievements', label: 'Achievements', to: '/student-achievements' },
     { key: 'admissions', label: 'Contact Us', to: '/contact' },
   ];
 
@@ -96,8 +96,8 @@ export const Navbar: React.FC<NavbarProps> = ({
                 className="flex flex-col text-left select-none shrink-0 group focus-visible:outline-none cursor-pointer"
                 aria-label="Islah International Academy"
               >
-                <span className="font-sans font-bold text-2xl sm:text-xl md:text-2xl tracking-tight text-[#082D7B] group-hover:text-[#2563EB] transition-colors leading-none">
-                  islah
+                <span className="font-impact font-extrabold text-2xl sm:text-xl md:text-2xl tracking-tight text-[#082D7B] group-hover:text-[#409EFF] transition-colors leading-none">
+                  ISLAH
                 </span>
                 <span className="font-mono text-[6px] sm:text-[7px] text-[#082D7B] font-medium tracking-wide leading-none mt-1">
                   INTERNATIONAL ACADEMY
@@ -105,7 +105,7 @@ export const Navbar: React.FC<NavbarProps> = ({
               </a>
 
               {/* Navigation Links (Desktop) */}
-              <nav className="hidden lg:flex items-center gap-4 xl:gap-6 text-[13px] xl:text-sm font-medium text-[#334155] ml-2">
+              <nav className="hidden lg:flex items-center justify-center gap-4 xl:gap-6 text-[13px] xl:text-sm font-medium text-[#334155] mx-auto">
                 {navLinks.map((link) => {
                   const isActive = checkIsActive(link.to);
 
@@ -129,7 +129,7 @@ export const Navbar: React.FC<NavbarProps> = ({
               </nav>
 
               {/* Right Action Buttons */}
-              <div className="flex items-center gap-2 sm:gap-3 ml-auto">
+              <div className="flex items-center gap-2 sm:gap-3 shrink-0 ml-auto lg:ml-0">
                 {/* WhatsApp Pill Button (Outline style from screenshot) */}
                 {/* <button
                   onClick={onOpenWhatsApp}

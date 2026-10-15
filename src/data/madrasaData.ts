@@ -3,7 +3,7 @@ export interface Course {
   name: string;
   arabicName?: string;
   shortDescription: string;
-  fullDescription: string;
+  fullDescription: string | string[];
   ageGroup: string;
   level: string;
   format: string;
@@ -144,109 +144,215 @@ export const WHY_ISLAH_PRINCIPLES = [
 
 export const COURSES: Course[] = [
   {
-    id: "noorani-qaida",
-    name: "Noorani Qaida",
+    id: "comprehensive-islamic-education-for-school-going-students",
+    name: "Comprehensive Islamic Education for School-Going Students",
     arabicName: "القاعدة النورانية",
     shortDescription: "Foundational Arabic phonetics, alphabet recognition, and letter joining for beginners.",
-    fullDescription: "The essential starting point for every young learner. Children master the 29 Arabic letter shapes, correct articulation points (Makharij), short and long vowels (Harakāt, Madd), and compound letter synthesis through proven pedagogical methods.",
-    ageGroup: "Ages 4–8 & Beginners",
-    level: "Beginner",
-    format: "1-on-1 or Small Group (Max 3)",
-    duration: "30 mins / 3–5 days weekly",
-    keyTopics: ["Arabic Alphabet & Shapes", "Short Vowels (Fatha, Kasra, Damma)", "Tanween & Sukoon", "Madd & Shaddah rules", "Joining words accurately"],
-    outcomes: "Ability to independently read any Arabic word from the Mushaf with correct basic pronunciation."
+    fullDescription: ["Give your child the opportunity to learn Islam alongside their regular school education.",
+      "Our Evening Online Madrasa provides structured Islamic education for school-going children, helping them develop a sound understanding of their religion while balancing their academic responsibilities.",
+      "Through engaging lessons, guided learning, and regular interaction with teachers, students gradually build their Islamic knowledge, improve their Qur’an recitation, and develop good manners based on the Qur’an and authentic Sunnah.",
+      "Our goal is not simply to teach children what Islam says, but to help them understand its teachings and apply them in their daily lives."
+    ],
+    ageGroup: "School-going children (5 - 18 years)",
+    level: "Evening Online Madrasa",
+    format: "Live online group interactive classes",
+    duration: "1 hour per session | 4 days a week",
+    keyTopics: ["Qur’an Reading and Recitation with perfection", "Islamic Studies", "Authentic daily Duas and Adhkar.", "Hadith and their practical lessons.", "Arabic Language", "Character Development"],
+    outcomes: "A child who grows in Islamic knowledge, Qur’an recitation, good character, and confidence in practising Islam."
   },
   {
-    id: "quran-reading",
-    name: "Quran Reading (Nazirah)",
+    id: "start-your-childs-day-with-islamic-learning",
+    name: "Start Your Child's Day with Islamic Learning",
     arabicName: "تلاوة القرآن الكريم",
     shortDescription: "Fluent reading directly from the Mushaf with continuous teacher guidance.",
-    fullDescription: "Designed for children who have completed Noorani Qaida. Focuses on building reading stamina, fluency, smooth pacing, and adhering to Quranic stop signs (Waqf) while reading directly from the Uthmani script.",
-    ageGroup: "Ages 6–15",
-    level: "Elementary to Intermediate",
-    format: "1-on-1 Individual Attention",
-    duration: "30–45 mins / 3–4 days weekly",
-    keyTopics: ["Smooth word connection", "Breath control & pauses (Waqf)", "Common reading pitfalls", "Daily continuous reading milestones", "Reverent recitation etiquette"],
+    fullDescription: ["Make Islamic learning a meaningful part of your child's daily routine.",
+      "Our Morning Online Madrasa is designed for families who prefer morning Islamic classes for their children. It provides a structured learning environment where students can study the Qur’an and essential Islamic subjects before beginning their other daily activities.",
+      "With regular classes and a planned curriculum, children develop consistency in their learning while building a stronger connection with their religion.",
+      "Whether your child is beginning their Islamic education or continuing their learning journey, our program aims to nurture knowledge, discipline, and good character."
+    ],
+    ageGroup: "Children whose daily schedules suit morning classes (5 - 18 years )",
+    level: "Morning Online Madrasa",
+    format: "Live online group interactive classes",
+    duration: "1 hour per session | 4 days a week",
+    keyTopics: ["Qur’an Reading and Recitation with perfection", "Islamic Studies", "Authentic daily Duas and Adhkar.", " Hadith and their practical lessons.", " Arabic Language", "Character Development"],
     outcomes: "Complete independent recitation of the Holy Quran from cover to cover with clear rhythm."
   },
   {
-    id: "quran-memorisation",
-    name: "Quran Memorisation (Hifz)",
+    id: "begin-your-child's-journey-with-the-book-of-allah-qaida-tilawa-hifdh",
+    name: "Begin Your Child's Journey with the Book of Allah - Qaida | Tilawa | Hifdh",
     arabicName: "حفظ القرآن الكريم",
     shortDescription: "Structured memorisation paths with strict retention and daily revision routines.",
-    fullDescription: "A disciplined, loving Hifz program tailored for students wishing to memorize Juz Amma, selected Surahs, or complete the entire Qur'an. Emphasizes the classical tripartite system: Sabaq (new lesson), Sabqi (recent revision), and Manzil (cumulative retention).",
-    ageGroup: "Ages 7–16",
-    level: "Intermediate to Advanced",
-    format: "1-on-1 Dedicated Ustadh/Ustadha",
+    fullDescription: ["Every child's journey with the Qur’an begins with learning to read it correctly.",
+      "Our Qur’an Classes for Kids are designed to help children develop the skills and confidence needed to read the Book of Allah, beginning with the Arabic alphabet and progressing towards fluent Qur’an recitation.",
+      "We offer three learning pathways according to each child's current reading level: Qaida, Qur’an Tilawa and Hifdh.",
+      "Our teachers guide students step by step, helping them recognise Arabic letters, pronounce them correctly, and gradually develop accurate recitation.",
+      "Choose Your Learning Path :",
+      "A. Qaida — Learn to Read Arabic",
+      "Ideal for children who are beginners or need to strengthen their Arabic reading foundation."
+    ],
+    ageGroup: "5 - 8 years",
+    level: "Qur’an Classes for Kids",
+    format: "Live 1-to-1 / small group online classes",
     duration: "45–60 mins / 4–5 days weekly",
-    keyTopics: ["Juz Amma & Tabarak foundations", "Systematic Sabqi & Manzil cycles", "Retention techniques for young minds", "Tarteel pacing and melodious tone", "Spiritual discipline of Hifz"],
-    outcomes: "Solid, unshakeable memorisation with retention verified through regular milestone assessments."
+    keyTopics: ["Read Qur’anic verses with increasing fluency.", "Improve the pronunciation of Arabic letters.", "Learn and practise essential Tajweed rules.", "Apply appropriate stopping and starting rules as taught.", "Develop accuracy and confidence through regular recitation.", "Build a consistent relationship with the Qur’an."],
+    outcomes: "A student who develops a consistent Islamic learning routine and builds a strong foundation in Qur’an and Islamic knowledge."
   },
   {
-    id: "tajweed-mastery",
-    name: "Tajweed Mastery",
+    id: "learn-the-quran-with-confidence-at-your-own-pace",
+    name: "Learn the Qur’an with Confidence, at Your Own Pace",
     arabicName: "أحكام التجويد",
     shortDescription: "In-depth study of recitation rules, articulation points, and vocal characteristics.",
-    fullDescription: "Elevates recitation from correct to beautiful. Students systematically study Makharij al-Huroof (articulation points), Sifat (characteristics), Noon Sakinah & Tanween rules, Meem Sakinah, and Madd categories with both practical drill and theoretical understanding.",
-    ageGroup: "Ages 8–17",
-    level: "Intermediate to Advanced",
-    format: "1-on-1 or Guided Pairs",
-    duration: "40 mins / 2–4 days weekly",
-    keyTopics: ["Makharij & Sifat al-Huroof", "Idgham, Ikhfa, Izhar, Iqlab", "Ghunnah and Qalqalah precision", "Rules of Raa and Laam", "Advanced Waqf & Ibtida (Stopping/Starting)"],
-    outcomes: "Reciting with precision following the rules of Hafs 'an 'Asim, certified upon completion."
+    fullDescription: ["It is never too late to begin learning the Qur’an or improve your recitation.",
+      "Our Qur’an Classes for Ladies provide an opportunity for women to learn from the comfort and privacy of their homes, regardless of whether they are complete beginners or already able to read the Qur’an.",
+      "Whether you wish to learn the Arabic alphabet from the beginning or refine your Qur’an recitation, our classes are structured around your current level and learning needs.",
+      "We offer two learning pathways: Qaida and Qur’an Tilawa."
+    ],
+    ageGroup: "Ladies and women of all adult age groups",
+    level: "Qur’an Classes for Ladies",
+    format: "Live online classes",
+    duration: "",
+    keyTopics: ["Improve fluency and accuracy in recitation.", "Work on the correct pronunciation of Arabic letters.", "Learn and practise Tajweed rules.", "Identify and correct common recitation mistakes.", "Improve stopping and starting during recitation.", "Develop consistency in reading the Qur’an."],
+    outcomes: "A student who develops a consistent Islamic learning routine and builds a strong foundation in Qur’an and Islamic knowledge."
   },
   {
-    id: "islamic-studies",
-    name: "Islamic Studies & Aqeedah",
+    id: "memorise-the-quran-with-guidance-consistency-and-care",
+    name: "Memorise the Qur’an with Guidance, Consistency and Care",
     arabicName: "الدراسات الإسلامية والعقيدة",
     shortDescription: "Essential pillars of Iman, Seerah of the Prophet (ﷺ), and moral worldview.",
-    fullDescription: "Nurturing minds with the knowledge of Allah, His Angels, His Books, and His Messengers. Lessons cover the inspirational biography (Seerah) of Prophet Muhammad (ﷺ), stories of the noble Companions, and foundational Fiqh of daily life.",
-    ageGroup: "Ages 6–16",
-    level: "All Levels (Graded curriculum)",
-    format: "Interactive Small Group or 1-on-1",
-    duration: "40 mins / 2 days weekly",
-    keyTopics: ["Six Pillars of Iman & Five Pillars of Islam", "Life of Prophet Muhammad (ﷺ)", "Stories of the Prophets for young minds", "Islamic manners in modern society", "Halal & Haram basics"],
-    outcomes: "A solid, rational, and heartwarming Islamic worldview that protects against modern confusion."
+    fullDescription: ["The memorisation of the Qur’an is a noble journey that requires dedication, consistency, and proper guidance.",
+      "Our Hifdh Batches are designed for students who wish to memorise the Qur’an systematically under the guidance of a teacher.",
+      "Students work towards their memorisation goals through structured lessons, regular revision, and recitation assessments. Equal importance is given to strengthening previously memorised portions so that students can retain and confidently recite what they have learnt.",
+      "We aim to help students develop discipline, patience, and a lifelong connection with the Book of Allah."
+    ],
+    ageGroup: "Children and students who are ready for Qur’an memorisation; eligibility to be confirmed",
+    level: "Hifdh Batches",
+    format: " Live online memorisation classes",
+    duration: "",
+    keyTopics: ["Initial Assessment", "Structured Memorisation", "Daily and Regular Revision", "Recitation Accuracy", "Progress Monitoring"],
+    outcomes: "A student who progresses towards Qur’an memorisation with proper guidance, regular revision, and a sustainable learning routine."
   },
   {
-    id: "daily-duas",
-    name: "Daily Duas & Supplications",
+    id: "supporting-students-in-their-academic-personal-and-islamic-development",
+    name: "Supporting Students in Their Academic, Personal and Islamic Development",
     arabicName: "الأدعية والأذكار اليومية",
     shortDescription: "Sunnah prayers for morning, evening, food, travel, and sleep with meanings.",
-    fullDescription: "Connecting everyday moments with remembrance of Allah (Dhikr). Children memorize the authentic morning and evening supplications, prayers before sleeping, waking, entering the home, and before eating, accompanied by their English meanings.",
-    ageGroup: "Ages 5–14",
-    level: "Beginner to Intermediate",
-    format: "1-on-1 or Integrated with Quran",
-    duration: "25–30 mins / 2 days weekly",
-    keyTopics: ["Morning & Evening Athkar", "Protection Duas from the Sunnah", "Duas for parents & family", "Situational supplications (travel, illness, rain)", "Etiquette and virtues of Dua"],
-    outcomes: "Daily living enriched by spontaneous remembrance of Allah from memory."
+    fullDescription: ["Every student faces challenges at different stages of life. Some struggle with motivation or study habits, while others need guidance in managing their time, developing discipline, or navigating everyday challenges.",
+      "Our Student Counselling service aims to provide students and families with structured guidance to help students develop healthy habits, make responsible decisions, and work towards their personal and academic goals.",
+      "With an emphasis on Islamic values, personal responsibility, and practical solutions, the programme seeks to help students grow in confidence, character, and self-discipline.",
+      "The counselling approach and session format can be tailored to the student's age and individual needs."
+    ],
+    ageGroup: "School-going students and teenagers.",
+    level: "Student Counselling",
+    format: "Online one-to-one counselling sessions",
+    duration: "Based on the student's needs and the counselling programme offered",
+    keyTopics: ["Understanding the Student's Needs", "Academic Guidance", "Personal Development", "Islamic Character Development", "Progress and Follow-Up"],
+    outcomes: "A student who is better equipped to manage everyday challenges, develop positive habits, and work towards academic and personal goals."
   },
   {
-    id: "salah-manners",
-    name: "Salah & Islamic Manners (Adab)",
-    arabicName: "تعليم الصلاة والآداب",
-    shortDescription: "Practical guide to Wudu, five daily prayers, humility in Salah, and moral conduct.",
-    fullDescription: "A hands-on practical course covering the correct physical posture and verbal recitations of Wudu and Salah. Teaches children why we pray, how to focus (Khushu'), and the essential Islamic manners of honoring parents, respecting elders, and speaking truthfully.",
-    ageGroup: "Ages 6–14",
-    level: "Beginner to Intermediate",
-    format: "1-on-1 or Interactive Workshop",
-    duration: "35 mins / 2–3 days weekly",
-    keyTopics: ["Step-by-step Wudu verification", "Positions and recitations of Salah", "Understanding the Surahs recited in prayer", "Kindness to parents (Birr al-Walidayn)", "Sunnah etiquette of eating, greeting, and speaking"],
-    outcomes: "Confident, independent performance of the five daily prayers with joy and reverence."
+    id: "comprehensive-islamic-education-for-school-going-students",
+    name: "Comprehensive Islamic Education for School-Going Students",
+    arabicName: "القاعدة النورانية",
+    shortDescription: "Foundational Arabic phonetics, alphabet recognition, and letter joining for beginners.",
+    fullDescription: ["Give your child the opportunity to learn Islam alongside their regular school education.",
+      "Our Evening Online Madrasa provides structured Islamic education for school-going children, helping them develop a sound understanding of their religion while balancing their academic responsibilities.",
+      "Through engaging lessons, guided learning, and regular interaction with teachers, students gradually build their Islamic knowledge, improve their Qur’an recitation, and develop good manners based on the Qur’an and authentic Sunnah.",
+      "Our goal is not simply to teach children what Islam says, but to help them understand its teachings and apply them in their daily lives."
+    ],
+    ageGroup: "School-going children (5 - 18 years)",
+    level: "Evening Online Madrasa",
+    format: "Live online group interactive classes",
+    duration: "1 hour per session | 4 days a week",
+    keyTopics: ["Qur’an Reading and Recitation with perfection", "Islamic Studies", "Authentic daily Duas and Adhkar.", "Hadith and their practical lessons.", "Arabic Language", "Character Development"],
+    outcomes: "A child who grows in Islamic knowledge, Qur’an recitation, good character, and confidence in practising Islam."
   },
   {
-    id: "arabic-basics",
-    name: "Arabic Language Basics",
-    arabicName: "أساسيات اللغة العربية",
-    shortDescription: "Everyday vocabulary, Quranic root words, and sentence comprehension.",
-    fullDescription: "An engaging introduction to Quranic and conversational Arabic. Young learners acquire foundational vocabulary, colors, numbers, family terms, and simple sentence structures, bridging the gap between reciting the Quran and understanding its vocabulary.",
-    ageGroup: "Ages 7–16",
-    level: "Beginner to Intermediate",
-    format: "Small Group or 1-on-1",
-    duration: "40 mins / 2–3 days weekly",
-    keyTopics: ["Common Quranic vocabulary", "Family, numbers, objects & colors", "Simple pronouns and verb patterns", "Greetings and conversational phrases", "Writing exercises and short dialogues"],
-    outcomes: "Understanding key words recurring across the Holy Qur'an and daily Salah."
-  }
+    id: "start-your-childs-day-with-islamic-learning",
+    name: "Start Your Child's Day with Islamic Learning",
+    arabicName: "تلاوة القرآن الكريم",
+    shortDescription: "Fluent reading directly from the Mushaf with continuous teacher guidance.",
+    fullDescription: ["Make Islamic learning a meaningful part of your child's daily routine.",
+      "Our Morning Online Madrasa is designed for families who prefer morning Islamic classes for their children. It provides a structured learning environment where students can study the Qur’an and essential Islamic subjects before beginning their other daily activities.",
+      "With regular classes and a planned curriculum, children develop consistency in their learning while building a stronger connection with their religion.",
+      "Whether your child is beginning their Islamic education or continuing their learning journey, our program aims to nurture knowledge, discipline, and good character."
+    ],
+    ageGroup: "Children whose daily schedules suit morning classes (5 - 18 years )",
+    level: "Morning Online Madrasa",
+    format: "Live online group interactive classes",
+    duration: "1 hour per session | 4 days a week",
+    keyTopics: ["Qur’an Reading and Recitation with perfection", "Islamic Studies", "Authentic daily Duas and Adhkar.", " Hadith and their practical lessons.", " Arabic Language", "Character Development"],
+    outcomes: "Complete independent recitation of the Holy Quran from cover to cover with clear rhythm."
+  },
+  {
+    id: "begin-your-child's-journey-with-the-book-of-allah-qaida-tilawa-hifdh",
+    name: "Begin Your Child's Journey with the Book of Allah - Qaida | Tilawa | Hifdh",
+    arabicName: "حفظ القرآن الكريم",
+    shortDescription: "Structured memorisation paths with strict retention and daily revision routines.",
+    fullDescription: ["Every child's journey with the Qur’an begins with learning to read it correctly.",
+      "Our Qur’an Classes for Kids are designed to help children develop the skills and confidence needed to read the Book of Allah, beginning with the Arabic alphabet and progressing towards fluent Qur’an recitation.",
+      "We offer three learning pathways according to each child's current reading level: Qaida, Qur’an Tilawa and Hifdh.",
+      "Our teachers guide students step by step, helping them recognise Arabic letters, pronounce them correctly, and gradually develop accurate recitation.",
+      "Choose Your Learning Path :",
+      "A. Qaida — Learn to Read Arabic",
+      "Ideal for children who are beginners or need to strengthen their Arabic reading foundation."
+    ],
+    ageGroup: "5 - 8 years",
+    level: "Qur’an Classes for Kids",
+    format: "Live 1-to-1 / small group online classes",
+    duration: "45–60 mins / 4–5 days weekly",
+    keyTopics: ["Read Qur’anic verses with increasing fluency.", "Improve the pronunciation of Arabic letters.", "Learn and practise essential Tajweed rules.", "Apply appropriate stopping and starting rules as taught.", "Develop accuracy and confidence through regular recitation.", "Build a consistent relationship with the Qur’an."],
+    outcomes: "A student who develops a consistent Islamic learning routine and builds a strong foundation in Qur’an and Islamic knowledge."
+  },
+  {
+    id: "learn-the-quran-with-confidence-at-your-own-pace",
+    name: "Learn the Qur’an with Confidence, at Your Own Pace",
+    arabicName: "أحكام التجويد",
+    shortDescription: "In-depth study of recitation rules, articulation points, and vocal characteristics.",
+    fullDescription: ["It is never too late to begin learning the Qur’an or improve your recitation.",
+      "Our Qur’an Classes for Ladies provide an opportunity for women to learn from the comfort and privacy of their homes, regardless of whether they are complete beginners or already able to read the Qur’an.",
+      "Whether you wish to learn the Arabic alphabet from the beginning or refine your Qur’an recitation, our classes are structured around your current level and learning needs.",
+      "We offer two learning pathways: Qaida and Qur’an Tilawa."
+    ],
+    ageGroup: "Ladies and women of all adult age groups",
+    level: "Qur’an Classes for Ladies",
+    format: "Live online classes",
+    duration: "",
+    keyTopics: ["Improve fluency and accuracy in recitation.", "Work on the correct pronunciation of Arabic letters.", "Learn and practise Tajweed rules.", "Identify and correct common recitation mistakes.", "Improve stopping and starting during recitation.", "Develop consistency in reading the Qur’an."],
+    outcomes: "A student who develops a consistent Islamic learning routine and builds a strong foundation in Qur’an and Islamic knowledge."
+  },
+  {
+    id: "memorise-the-quran-with-guidance-consistency-and-care",
+    name: "Memorise the Qur’an with Guidance, Consistency and Care",
+    arabicName: "الدراسات الإسلامية والعقيدة",
+    shortDescription: "Essential pillars of Iman, Seerah of the Prophet (ﷺ), and moral worldview.",
+    fullDescription: ["The memorisation of the Qur’an is a noble journey that requires dedication, consistency, and proper guidance.",
+      "Our Hifdh Batches are designed for students who wish to memorise the Qur’an systematically under the guidance of a teacher.",
+      "Students work towards their memorisation goals through structured lessons, regular revision, and recitation assessments. Equal importance is given to strengthening previously memorised portions so that students can retain and confidently recite what they have learnt.",
+      "We aim to help students develop discipline, patience, and a lifelong connection with the Book of Allah."
+    ],
+    ageGroup: "Children and students who are ready for Qur’an memorisation; eligibility to be confirmed",
+    level: "Hifdh Batches",
+    format: " Live online memorisation classes",
+    duration: "",
+    keyTopics: ["Initial Assessment", "Structured Memorisation", "Daily and Regular Revision", "Recitation Accuracy", "Progress Monitoring"],
+    outcomes: "A student who progresses towards Qur’an memorisation with proper guidance, regular revision, and a sustainable learning routine."
+  },
+  {
+    id: "supporting-students-in-their-academic-personal-and-islamic-development",
+    name: "Supporting Students in Their Academic, Personal and Islamic Development",
+    arabicName: "الأدعية والأذكار اليومية",
+    shortDescription: "Sunnah prayers for morning, evening, food, travel, and sleep with meanings.",
+    fullDescription: ["Every student faces challenges at different stages of life. Some struggle with motivation or study habits, while others need guidance in managing their time, developing discipline, or navigating everyday challenges.",
+      "Our Student Counselling service aims to provide students and families with structured guidance to help students develop healthy habits, make responsible decisions, and work towards their personal and academic goals.",
+      "With an emphasis on Islamic values, personal responsibility, and practical solutions, the programme seeks to help students grow in confidence, character, and self-discipline.",
+      "The counselling approach and session format can be tailored to the student's age and individual needs."
+    ],
+    ageGroup: "School-going students and teenagers.",
+    level: "Student Counselling",
+    format: "Online one-to-one counselling sessions",
+    duration: "Based on the student's needs and the counselling programme offered",
+    keyTopics: ["Understanding the Student's Needs", "Academic Guidance", "Personal Development", "Islamic Character Development", "Progress and Follow-Up"],
+    outcomes: "A student who is better equipped to manage everyday challenges, develop positive habits, and work towards academic and personal goals."
+  },
 ];
 
 export const LEARNING_JOURNEY_STEPS = [
@@ -272,7 +378,7 @@ export const LEARNING_JOURNEY_STEPS = [
     step: "04",
     title: "Regular Practice",
     subtitle: "Habit-Forming Routine",
-    description: "Consistent 30 to 45-minute sessions scheduled around your family's timezone, ensuring steady progress without homework fatigue."
+    description: "Consistent 1 hour sessions scheduled around your family's timezone, ensuring steady progress without homework fatigue."
   },
   {
     step: "05",

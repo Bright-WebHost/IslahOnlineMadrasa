@@ -181,13 +181,13 @@ export const WorkshopsPage: React.FC<WorkshopsPageProps> = ({
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 xl:gap-14 items-center">
 
             {/* Left Narrative / Title (Col 1: 4 cols) */}
-            <div className="lg:col-span-4 flex flex-col justify-center">
+            <div className="lg:col-span-4 flex flex-col justify-center text-center sm:text-left">
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-                className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#E8EDF9] border border-[#CCD8F0] text-xs text-[#082D7B] font-semibold mb-6 shadow-xs w-fit"
+                className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#E8EDF9] border border-[#CCD8F0] text-xs text-[#082D7B] font-semibold mb-6 shadow-xs w-fit mx-auto sm:mx-0"
               >
                 <Sparkles className="w-3.5 h-3.5 text-[#082D7B]" />
                 <span className="uppercase tracking-widest text-[10.5px] sm:text-[11px] font-bold text-[#082D7B]">
@@ -200,12 +200,12 @@ export const WorkshopsPage: React.FC<WorkshopsPageProps> = ({
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.75, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
-                className="text-3xl sm:text-4xl lg:text-[36px] xl:text-[42px] font-extrabold text-[#082D7B] leading-[1.16] tracking-tight"
+                className="text-3xl sm:text-4xl lg:text-[36px] xl:text-[42px] font-extrabold text-[#082D7B] leading-[1.16] tracking-tight "
               >
-                Making Islamic<br />
-                Learning<br />
-                <span className="whitespace-nowrap">Enjoyable,</span><br />
-                <span className="whitespace-nowrap">Memorable &</span><br />
+                Making Islamic 
+                Learning
+                <span className="whitespace-nowrap"> Enjoyable,</span><br />
+                <span className="">Memorable & </span>
                 Engaging
               </motion.h2>
             </div>
@@ -235,7 +235,7 @@ export const WorkshopsPage: React.FC<WorkshopsPageProps> = ({
             </div>
 
             {/* Right Narrative Paragraphs (Col 3: 4 cols) */}
-            <div className="lg:col-span-4 flex flex-col justify-center">
+            <div className="lg:col-span-4 flex flex-col justify-center text-center sm:text-left">
               <motion.div
                 initial={{ opacity: 0, y: 35 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -304,15 +304,15 @@ export const WorkshopsPage: React.FC<WorkshopsPageProps> = ({
 
                 <div className="p-6 sm:w-7/12 flex flex-col justify-between">
                   <div>
-                    <div className="text-xs  text-[#C9A45C] font-bold mb-1">
+                    {/* <div className="text-xs  text-[#C9A45C] font-bold mb-1">
                       {ws.arabic}
-                    </div>
+                    </div> */}
                     <h3 className=" text-xl font-bold text-[#082D7B] mb-2.5">
                       {ws.title}
                     </h3>
-                    <p className="text-xs text-[#475569] leading-relaxed mb-4">
+                    {/* <p className="text-xs text-[#475569] leading-relaxed mb-4">
                       {ws.description}
-                    </p>
+                    </p> */}
 
                     <div className="space-y-1.5 mb-5">
                       {ws.keyTopics.map((t, idx) => (
@@ -324,13 +324,13 @@ export const WorkshopsPage: React.FC<WorkshopsPageProps> = ({
                     </div>
                   </div>
 
-                  <button
+                  {/* <button
                     onClick={() => onOpenTrialModal(ws.title)}
                     className="inline-flex items-center gap-2 text-xs font-bold text-[#082D7B] hover:text-[#C9A45C] transition-colors cursor-pointer"
                   >
                     <span>Register Interest</span>
                     <ArrowRight className="w-3.5 h-3.5" />
-                  </button>
+                  </button> */}
                 </div>
               </div>
             ))}

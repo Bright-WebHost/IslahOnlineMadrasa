@@ -21,7 +21,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
       {/* Background Image: hero-bg2.webp - On mobile focused to 78% right, on PC centered cover */}
       <img
         className="absolute top-0 left-0 right-0 h-full w-full object-cover object-[78%_center] sm:object-center select-none pointer-events-none"
-        src="/assets/img/Golden Arch, Mosque Skyline, and Lanterns.png"
+        src="/assets/img/hero-bgf.webp"
         alt="Islah International Academy"
       />
 
@@ -69,19 +69,19 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
 
             {/* Primary & Secondary CTAs - Smooth Landing Actions */}
             <div className="animate-landing-actions flex flex-row items-center justify-center lg:justify-start gap-2.5 sm:gap-4 mb-8 sm:mb-10 w-full sm:w-auto">
-              <button
+              {/* <button
                 type="button"
                 onClick={onOpenTrialModal}
                 className="flex-1 sm:flex-none inline-flex items-center justify-center gap-1.5 sm:gap-2.5 px-4 sm:px-7 py-3 sm:py-3.5 text-xs sm:text-sm font-semibold text-white bg-[#C9A45C] hover:bg-[#1B2CC1] active:scale-[0.98] rounded-md transition-all shadow-sm hover:shadow-md cursor-pointer focus-visible:outline-2 focus-visible:outline-[#082D7B] whitespace-nowrap"
               >
                 <span>Book a Free Trial</span>
                 <ArrowRight className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#082D7B] shrink-0" />
-              </button>
+              </button> */}
 
               <button
                 type="button"
                 onClick={onExploreCourses}
-                className="flex-1 sm:flex-none inline-flex items-center justify-center gap-1.5 sm:gap-2 px-3.5 sm:px-6 py-3 sm:py-3.5 text-xs sm:text-sm font-medium text-[#082D7B] bg-white hover:bg-[#F6F1E7] border border-[#082D7B]/20 rounded-md transition-colors cursor-pointer whitespace-nowrap"
+                className="flex-1 sm:flex-none inline-flex items-center justify-center gap-1.5 sm:gap-2 px-3.5 sm:px-6 py-3 sm:py-3.5 text-xs sm:text-sm font-medium text-[#082D7B] bg-white hover:bg-[#c9a45c] border border-[#082D7B]/20 rounded-md transition-colors cursor-pointer whitespace-nowrap"
               >
                 <span>Explore Courses</span>
                 <ArrowRight className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#082D7B] shrink-0" />
@@ -140,14 +140,14 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
 
           {/* Mobile Stacked Pill Buttons - Smooth Landing Actions */}
           <div className="animate-landing-actions flex flex-col items-start gap-2.5 mb-6 w-full">
-            <button
+            {/* <button
               type="button"
               onClick={onOpenTrialModal}
               className="inline-flex items-center justify-center gap-1.5 px-6 py-2.5 text-xs font-bold text-[#061838] bg-[#F3A867] hover:bg-white active:scale-[0.98] rounded-[10px] transition-all shadow-md cursor-pointer whitespace-nowrap"
             >
               <span>Book a Free Trial</span>
               <ArrowRight className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#082D7B] shrink-0" />
-            </button>
+            </button> */}
 
             <button
               type="button"

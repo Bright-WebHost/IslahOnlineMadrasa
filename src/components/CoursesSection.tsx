@@ -93,7 +93,7 @@ export const CoursesSection: React.FC<CoursesSectionProps> = ({
         <div className="flex flex-col items-center justify-center mb-8 sm:mb-12 text-center">
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/15 text-xs text-[#C9A45C] font-semibold uppercase tracking-widest mb-4">
             <Sparkles className="w-3.5 h-3.5" />
-            <span>Structured Curriculum</span>
+            <span>Explore Our Courses</span>
           </div>
 
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-white leading-tight max-w-3xl">
@@ -102,7 +102,7 @@ export const CoursesSection: React.FC<CoursesSectionProps> = ({
           </h2>
 
           <p className="font-sans text-xs sm:text-sm text-white/75 mt-3 max-w-xl">
-            Drag or click cards to explore our 8 structured courses.
+            At Islah Online Madrasa, we provide structured online Islamic education for children, students and adults. Our programs are designed to help learners develop a strong foundation in the Qur’an, Islamic knowledge and everyday Islamic practice.
           </p>
         </div>
 
@@ -256,11 +256,11 @@ export const CoursesSection: React.FC<CoursesSectionProps> = ({
               <h3 className=" text-2xl sm:text-3xl font-bold text-white">
                 {selectedCourse.name}
               </h3>
-              {selectedCourse.arabicName && (
+              {/* {selectedCourse.arabicName && (
                 <span className=" text-lg text-[#E5A83B] mt-1 block">
                   {selectedCourse.arabicName}
                 </span>
-              )}
+              )} */}
             </div>
 
             {/* Metadata Pills */}
@@ -285,9 +285,18 @@ export const CoursesSection: React.FC<CoursesSectionProps> = ({
                 <h4 className="text-xs font-bold uppercase tracking-wider text-[#C9A45C] mb-2">
                   Program Overview
                 </h4>
-                <p className="text-sm text-white/85 leading-relaxed font-sans font-normal">
-                  {selectedCourse.fullDescription}
-                </p>
+                <div className="space-y-3">
+                  {(Array.isArray(selectedCourse.fullDescription)
+                    ? selectedCourse.fullDescription
+                    : typeof selectedCourse.fullDescription === 'string'
+                    ? selectedCourse.fullDescription.split(/\r?\n+/).filter(Boolean)
+                    : []
+                  ).map((paragraph, idx) => (
+                    <p key={idx} className="text-sm text-white/85 leading-relaxed font-sans font-normal">
+                      {paragraph}
+                    </p>
+                  ))}
+                </div>
               </div>
 
               {/* Key Milestones */}
@@ -319,7 +328,7 @@ export const CoursesSection: React.FC<CoursesSectionProps> = ({
             {/* Modal Bottom CTA */}
             <div className="pt-6 border-t border-white/15 flex flex-col sm:flex-row items-center justify-between gap-4">
               <span className="text-xs text-white/60">
-                100% Free Trial Class · Zero Obligation
+                Learning Outcome: {selectedCourse.outcomes}
               </span>
               <button
                 onClick={() => {
@@ -327,9 +336,9 @@ export const CoursesSection: React.FC<CoursesSectionProps> = ({
                   setSelectedCourse(null);
                   onOpenTrialModal(courseName);
                 }}
-                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3 text-xs sm:text-sm font-bold text-[#082D7B] bg-[#C9A45C] hover:bg-white rounded-full transition-all shadow-md cursor-pointer active:scale-95"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3 text-xs sm:text-xs font-bold text-[#082D7B] bg-[#C9A45C] hover:bg-white rounded-full transition-all shadow-md cursor-pointer active:scale-95"
               >
-                <span>Book Free Trial for this Course</span>
+                <span>Contact Now</span>
                 <ArrowRight className="w-4 h-4 text-[#082D7B]" />
               </button>
             </div>

@@ -97,7 +97,7 @@ export const AboutSection: React.FC<AboutSectionProps> = ({
             <div className="flex items-center justify-between gap-4 mb-6 pb-4 border-b border-white/10">
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 backdrop-blur-sm border border-[#C9A45C]/40 text-[#DFBA74] text-xs font-semibold">
                 <span className="w-1.5 h-1.5 rounded-full bg-[#C9A45C] animate-pulse" />
-                <span className="uppercase tracking-[0.18em] text-[8px] sm:text-xs">9th Successful Academic Year</span>
+                <span className="uppercase tracking-[0.18em] text-[8px] sm:text-xs">9th Successful Academic Year, Alhamdulillah</span>
                 <Sparkles className="w-3 h-3 text-[#C9A45C]" />
               </div>
 
@@ -170,7 +170,7 @@ export const AboutSection: React.FC<AboutSectionProps> = ({
                     //   </div>
                     // </div> */}
                 <div className='rounded-xl overflow-hidden'>
-                  <img src="/assets/img/HomeAbout Us.webp" alt="" />
+                  <img src="/assets/img/home-about.webp" alt="" />
                 </div>
                 {/* ); */}
                 {/* // })} */}

@@ -280,11 +280,7 @@ export const StudentAchievementsPage: React.FC<StudentAchievementsPageProps> = (
                     className="select-none pointer-events-none "
                   >
                     <span
-                      className="font-sans font-black tracking-tight uppercase whitespace-nowrap text-[28px] xs:text-[34px] sm:text-[50px] md:text-[64px] lg:text-[74px] leading-none block"
-                      style={{
-                        WebkitTextStroke: '1.6px #082D7B',
-                        color: 'transparent',
-                      }}
+                      className="font-sans font-bold sm:font-black tracking-tight uppercase whitespace-nowrap text-[26px] xs:text-[34px] sm:text-[50px] md:text-[64px] lg:text-[74px] leading-none block text-outline-blue"
                     >
                       BUILDING CONFIDENCE
                     </span>
@@ -307,21 +303,13 @@ export const StudentAchievementsPage: React.FC<StudentAchievementsPageProps> = (
                   className="flex flex-col items-center select-none pointer-events-none shrink-0"
                 >
                   <span
-                    className="font-sans font-black uppercase text-[28px] xs:text-[34px] sm:text-[50px] md:text-[64px] lg:text-[94px] leading-none select-none"
-                    style={{
-                      WebkitTextStroke: '1.6px #082D7B',
-                      color: 'transparent',
-                    }}
+                    className="font-sans font-black uppercase text-[28px] xs:text-[34px] sm:text-[50px] md:text-[64px] lg:text-[94px] leading-none select-none text-outline-blue"
                   >
                     &
                   </span>
 
                   <span
-                    className="font-sans font-black uppercase tracking-[0.04em] sm:tracking-[0.08em] text-[23px] xs:text-[28px] sm:text-[42px] md:text-[52px] lg:text-[60px] leading-none [writing-mode:vertical-rl] select-none text-center mt-2.5 sm:mt-4 md:mt-5"
-                    style={{
-                      WebkitTextStroke: '1.6px #082D7B',
-                      color: 'transparent',
-                    }}
+                    className="font-sans font-black uppercase tracking-[0.04em] sm:tracking-[0.08em] text-[23px] xs:text-[28px] sm:text-[42px] md:text-[52px] lg:text-[60px] leading-none [writing-mode:vertical-rl] select-none text-center mt-2.5 sm:mt-4 md:mt-5 text-outline-blue"
                   >
                     RESPECT
                   </span>
@@ -331,7 +319,7 @@ export const StudentAchievementsPage: React.FC<StudentAchievementsPageProps> = (
             </div>
 
             {/* Bottom Statement Narrative in Live Typography */}
-            <p className="mt-2 sm:mt-3 md:mt-3 text-center text-[#082D7B] font-medium text-xs xs:text-sm sm:text-[15.5px] md:text-[16.5px] leading-relaxed max-w-[900px] mx-auto px-4 font-sans">
+            <p className="mt-2 sm:mt-3 md:mt-3 text-center  font-normal text-xs xs:text-sm sm:text-[15.5px] md:text-[16.5px] leading-relaxed max-w-[900px] mx-auto px-0 font-sans">
               At Islah International Academy, achievements are not measured simply by trophies or test percentages. We celebrate every child who overcomes a stutter to articulate a difficult Arabic letter, every student who memorises their first Surah, and every young Muslim who begins praying five times daily with devotion.
             </p>
 

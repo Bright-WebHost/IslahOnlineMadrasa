@@ -331,27 +331,6 @@ export const CurriculumPage: React.FC<CurriculumPageProps> = ({
         subtitle="A progressive, 6-pillar Islamic education crafted for modern diaspora children—balancing correct Qur'anic articulation with living Sunnah character."
       />
 
-      {/* 2. STATS & ARCHITECTURAL SUMMARY STRIP (Minimal & scannable) */}
-      {/* <section className="relative -mt-6 sm:-mt-8 z-20 max-w-6xl mx-auto px-4 sm:px-6">
-        <div className="rounded-2xl sm:rounded-3xl bg-white/95 backdrop-blur-md p-4 sm:p-6 shadow-[0_16px_36px_rgba(8,45,123,0.08)] border border-[#082D7B]/10 grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 divide-y sm:divide-y-0 sm:divide-x divide-[#082D7B]/8 text-center">
-          <div className="pt-2 sm:pt-0">
-            <span className=" text-2xl sm:text-3xl font-bold text-[#082D7B]">6 Pillars</span>
-            <p className="text-[11px] sm:text-xs text-slate-500 mt-0.5">Comprehensive Deen</p>
-          </div>
-          <div className="pt-2 sm:pt-0">
-            <span className=" text-2xl sm:text-3xl font-bold text-[#082D7B]">3 Stages</span>
-            <p className="text-[11px] sm:text-xs text-slate-500 mt-0.5">Ages 5 to 16</p>
-          </div>
-          <div className="pt-2 sm:pt-0">
-            <span className=" text-2xl sm:text-3xl font-bold text-[#082D7B]">100% 1-on-1</span>
-            <p className="text-[11px] sm:text-xs text-slate-500 mt-0.5">Sanad Mentorship</p>
-          </div>
-          <div className="pt-2 sm:pt-0">
-            <span className=" text-2xl sm:text-3xl font-bold text-[#082D7B]">Bi-Weekly</span>
-            <p className="text-[11px] sm:text-xs text-slate-500 mt-0.5">Parent Reports</p>
-          </div>
-        </div>
-      </section> */}
 
       {/* ============================================================== */}
       {/* 3. IMAGES SCROLLING SECTION ANIMATIONS (Continuous Marquee)     */}
@@ -437,43 +416,6 @@ export const CurriculumPage: React.FC<CurriculumPageProps> = ({
             </div>
           </div>
 
-          {/* Row 2: Rightward Reverse Flow */}
-          <div className="overflow-hidden flex">
-            <div className="animate-marquee-reverse flex gap-4 sm:gap-5">
-              {[...SCROLLING_IMAGES_ROW_2, ...SCROLLING_IMAGES_ROW_2].map((item, idx) => (
-                <div
-                  key={`r2-${idx}`}
-                  className="w-[270px] sm:w-[310px] h-[180px] sm:h-[195px] rounded-2xl overflow-hidden relative group shrink-0 shadow-sm hover:shadow-md border border-[#082D7B]/10 bg-white"
-                >
-                  <img
-                    src={item.image}
-                    alt={item.title}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                    loading="lazy"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#061C48]/90 via-[#061C48]/30 to-transparent" />
-                  
-                  {/* Arabic Badge Top Right */}
-                  <div className="absolute top-2.5 right-3 px-2 py-0.5 rounded-full bg-white/20 backdrop-blur-md border border-white/25 text-[10.5px] font-arabic text-white">
-                    {item.arabic}
-                  </div>
-
-                  {/* Caption Bottom */}
-                  <div className="absolute bottom-3 left-3.5 right-3.5 text-white">
-                    <span className="text-[9.5px] font-bold uppercase tracking-wider text-[#DFBA74] block mb-0.5">
-                      {item.tag}
-                    </span>
-                    <h4 className=" text-sm sm:text-base font-bold leading-tight drop-shadow-xs">
-                      {item.title}
-                    </h4>
-                    <p className="text-[11px] text-white/80 line-clamp-1 mt-0.5">
-                      {item.caption}
-                    </p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
 
         </div>
       </section>
@@ -590,109 +532,6 @@ export const CurriculumPage: React.FC<CurriculumPageProps> = ({
       </section>
 
       {/* ============================================================== */}
-      {/* 5. AGE PROGRESSION ROADMAP (Interactive 3-Stage Stepper)       */}
-      {/* ============================================================== */}
-      <section className="relative py-16 sm:py-24 bg-[#FAF8F5] overflow-hidden">
-        <HeroBgPattern opacity={0.02} />
-
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          
-          <div className="text-center max-w-2xl mx-auto mb-10 sm:mb-14">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#082D7B]/6 border border-[#082D7B]/12 text-xs text-[#082D7B] font-semibold mb-3">
-              <Compass className="w-3.5 h-3.5 text-[#C9A45C]" />
-              <span className="uppercase tracking-widest text-[10px] sm:text-[11px]">Defined Progression</span>
-            </div>
-            <h2 className=" text-2xl sm:text-4xl lg:text-5xl font-bold text-[#082D7B] tracking-tight mb-2">
-              Three Distinct Age Progression Stages
-            </h2>
-            <p className="text-xs sm:text-sm text-slate-600">
-              Children develop differently. Our curriculum gently evolves from phonetics to worship autonomy and youthful conviction.
-            </p>
-          </div>
-
-          {/* Stage Selector Tabs */}
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 mb-8">
-            {AGE_STAGES.map((stg, idx) => {
-              const isActive = activeStage === idx;
-              return (
-                <button
-                  key={stg.stage}
-                  onClick={() => setActiveStage(idx)}
-                  className={`p-4 sm:p-5 rounded-2xl text-left transition-all border cursor-pointer relative overflow-hidden ${
-                    isActive
-                      ? "bg-[#082D7B] text-white border-[#082D7B] shadow-xl -translate-y-1"
-                      : "bg-white text-slate-700 border-[#082D7B]/10 hover:border-[#082D7B]/25 hover:shadow-md"
-                  }`}
-                >
-                  <div className="flex items-center justify-between mb-1.5">
-                    <span className={`text-[10px] font-mono font-bold px-2 py-0.5 rounded-full ${
-                      isActive ? "bg-white/20 text-[#DFBA74]" : "bg-[#082D7B]/8 text-[#082D7B]"
-                    }`}>
-                      {stg.stage}
-                    </span>
-                    <span className={`text-xs font-bold ${isActive ? "text-[#DFBA74]" : "text-[#C9A45C]"}`}>
-                      {stg.ageRange}
-                    </span>
-                  </div>
-                  <h3 className={` text-lg font-bold ${isActive ? "text-white" : "text-[#082D7B]"}`}>
-                    {stg.title}
-                  </h3>
-                </button>
-              );
-            })}
-          </div>
-
-          {/* Active Stage Detailed Panel */}
-          <motion.div
-            key={activeStage}
-            initial={{ opacity: 0, y: 15 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.4 }}
-            className="rounded-3xl bg-white p-6 sm:p-8 lg:p-10 shadow-lg border border-[#082D7B]/10 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-8"
-          >
-            <div className="max-w-xl">
-              <div className="flex items-center gap-2 text-xs font-bold text-[#C9A45C] uppercase tracking-wider mb-1">
-                <span>{AGE_STAGES[activeStage].stage} Milestone Focus</span>
-                <span>•</span>
-                <span className="font-arabic font-normal text-sm">{AGE_STAGES[activeStage].arabic}</span>
-              </div>
-              <h3 className=" text-2xl sm:text-3xl font-bold text-[#082D7B] mb-2">
-                {AGE_STAGES[activeStage].title}
-              </h3>
-              <p className="text-xs sm:text-sm text-[#0568BD] font-medium mb-5">
-                {AGE_STAGES[activeStage].tagline}
-              </p>
-
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                {AGE_STAGES[activeStage].milestones.map((m, i) => (
-                  <div key={i} className="flex items-start gap-2.5 text-xs text-slate-700">
-                    <CheckCircle2 className="w-4 h-4 text-[#C9A45C] shrink-0 mt-0.5" />
-                    <span className="leading-relaxed">{m}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            <div className="w-full lg:w-auto shrink-0 flex flex-col sm:flex-row lg:flex-col gap-3">
-              <button
-                onClick={() => onOpenTrialModal(AGE_STAGES[activeStage].title)}
-                className="w-full sm:w-auto px-6 py-3.5 rounded-full text-xs font-bold text-white bg-[#082D7B] hover:bg-[#051C4E] transition-all shadow-md active:scale-95 text-center cursor-pointer"
-              >
-                Enroll for {AGE_STAGES[activeStage].stage}
-              </button>
-              <button
-                onClick={onOpenWhatsApp}
-                className="w-full sm:w-auto px-6 py-3.5 rounded-full text-xs font-semibold text-[#082D7B] bg-[#082D7B]/5 hover:bg-[#082D7B]/10 transition-all text-center cursor-pointer"
-              >
-                Discuss Placement on WhatsApp
-              </button>
-            </div>
-          </motion.div>
-
-        </div>
-      </section>
-
-      {/* ============================================================== */}
       {/* 6. MEASURABLE TRANSFORMATION (Dark Royal Navy Sanctuary)        */}
       {/* ============================================================== */}
       <section className="relative py-16 sm:py-24 bg-[#051C4E] text-white overflow-hidden">
@@ -757,55 +596,6 @@ export const CurriculumPage: React.FC<CurriculumPageProps> = ({
         </div>
       </section>
 
-      {/* ============================================================== */}
-      {/* 7. FREQUENTLY ASKED QUESTIONS (Minimalist Accordion)           */}
-      {/* ============================================================== */}
-      <section className="relative py-16 sm:py-24 bg-white border-t border-[#082D7B]/8">
-        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-          
-          <div className="text-center mb-10 sm:mb-12">
-            <h2 className=" text-2xl sm:text-4xl font-bold text-[#082D7B] tracking-tight mb-2">
-              Frequently Asked Questions
-            </h2>
-            <p className="text-xs sm:text-sm text-slate-600">
-              Common parent queries regarding curriculum placement, grouping, and flexibility.
-            </p>
-          </div>
-
-          <div className="space-y-3">
-            {FAQS.map((faq, index) => {
-              const isOpen = openFaqIndex === index;
-              return (
-                <div
-                  key={index}
-                  className="rounded-2xl border border-[#082D7B]/10 bg-[#FAF8F5] overflow-hidden transition-all"
-                >
-                  <button
-                    onClick={() => setOpenFaqIndex(isOpen ? null : index)}
-                    className="w-full text-left px-5 sm:px-6 py-4.5 flex items-center justify-between gap-4 cursor-pointer hover:bg-[#082D7B]/4 transition-colors"
-                  >
-                    <span className=" text-base sm:text-lg font-bold text-[#082D7B]">
-                      {faq.q}
-                    </span>
-                    <ChevronDown
-                      className={`w-4 h-4 text-[#082D7B] transition-transform duration-300 shrink-0 ${
-                        isOpen ? 'rotate-180 text-[#C9A45C]' : ''
-                      }`}
-                    />
-                  </button>
-
-                  {isOpen && (
-                    <div className="px-5 sm:px-6 pb-5 pt-1 text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-[#082D7B]/5">
-                      {faq.a}
-                    </div>
-                  )}
-                </div>
-              );
-            })}
-          </div>
-
-        </div>
-      </section>
 
 
       {/* ============================================================== */}

@@ -103,6 +103,18 @@
   box-shadow: 0 0 35px -5px rgba(26, 77, 143, 0.35);
 }
 
+/* Responsive outlined typography */
+.text-outline-blue {
+  -webkit-text-stroke: 0.9px #082D7B;
+  color: transparent;
+}
+
+@media (min-width: 640px) {
+  .text-outline-blue {
+    -webkit-text-stroke: 1.6px #082D7B;
+  }
+}
+
 /* Capsule Navbar styling */
 .capsule-bar {
   background: rgba(255, 255, 255, 0.43);

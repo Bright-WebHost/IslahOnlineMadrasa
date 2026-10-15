@@ -74,7 +74,7 @@ export const LearningJourney: React.FC<LearningJourneyProps> = ({ onOpenTrialMod
 
           {/* Active Step Feature Box */}
           <div className="bg-white rounded-2xl p-8 sm:p-10 border border-[#082D7B]/15 shadow-sm max-w-4xl mx-auto flex flex-col md:flex-row items-center justify-between gap-8">
-            <div className="max-w-xl">
+            <div className="max-w-4xl">
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded bg-[#082D7B]/6 text-xs text-[#082D7B] font-semibold mb-3">
                 <Sparkles className="w-3.5 h-3.5 text-[#C9A45C]" />
                 <span>Phase {LEARNING_JOURNEY_STEPS[activeStepIndex].step} in Depth</span>
@@ -87,7 +87,7 @@ export const LearningJourney: React.FC<LearningJourneyProps> = ({ onOpenTrialMod
               </p>
             </div>
 
-            <div className="shrink-0 flex flex-col items-center gap-3">
+            {/* <div className="shrink-0 flex flex-col items-center gap-3">
               <button
                 onClick={onOpenTrialModal}
                 className="inline-flex items-center gap-2 px-5 py-3 text-xs sm:text-sm font-medium text-white bg-[#082D7B] hover:bg-[#001E3C] rounded-md transition-all shadow-xs cursor-pointer whitespace-nowrap"
@@ -98,7 +98,7 @@ export const LearningJourney: React.FC<LearningJourneyProps> = ({ onOpenTrialMod
               <span className="text-[11px] text-[#151918]/50">
                 1-on-1 trial class with teacher
               </span>
-            </div>
+            </div> */}
           </div>
 
         </div>
