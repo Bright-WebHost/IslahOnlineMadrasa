@@ -30,6 +30,13 @@ interface CurriculumPageProps {
   onOpenWhatsApp: () => void;
 }
 
+const openDirectWhatsAppBooking = (courseName: string) => {
+  const message = encodeURIComponent(
+    `As-salamu alaykum Islah International Academy, I would like to enquire about ${courseName}.`
+  );
+  window.open(`https://wa.me/+919945002120?text=${message}`, '_blank');
+};  
+
 export const CurriculumPage: React.FC<CurriculumPageProps> = ({
   onOpenTrialModal,
   onOpenWhatsApp,
@@ -52,8 +59,10 @@ export const CurriculumPage: React.FC<CurriculumPageProps> = ({
       arabicTitle: "تلاوة القرآن وحفظه",
       category: "quran-aqeedah",
       image: "https://images.unsplash.com/photo-1609599006353-e629aaabfeae?auto=format&fit=crop&w=900&q=80",
-      tagline: "From Noorani Qaida phonetics to fluent Tajweed & Hifz",
-      summary: "Personalized reading pace based on letter articulation (Makharij), measured Tajweed rules, and structured daily revision.",
+      tagline: "Recite the Qur'an with accuracy and confidence.",
+      summary: ["Students learn to read the Qur'an correctly, improve their pronunciation, and apply the essential rules of Tajweed. Beginning with Arabic reading foundations where necessary, they gradually develop fluency and accuracy in recitation.",
+        "Our aim is to help every student improve their recitation and develop a lasting connection with the Book of Allah."
+      ],
       tags: ["Makharij Precision", "Step-by-Step Tajweed", "Structured Hifz"],
       targetAge: "Ages 5 – 16",
       pace: "2 to 5 sessions / week",
@@ -70,8 +79,10 @@ export const CurriculumPage: React.FC<CurriculumPageProps> = ({
       arabicTitle: "العقيدة الإسلامية",
       category: "quran-aqeedah",
       image: "https://images.unsplash.com/photo-1542816417-0983c9c9ad53?auto=format&fit=crop&w=900&q=80",
-      tagline: "Unshakeable conviction in Tawheed & the 6 Articles of Faith",
-      summary: "Anchoring children's understanding of Allah's Names and Attributes with rational clarity, shielding against modern skepticism.",
+      tagline: "Build your faith upon authentic Islamic teachings.",
+      summary: ["Students learn the fundamental beliefs of Islam based on the Qur'an and authentic Sunnah. They develop an understanding of Tawheed, the purpose of their creation, belief in Allah and the pillars of Iman, and the importance of worshipping Allah alone.",
+        "Our aim is to nurture students with sound Islamic beliefs and a clear understanding of their relationship with their Creator."
+      ],
       tags: ["Tawheed & Iman", "Names of Allah", "Guarding Faith"],
       targetAge: "Ages 7 – 16",
       pace: "Integrated weekly module",
@@ -84,12 +95,14 @@ export const CurriculumPage: React.FC<CurriculumPageProps> = ({
     },
     {
       id: "fiqh",
-      title: "Practical Fiqh & Taharah",
+      title: "Fiqh (Islamic Jurisprudence)",
       arabicTitle: "الفقه الإسلامي العملي",
       category: "fiqh-sunnah",
       image: "https://images.unsplash.com/photo-1564769625905-50e93615e769?auto=format&fit=crop&w=900&q=80",
-      tagline: "Hands-on demonstration of Wudu, Salah & daily living",
-      summary: "Students master correct Wudu postures, independent five daily prayers with meaning, Ramadan fasting, and Halal living.",
+      tagline: "Learn how to practise Islam in everyday life.",
+      summary: ["Students learn the essential rulings of Islamic worship and daily practices. Topics include purification, Salah, fasting, Zakah, Hajj, and other age-appropriate matters.",
+        "Through structured lessons, students understand not only what to do but also how to perform acts of worship correctly according to authentic Islamic teachings."
+      ],
       tags: ["Independent Salah", "Wudu Mastery", "Halal Living"],
       targetAge: "Ages 7 – 16",
       pace: "Core practical module",
@@ -101,13 +114,15 @@ export const CurriculumPage: React.FC<CurriculumPageProps> = ({
       ]
     },
     {
-      id: "hadith",
-      title: "Hadith & Prophetic Seerah",
-      arabicTitle: "الحديث الشريف والسيرة",
+      id: "tafseer",
+      title: "Tafseer (Understanding the Qur'an)",
+      arabicTitle: "تفسير القرآن الكريم",
       category: "fiqh-sunnah",
       image: "https://images.unsplash.com/photo-1585036156171-384164a8c675?auto=format&fit=crop&w=900&q=80",
-      tagline: "Mercy, resilience, and timeless role models",
-      summary: "Chronological exploration of Prophet Muhammad's ﷺ life, 40 Hadith of Imam Nawawi, and inspiring stories of the Sahabah.",
+      tagline: "Understand the message of Allah's Book.",
+      summary: ["Students explore selected Surahs and verses of the Qur'an, learning their meanings, explanations, and practical lessons. Through age-appropriate Tafseer, they discover the guidance, wisdom, and reminders contained in Allah's words.",
+        "Our aim is to help students move beyond recitation towards understanding, reflection, and applying Qur'anic guidance in their lives."
+      ],
       tags: ["Prophetic Seerah", "40 Hadith Ethics", "Sahabah Heroes"],
       targetAge: "Ages 6 – 16",
       pace: "Weekly narrative session",
@@ -119,13 +134,15 @@ export const CurriculumPage: React.FC<CurriculumPageProps> = ({
       ]
     },
     {
-      id: "arabic",
-      title: "Qur'anic & Spoken Arabic",
-      arabicTitle: "المحادثة واللغة العربية",
+      id: "hadeeth",
+      title: "Hadeeth (Teachings of Prophet Muhammad ﷺ)",
+      arabicTitle: "الحديث (تعاليم النبي محمد ﷺ)",
       category: "language-adab",
       image: "https://images.unsplash.com/photo-1519791883288-dc8bd696e667?auto=format&fit=crop&w=900&q=80",
-      tagline: "Understanding prayer recitations and conversational basics",
-      summary: "Building high-frequency vocabulary, Quranic comprehension, and natural conversational confidence with native Arabic speakers.",
+      tagline: "Learn from the words and guidance of the Messenger of Allah ﷺ.",
+      summary: ["Students study authentic Hadith that teach important Islamic beliefs, acts of worship, manners, and everyday conduct. They learn the meanings of these narrations and understand how to apply their lessons in daily life.",
+        "Through the authentic Sunnah, students develop a deeper understanding of Islam and learn to follow the example of Prophet Muhammad ﷺ."
+      ],
       tags: ["Qur'anic Vocabulary", "Conversational Drills", "Native Educators"],
       targetAge: "Ages 8 – 16",
       pace: "Conversational tracks",
@@ -138,12 +155,14 @@ export const CurriculumPage: React.FC<CurriculumPageProps> = ({
     },
     {
       id: "duas",
-      title: "Duas, Adhkar & Akhlaaq",
-      arabicTitle: "الأدعية والأذكار والآداب",
+      title: "Authentic Duas and Adhkar",
+      arabicTitle: "الأدعية والأذكار الصحيحة",
       category: "language-adab",
       image: "https://images.unsplash.com/photo-1590076212450-482d790479fb?auto=format&fit=crop&w=900&q=80",
-      tagline: "Daily Masnoon supplications & noble character",
-      summary: "Instilling daily morning/evening Adhkar, polite speech, modesty (Haya'), and deep respect for parents so Deen becomes second nature.",
+      tagline: "Remember Allah throughout the day.",
+      summary: ["Students memorise authentic supplications and words of remembrance from the Qur'an and Sunnah. These include Duas for daily activities, Salah, seeking knowledge, protection, gratitude, and other important occasions.",
+        "Students learn the Arabic text, meanings, and appropriate occasions for reciting these Duas, helping them develop the habit of remembering Allah in their everyday lives."
+      ],
       tags: ["Masnoon Duas", "Etiquette (Adab)", "Habit Checklists"],
       targetAge: "All Ages (5 – 16)",
       pace: "Daily integration in each class",
@@ -153,7 +172,70 @@ export const CurriculumPage: React.FC<CurriculumPageProps> = ({
         "Prophetic manners: honoring parents, truthfulness, humility, and modesty",
         "Dua memorisation flashcards and practical weekly habit tracker"
       ]
-    }
+    },
+    {
+      id: "arabic",
+      title: "Arabic Language",
+      arabicTitle: "اللغة العربية",
+      category: "language-adab",
+      image: "https://images.unsplash.com/photo-1590076212450-482d790479fb?auto=format&fit=crop&w=900&q=80",
+      tagline: "Connect with the language of the Qur'an",
+      summary: ["Students develop their Arabic language skills through age-appropriate vocabulary, essential expressions, and simple conversations. As they progress, they build familiarity with Arabic words and structures that support their Islamic learning.",
+        "Our aim is to make Arabic learning engaging and meaningful while helping students develop a stronger connection with the language of the Qur'an."
+      ],
+      tags: ["Masnoon Duas", "Etiquette (Adab)", "Habit Checklists"],
+      targetAge: "All Ages (5 – 16)",
+      pace: "Core subject",
+      details: [
+        "Interactive alphabet learning with correct pronunciation of each letter",
+        "Reading short Arabic sentences and phrases relevant to Islamic topics",
+        "Basic grammar concepts introduced through simple, clear examples",
+        "Vocabulary building with everyday Arabic words used in the Qur'an and Sunnah"
+      ]
+    },
+    {
+      id: "character-development",
+      title: "Character Development Workshops",
+      arabicTitle: "تطوير الشخصية",
+      category: "character-development",
+      image: "https://images.unsplash.com/photo-1590076212450-482d790479fb?auto=format&fit=crop&w=900&q=80",
+      tagline: "Transform Islamic knowledge into everyday character.",
+      summary: ["Islamic education should be reflected in a student's behaviour, choices, and interactions with others.",
+        "Our character development workshops focus on helping students practise Islamic manners and values, including honesty, kindness, patience, humility, respect, responsibility, and self-discipline.",
+        "Through interactive discussions, practical examples, and guided reflection, students learn how to apply Islamic teachings at home, in school, with friends, and in society.",
+        "Our goal is to nurture students whose character reflects the beautiful teachings of Islam."
+      ],
+      tags: ["Masnoon Duas", "Etiquette (Adab)", "Habit Checklists"],
+      targetAge: "All Ages (5 – 16)",
+      pace: "Core subject",
+      details: [
+        "Interactive alphabet learning with correct pronunciation of each letter",
+        "Reading short Arabic sentences and phrases relevant to Islamic topics",
+        "Basic grammar concepts introduced through simple, clear examples",
+        "Vocabulary building with everyday Arabic words used in the Qur'an and Sunnah"
+      ]
+    },
+    {
+      id: "activities",
+      title: "Islamic Activities",
+      arabicTitle: "الأنشطة الإسلامية",
+      category: "activities",
+      image: "https://images.unsplash.com/photo-1590076212450-482d790479fb?auto=format&fit=crop&w=900&q=80",
+      tagline: "Learn Islam through participation and practice.",
+      summary: ["Our Islamic activities make learning enjoyable, engaging, and practical. Students participate in age-appropriate activities that reinforce what they learn in their lessons and encourage active participation.",
+        "These may include Islamic projects, creative assignments, group activities, knowledge-based games, presentations, and practical learning tasks.",
+        "Through these experiences, students strengthen their understanding, develop confidence, and enjoy learning about their religion."
+      ],
+      tags: ["Masnoon Duas", "Etiquette (Adab)", "Habit Checklists"],
+      targetAge: "All Ages (5 – 16)",
+      pace: "Core subject",
+      details: [
+        "Interactive alphabet learning with correct pronunciation of each letter",
+        "Reading short Arabic sentences and phrases relevant to Islamic topics",
+        "Basic grammar concepts introduced through simple, clear examples",
+        "Vocabulary building with everyday Arabic words used in the Qur'an and Sunnah"
+      ]
+    },
   ];
 
   // Scrolling Gallery Items (Images Scrolling Section Animation)
@@ -202,127 +284,60 @@ export const CurriculumPage: React.FC<CurriculumPageProps> = ({
     }
   ];
 
-  const SCROLLING_IMAGES_ROW_2 = [
-    {
-      title: "Practical Salah Clinic",
-      arabic: "إقامة الصلاة",
-      tag: "Fiqh Demo",
-      image: "https://images.unsplash.com/photo-1564769625905-50e93615e769?auto=format&fit=crop&w=800&q=80",
-      caption: "Step-by-step posture check, Wudu, and mindful presence"
-    },
-    {
-      title: "Aqeedah Foundations",
-      arabic: "عقيدة التوحيد",
-      tag: "Firm Belief",
-      image: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=800&q=80",
-      caption: "Anchoring the 6 Pillars of Iman against modern doubts"
-    },
-    {
-      title: "Sanad-Certified Faculty",
-      arabic: "شيوخ الإجازة",
-      tag: "1-on-1 Care",
-      image: "https://images.unsplash.com/photo-1532012164546-f432f2e3777f?auto=format&fit=crop&w=800&q=80",
-      caption: "100% University degreed teachers with child empathy"
-    },
-    {
-      title: "Living Noble Character",
-      arabic: "مكارم الأخلاق",
-      tag: "Akhlaaq",
-      image: "https://images.unsplash.com/photo-1577896851231-70ef18881754?auto=format&fit=crop&w=800&q=80",
-      caption: "Modesty, honoring parents, and truthfulness in life"
-    },
-    {
-      title: "Structured Hifz Muraja'ah",
-      arabic: "حفظ ومراجعة",
-      tag: "Memorisation",
-      image: "https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=800&q=80",
-      caption: "Steady pace with daily revision preventing memory loss"
-    },
-    {
-      title: "Focused Micro-Classes",
-      arabic: "بيئة هادئة",
-      tag: "Online Sanctuary",
-      image: "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=800&q=80",
-      caption: "Private 1-on-1 lessons designed around family routines"
-    }
-  ];
+  // const SCROLLING_IMAGES_ROW_2 = [
+  //   {
+  //     title: "Practical Salah Clinic",
+  //     arabic: "إقامة الصلاة",
+  //     tag: "Fiqh Demo",
+  //     image: "https://images.unsplash.com/photo-1564769625905-50e93615e769?auto=format&fit=crop&w=800&q=80",
+  //     caption: "Step-by-step posture check, Wudu, and mindful presence"
+  //   },
+  //   {
+  //     title: "Aqeedah Foundations",
+  //     arabic: "عقيدة التوحيد",
+  //     tag: "Firm Belief",
+  //     image: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=800&q=80",
+  //     caption: "Anchoring the 6 Pillars of Iman against modern doubts"
+  //   },
+  //   {
+  //     title: "Sanad-Certified Faculty",
+  //     arabic: "شيوخ الإجازة",
+  //     tag: "1-on-1 Care",
+  //     image: "https://images.unsplash.com/photo-1532012164546-f432f2e3777f?auto=format&fit=crop&w=800&q=80",
+  //     caption: "100% University degreed teachers with child empathy"
+  //   },
+  //   {
+  //     title: "Living Noble Character",
+  //     arabic: "مكارم الأخلاق",
+  //     tag: "Akhlaaq",
+  //     image: "https://images.unsplash.com/photo-1577896851231-70ef18881754?auto=format&fit=crop&w=800&q=80",
+  //     caption: "Modesty, honoring parents, and truthfulness in life"
+  //   },
+  //   {
+  //     title: "Structured Hifz Muraja'ah",
+  //     arabic: "حفظ ومراجعة",
+  //     tag: "Memorisation",
+  //     image: "https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=800&q=80",
+  //     caption: "Steady pace with daily revision preventing memory loss"
+  //   },
+  //   {
+  //     title: "Focused Micro-Classes",
+  //     arabic: "بيئة هادئة",
+  //     tag: "Online Sanctuary",
+  //     image: "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=800&q=80",
+  //     caption: "Private 1-on-1 lessons designed around family routines"
+  //   }
+  // ];
 
-  // 3 Age Stages
-  const AGE_STAGES = [
-    {
-      stage: "Stage 01",
-      ageRange: "Ages 5 – 7",
-      title: "Foundations & Joyful Discovery",
-      arabic: "البدايات المبهجة",
-      tagline: "Instilling love for Allah & the Arabic Alphabet",
-      color: "#082D7B",
-      milestones: [
-        "Noorani Qaida with correct phonetic letter exit points (Makharij)",
-        "Short Surahs of Juz Amma (Al-Fatihah, An-Nas, Al-Falaq, Al-Ikhlas)",
-        "Daily Masnoon bedtime, waking, and mealtime supplications",
-        "Gentle prophetic stories highlighting kindness and honesty"
-      ]
-    },
-    {
-      stage: "Stage 02",
-      ageRange: "Ages 8 – 11",
-      title: "Practical Worship & Understanding",
-      arabic: "الفهم والعبادة",
-      tagline: "Mastering independent Salah, Tajweed rules, and essential creed",
-      color: "#0B3388",
-      milestones: [
-        "Applied Tajweed rules with continuous teacher recitation oversight",
-        "Complete step-by-step Fiqh of Wudu and Salah with meaning of recitations",
-        "Aqeedah: The 6 Pillars of Iman and recognizing Tawheed in nature",
-        "Selections from 40 Hadith of Imam Nawawi on good character"
-      ]
-    },
-    {
-      stage: "Stage 03",
-      ageRange: "Ages 12 – 16",
-      title: "Conviction & Youth Mentorship",
-      arabic: "اليقين والريادة",
-      tagline: "Thematic Tafseer, contemporary ethics, and spoken Arabic",
-      color: "#082D7B",
-      milestones: [
-        "Fluent Qur'anic recitation with advanced Tajweed rules and Tafseer insights",
-        "Fiqh of Fasting, Halal living, and addressing modern youth faith challenges",
-        "Deep-dive Seerah: The Prophet's leadership, ethics, and Sahabah role models",
-        "Spoken Arabic conversation tracks and deeper Qur'anic vocabulary"
-      ]
-    }
-  ];
+  
 
-  // FAQs
-  const FAQS = [
-    {
-      q: "What subjects are included in the curriculum?",
-      a: "Our core curriculum comprehensively covers six essential pillars: Qur'an Reading & Memorisation (with Tajweed), Aqeedah (Islamic Creed), Fiqh (Practical Worship & Daily Living), Hadith & Seerah (Life of Prophet Muhammad ﷺ), Arabic Conversation & Vocabulary, and Duas, Adhkar & Islamic Manners (Akhlaaq)."
-    },
-    {
-      q: "How are students evaluated and placed?",
-      a: "Every child begins with a complimentary 1-on-1 placement assessment with a senior educator. We evaluate their reading fluency, prior knowledge, age, and comfort level, tailoring a custom roadmap before regular classes begin."
-    },
-    {
-      q: "Is Qur'an memorisation (Hifz) included?",
-      a: "Yes. General students memorize Juz Amma and Surahs recited in daily Salah. For students aspiring to memorize the entire Qur'an, we provide a dedicated Hifz Track with daily revision (Muraja'ah)."
-    },
-    {
-      q: "Can complete beginners join without prior Arabic?",
-      a: "Absolutely. Many students join with zero prior Arabic background. Our patient, English-fluent teachers start gently with the Noorani Qaida method until independent reading is mastered."
-    },
-    {
-      q: "Can parents customize their child's focus?",
-      a: "Yes. Parents can opt for subject-specific tracks—such as pure Quran Recitation with Tajweed, intensive Arabic conversation, or specialized Islamic Studies sessions."
-    }
-  ];
 
   const filteredSubjects = activeTab === 'all'
     ? SUBJECTS
     : SUBJECTS.filter(s => s.category === activeTab);
 
   return (
-    <div className="min-h-screen bg-[#FAF8F5] text-[#151918] selection:bg-[#C9A45C]/25">
+    <div className="min-h-screen bg-[#FAF8F5] text-[#151918] selection:bg-[#C9A45C]/25 ">
       
       {/* 1. HERO INNER BANNER */}
       <InnerBanner
@@ -330,6 +345,106 @@ export const CurriculumPage: React.FC<CurriculumPageProps> = ({
         breadcrumb="Curriculum"
         subtitle="A progressive, 6-pillar Islamic education crafted for modern diaspora children—balancing correct Qur'anic articulation with living Sunnah character."
       />
+
+      <section className="relative py-16 sm:py-24 bg-white overflow-hidden">
+              <HeroBgPattern opacity={0.02} />
+      
+              <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 xl:gap-14 items-center">
+      
+                  {/* Left Narrative / Title (Col 1: 4 cols) */}
+                  <div className="lg:col-span-4 flex flex-col justify-center text-center sm:text-left">
+                    <motion.div
+                      initial={{ opacity: 0, y: 20 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      viewport={{ once: true }}
+                      transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+                      className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#E8EDF9] border border-[#CCD8F0] text-xs text-[#082D7B] font-semibold mb-6 shadow-xs w-fit mx-auto sm:mx-0"
+                    >
+                      <Sparkles className="w-3.5 h-3.5 text-[#082D7B]" />
+                      <span className="uppercase tracking-widest text-[10.5px] sm:text-[11px] font-bold text-[#082D7B]">
+                        Our Curriculum
+                      </span>
+                    </motion.div>
+      
+                    <motion.h2
+                      initial={{ opacity: 0, y: 35 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      viewport={{ once: true }}
+                      transition={{ duration: 0.75, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
+                      className="text-3xl sm:text-4xl lg:text-[36] xl:text-[44px] font-extrabold text-[#082D7B] leading-[1.26] tracking-tight mx-auto"
+                    >
+                      Knowledge That Inspires.
+                      <span className="whitespace-nowrap"> Character</span><br />
+                      <span className="whitespace-nowrap">That Reflects </span>
+                      Islam
+                    </motion.h2>
+                  </div>
+      
+                  {/* Center Arched Image (Col 2: 4 cols) */}
+                  <div className="lg:col-span-4 flex justify-center items-center py-4 lg:py-0">
+                    <motion.div
+                      initial={{ opacity: 0, y: 90 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      viewport={{ once: true, margin: "-40px" }}
+                      transition={{ duration: 0.95, delay: 0.15, ease: [0.16, 1, 0.3, 1] }}
+                      className="relative"
+                    >
+                      {/* Outer delicate gold oval/capsule frame */}
+                      <div className="relative w-[265px] sm:w-[295px] lg:w-[315px] xl:w-[330px] h-[385px] sm:h-[435px] lg:h-[465px] xl:h-[485px] rounded-full p-2.5 sm:p-3 border-[1.5px] border-[#C5A059] bg-transparent shadow-xs transition-transform duration-500 hover:scale-[1.02]">
+                        {/* Inner clipped image container */}
+                        <div className="w-full h-full rounded-full overflow-hidden bg-[#F0EDE6] shadow-sm relative group">
+                          <img
+                            src="/assets/img/HomeAbout Us.webp"
+                            alt="Muslim student learning enthusiastically in online Islamic workshop"
+                            className="w-full h-full object-cover object-[center_30%] transition-transform duration-700 group-hover:scale-105"
+                            loading="eager"
+                          />
+                        </div>
+                      </div>
+                    </motion.div>
+                  </div>
+      
+                  {/* Right Narrative Paragraphs (Col 3: 4 cols) */}
+                  <div className="lg:col-span-4 flex flex-col justify-center text-center sm:text-left">
+                    <motion.div
+                      initial={{ opacity: 0, y: 35 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      viewport={{ once: true }}
+                      transition={{ duration: 0.8, delay: 0.25, ease: [0.22, 1, 0.36, 1] }}
+                      className="space-y-6 text-[#475569] text-sm sm:text-base lg:text-[15.5px] xl:text-[16px] leading-relaxed"
+                    >
+                      <motion.p
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.65, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
+                      >
+                        At Islah Online Madrasa, our curriculum goes beyond teaching Islamic knowledge. We aim to nurture students who understand their religion, practise Islam in their daily lives, and develop excellent character.
+                      </motion.p>
+      
+                      <motion.p
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.65, delay: 0.45, ease: [0.22, 1, 0.36, 1] }}
+                      >
+                        Our structured curriculum combines the study of the Qur'an and authentic Sunnah with essential Islamic sciences, Arabic language learning, and practical character development.
+                      </motion.p>
+                      <motion.p
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.65, delay: 0.45, ease: [0.22, 1, 0.36, 1] }}
+                      >
+                        Through engaging lessons, interactive activities, and guided learning, we help students build a strong Islamic foundation and develop a lifelong connection with their religion.
+                      </motion.p>
+                    </motion.div>
+                  </div>
+      
+                </div>
+              </div>
+            </section>
 
 
       {/* ============================================================== */}
@@ -430,7 +545,7 @@ export const CurriculumPage: React.FC<CurriculumPageProps> = ({
             <div>
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#082D7B]/6 border border-[#082D7B]/12 text-xs text-[#082D7B] font-semibold mb-3">
                 <Layers className="w-3.5 h-3.5 text-[#C9A45C]" />
-                <span className="uppercase tracking-widest text-[10px] sm:text-[11px]">Syllabus Breakdown</span>
+                <span className="uppercase tracking-widest text-[10px] sm:text-[11px]">Explore Our Subjects</span>
               </div>
               <h2 className=" text-2xl sm:text-4xl lg:text-5xl font-bold text-[#082D7B] tracking-tight">
                 Six Pillars of Islamic Excellence
@@ -438,7 +553,7 @@ export const CurriculumPage: React.FC<CurriculumPageProps> = ({
             </div>
 
             {/* Filter Tabs */}
-            <div className="flex items-center gap-1.5 p-1 bg-[#F5F2EB] rounded-full self-start md:self-auto overflow-x-auto scrollbar-none">
+            {/* <div className="flex items-center gap-1.5 p-1 bg-[#F5F2EB] rounded-full self-start md:self-auto overflow-x-auto scrollbar-none">
               {[
                 { id: 'all', label: 'All Pillars' },
                 { id: 'quran-aqeedah', label: "Qur'an & Creed" },
@@ -457,13 +572,13 @@ export const CurriculumPage: React.FC<CurriculumPageProps> = ({
                   {tab.label}
                 </button>
               ))}
-            </div>
+            </div> */}
           </div>
 
           {/* 6 Disciplines Grid (Sleek, minimal, scannable) */}
           <motion.div
             layout
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6"
+            className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6"
           >
             <AnimatePresence>
               {filteredSubjects.map((sub, idx) => (
@@ -480,7 +595,7 @@ export const CurriculumPage: React.FC<CurriculumPageProps> = ({
                   <div>
                     {/* Top Row: Arabic title + Serial */}
                     <div className="flex items-center justify-between gap-3 mb-4">
-                      <span className="font-arabic text-sm text-[#082D7B]/80 font-medium">
+                      <span className="font-arabic text-[10px] sm:text-sm text-[#082D7B]/80 font-medium">
                         {sub.arabicTitle}
                       </span>
                       <span className="text-[10px] font-mono font-bold px-2.5 py-0.5 rounded-full bg-white text-slate-500 border border-slate-200">
@@ -489,21 +604,21 @@ export const CurriculumPage: React.FC<CurriculumPageProps> = ({
                     </div>
 
                     {/* Subject Title & Tagline */}
-                    <h3 className=" text-xl font-bold text-[#082D7B] mb-1 group-hover:text-[#0568BD] transition-colors flex items-center justify-between">
+                    <h3 className=" text-sm sm:text-xl font-bold text-[#082D7B] mb-1 group-hover:text-[#0568BD] transition-colors flex items-center justify-between">
                       <span>{sub.title}</span>
-                      <ArrowRight className="w-4 h-4 text-slate-300 group-hover:text-[#082D7B] group-hover:translate-x-1 transition-all" />
+                      {/* <ArrowRight className="w-4 h-4 text-slate-300 group-hover:text-[#082D7B] group-hover:translate-x-1 transition-all" /> */}
                     </h3>
-                    <p className="text-[11px] font-medium text-[#C9A45C] mb-3">
+                    <p className="text-[11px] font-normal sm:font-medium text-[#C9A45C] mb-3">
                       {sub.tagline}
                     </p>
 
                     {/* Summary */}
-                    <p className="text-xs text-slate-600 leading-relaxed mb-5">
+                    {/* <p className="text-xs text-slate-600 leading-relaxed mb-5">
                       {sub.summary}
-                    </p>
+                    </p> */}
 
                     {/* Tag Pills */}
-                    <div className="flex flex-wrap gap-1.5 mb-5">
+                    {/* <div className="flex flex-wrap gap-1.5 mb-5">
                       {sub.tags.map((t, i) => (
                         <span
                           key={i}
@@ -513,12 +628,12 @@ export const CurriculumPage: React.FC<CurriculumPageProps> = ({
                           <span>{t}</span>
                         </span>
                       ))}
-                    </div>
+                    </div> */}
                   </div>
 
                   {/* Card Bottom Meta */}
                   <div className="pt-3.5 border-t border-[#082D7B]/8 flex items-center justify-between text-[11px] text-slate-500">
-                    <span className="font-medium text-[#082D7B]">{sub.targetAge}</span>
+                    {/* <span className="font-medium text-[#082D7B]">{sub.targetAge}</span> */}
                     <span className="text-xs font-semibold text-[#082D7B] group-hover:underline flex items-center gap-1">
                       Explore Syllabus <ChevronRight className="w-3 h-3" />
                     </span>
@@ -531,72 +646,198 @@ export const CurriculumPage: React.FC<CurriculumPageProps> = ({
         </div>
       </section>
 
+      
+
+
+
       {/* ============================================================== */}
-      {/* 6. MEASURABLE TRANSFORMATION (Dark Royal Navy Sanctuary)        */}
+      {/* BEYOND THE CLASSROOM: COMPETITIONS & ENRICHMENT ACTIVITIES     */}
       {/* ============================================================== */}
-      <section className="relative py-16 sm:py-24 bg-[#051C4E] text-white overflow-hidden">
-        <HeroBgPattern isDark opacity={0.06} />
+      <section className="relative py-20 sm:py-28 bg-[#061C48] overflow-hidden rounded-[50px]">
+        {/* Decorative background elements */}
+        <div className="absolute inset-0 pointer-events-none">
+          <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-[#C9A45C]/40 to-transparent" />
+          <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-[#C9A45C]/30 to-transparent" />
+          <div className="absolute -top-40 -right-40 w-[500px] h-[500px] rounded-full bg-[#082D7B]/60 blur-3xl" />
+          <div className="absolute -bottom-40 -left-40 w-[500px] h-[500px] rounded-full bg-[#C9A45C]/8 blur-3xl" />
+          {/* Subtle geometric grid pattern */}
+          <div className="absolute inset-0 opacity-[0.03]" style={{
+            backgroundImage: 'linear-gradient(#C9A45C 1px, transparent 1px), linear-gradient(90deg, #C9A45C 1px, transparent 1px)',
+            backgroundSize: '60px 60px'
+          }} />
+        </div>
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          
-          <div className="text-center max-w-2xl mx-auto mb-12 sm:mb-16">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 border border-white/20 text-xs text-[#DFBA74] font-semibold mb-3">
+
+          {/* Section Header */}
+          <div className="text-center mb-14 sm:mb-18">
+            <motion.div
+              initial={{ opacity: 0, y: 15 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5 }}
+              className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#C9A45C]/15 border border-[#C9A45C]/30 text-[#C9A45C] font-semibold mb-5"
+            >
               <Award className="w-3.5 h-3.5" />
-              <span className="uppercase tracking-widest text-[10px] sm:text-[11px]">Measurable Transformation</span>
-            </div>
-            <h2 className=" text-2xl sm:text-4xl lg:text-5xl font-bold text-white tracking-tight mb-3">
-              Real Outcomes for Your Child
-            </h2>
-            <p className="text-xs sm:text-sm text-white/80">
-              Beyond scores and memorization badges—what every enrolled student actually takes away into daily life.
-            </p>
+              <span className="uppercase tracking-widest text-[10px] sm:text-[11px]">Beyond the Classroom</span>
+            </motion.div>
+
+            <motion.h2
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.1 }}
+              className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white tracking-tight mb-5"
+            >
+              Competitions, Challenges &{' '}
+              <span className="text-[#C9A45C]">Enrichment Activities</span>
+            </motion.h2>
+
+            <motion.p
+              initial={{ opacity: 0, y: 15 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.55, delay: 0.2 }}
+              className="text-slate-300 text-sm sm:text-base max-w-2xl mx-auto leading-relaxed"
+            >
+              Competitions are more than just opportunities to win prizes. When planned well, they encourage
+              students to revise their lessons, build confidence, improve their skills, and develop a healthy
+              spirit of participation.
+            </motion.p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="p-6 sm:p-8 rounded-2xl bg-white/5 backdrop-blur-md border border-white/10 hover:border-white/20 transition-all flex flex-col justify-between">
-              <div>
-                <span className="font-mono text-2xl font-bold text-[#DFBA74] block mb-2">01</span>
-                <h3 className=" text-xl font-bold text-white mb-2">Cognitive Clarity</h3>
-                <p className="text-xs sm:text-sm text-white/80 leading-relaxed">
-                  Deeply understanding the 'why' behind Tawheed and religious obligations, building an internal fortress against contemporary youth skepticism.
-                </p>
-              </div>
-              <div className="mt-6 pt-4 border-t border-white/10 text-[11px] text-[#DFBA74] font-semibold">
-                Shielding Faith & Conviction
-              </div>
-            </div>
+          {/* Intro Card */}
+          <motion.div
+            initial={{ opacity: 0, y: 25 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.65, delay: 0.15 }}
+            className="relative rounded-2xl bg-white/5 border border-white/10 backdrop-blur-sm p-7 sm:p-9 mb-10 sm:mb-14 overflow-hidden"
+          >
+            <div className="absolute top-0 left-0 w-1 h-full bg-gradient-to-b from-[#C9A45C] to-[#C9A45C]/20 rounded-l-2xl" />
+            <div className="absolute -right-8 -top-8 w-40 h-40 rounded-full bg-[#C9A45C]/5 blur-2xl pointer-events-none" />
 
-            <div className="p-6 sm:p-8 rounded-2xl bg-white/5 backdrop-blur-md border border-white/10 hover:border-white/20 transition-all flex flex-col justify-between">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-10 items-start">
               <div>
-                <span className="font-mono text-2xl font-bold text-[#DFBA74] block mb-2">02</span>
-                <h3 className=" text-xl font-bold text-white mb-2">Autonomous Salah</h3>
-                <p className="text-xs sm:text-sm text-white/80 leading-relaxed">
-                  Independent, timely prayer with correct Wudu postures, meaningful recitations, and genuine mindfulness (Khushoo) rather than mechanical motions.
+                <h3 className="text-lg sm:text-xl font-bold text-white mb-3">
+                  Making Islamic Learning Engaging and Rewarding
+                </h3>
+                <p className="text-slate-300 text-sm leading-relaxed">
+                  At Islah Online Madrasa, we encourage students to put their knowledge into practice
+                  through engaging competitions and enrichment activities.
                 </p>
               </div>
-              <div className="mt-6 pt-4 border-t border-white/10 text-[11px] text-[#DFBA74] font-semibold">
-                Daily Living Devotion
+              <div>
+                <p className="text-slate-300 text-sm leading-relaxed">
+                  These experiences provide opportunities for students to demonstrate their learning,
+                  challenge themselves, and develop confidence while strengthening their connection with Islam.
+                </p>
               </div>
             </div>
+          </motion.div>
 
-            <div className="p-6 sm:p-8 rounded-2xl bg-white/5 backdrop-blur-md border border-white/10 hover:border-white/20 transition-all flex flex-col justify-between">
-              <div>
-                <span className="font-mono text-2xl font-bold text-[#DFBA74] block mb-2">03</span>
-                <h3 className=" text-xl font-bold text-white mb-2">Radiant Akhlaaq</h3>
-                <p className="text-xs sm:text-sm text-white/80 leading-relaxed">
-                  Polite speech, honoring parents, natural recitation of daily Masnoon Duas, and holding quiet confidence in their Muslim identity anywhere.
+          {/* Label */}
+          <motion.p
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+            className="text-[#C9A45C] text-xs font-bold uppercase tracking-widest mb-6 text-center"
+          >
+            Our competitions may include
+          </motion.p>
+
+          {/* Competition Activities Grid */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5">
+            {[
+              {
+                icon: <BookOpen className="w-5 h-5" />,
+                title: "Qur'an Recitation",
+                description: "Demonstrate correct pronunciation, fluency, and Tajweed.",
+                accent: "#C9A45C",
+                num: "01"
+              },
+              {
+                icon: <Star className="w-5 h-5" />,
+                title: "Hifdh Competitions",
+                description: "Showcase Qur'an memorisation and revision.",
+                accent: "#7BB3FF",
+                num: "02"
+              },
+              {
+                icon: <GraduationCap className="w-5 h-5" />,
+                title: "Islamic Quiz Competitions",
+                description: "Test knowledge of Aqeedah, Fiqh, Seerah, Hadith, and other Islamic subjects.",
+                accent: "#86EFAC",
+                num: "03"
+              },
+              {
+                icon: <Heart className="w-5 h-5" />,
+                title: "Dua Memorisation",
+                description: "Recite authentic Duas and demonstrate understanding of their meanings.",
+                accent: "#F9A8D4",
+                num: "04"
+              },
+              {
+                icon: <MessageCircle className="w-5 h-5" />,
+                title: "Islamic Presentations",
+                description: "Share knowledge of Islamic topics and develop communication skills.",
+                accent: "#A5F3FC",
+                num: "05"
+              },
+              {
+                icon: <Sparkles className="w-5 h-5" />,
+                title: "Creative Islamic Challenges",
+                description: "Participate in age-appropriate activities that encourage learning, reflection, and creativity.",
+                accent: "#C9A45C",
+                num: "06"
+              }
+            ].map((item, idx) => (
+              <motion.div
+                key={item.num}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: idx * 0.07 }}
+                className="group relative rounded-2xl bg-white/[0.04] border border-white/10 hover:border-white/20 hover:bg-white/[0.07] transition-all duration-300 p-6 overflow-hidden cursor-default"
+              >
+                {/* Subtle corner glow on hover */}
+                <div
+                  className="absolute top-0 right-0 w-24 h-24 rounded-full blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"
+                  style={{ backgroundColor: `${item.accent}18` }}
+                />
+
+                {/* Number badge */}
+                <span className="absolute top-4 right-4 text-[10px] font-mono font-bold text-white/20 group-hover:text-white/40 transition-colors">
+                  {item.num}
+                </span>
+
+                {/* Icon */}
+                <div
+                  className="w-10 h-10 rounded-xl flex items-center justify-center mb-4 transition-transform duration-300 group-hover:scale-105"
+                  style={{ backgroundColor: `${item.accent}20`, color: item.accent }}
+                >
+                  {item.icon}
+                </div>
+
+                {/* Content */}
+                <h4 className="text-white font-bold text-sm sm:text-base mb-2 leading-snug">
+                  {item.title}
+                </h4>
+                <p className="text-slate-400 text-xs sm:text-sm leading-relaxed group-hover:text-slate-300 transition-colors">
+                  {item.description}
                 </p>
-              </div>
-              <div className="mt-6 pt-4 border-t border-white/10 text-[11px] text-[#DFBA74] font-semibold">
-                Prophetic Etiquette & Adab
-              </div>
-            </div>
+
+                {/* Bottom accent line */}
+                <div
+                  className="absolute bottom-0 left-0 h-[2px] w-0 group-hover:w-full transition-all duration-500 rounded-b-2xl"
+                  style={{ backgroundColor: item.accent }}
+                />
+              </motion.div>
+            ))}
           </div>
-
         </div>
       </section>
-
-
 
       {/* ============================================================== */}
       {/* 9. MODAL: DETAILED SYLLABUS INSPECTION                         */}
@@ -636,8 +877,8 @@ export const CurriculumPage: React.FC<CurriculumPageProps> = ({
 
                 <div className="absolute bottom-3 left-5 right-5 text-white">
                   <div className="flex items-center justify-between text-xs mb-0.5">
-                    <span className="text-[#DFBA74] font-semibold">{selectedSubjectModal.targetAge}</span>
-                    <span className="font-arabic font-normal text-sm">{selectedSubjectModal.arabicTitle}</span>
+                    {/* <span className="text-[#DFBA74] font-semibold">{selectedSubjectModal.targetAge}</span> */}
+                    <span className="font-arabic text-[#DFBA74] font-normal text-sm">{selectedSubjectModal.arabicTitle}</span>
                   </div>
                   <h3 className=" text-2xl font-bold">
                     {selectedSubjectModal.title}
@@ -647,34 +888,41 @@ export const CurriculumPage: React.FC<CurriculumPageProps> = ({
 
               {/* Modal Body */}
               <div className="p-6 overflow-y-auto">
-                <p className="text-xs text-slate-600 leading-relaxed mb-4">
-                  {selectedSubjectModal.summary}
-                </p>
+                <div className="space-y-3 mb-4">
+                  {(Array.isArray(selectedSubjectModal.summary)
+                    ? selectedSubjectModal.summary
+                    : [selectedSubjectModal.summary]
+                  ).map((para: string, i: number) => (
+                    <p key={i} className="text-xs text-slate-600 leading-relaxed">
+                      {para}
+                    </p>
+                  ))}
+                </div>
 
-                <h4 className="text-xs font-bold uppercase tracking-wider text-[#082D7B] mb-2.5">
+                {/* <h4 className="text-xs font-bold uppercase tracking-wider text-[#082D7B] mb-2.5">
                   Core Learning Highlights:
-                </h4>
-                <div className="space-y-2 mb-6">
+                </h4> */}
+                {/* <div className="space-y-2 mb-6">
                   {selectedSubjectModal.details.map((item: string, i: number) => (
                     <div key={i} className="flex items-start gap-2.5 text-xs text-slate-700 leading-relaxed">
                       <CheckCircle2 className="w-4 h-4 text-[#C9A45C] shrink-0 mt-0.5" />
                       <span>{item}</span>
                     </div>
                   ))}
-                </div>
+                </div> */}
 
                 <div className="pt-4 border-t border-slate-100 flex items-center justify-between gap-3">
                   <button
                     onClick={() => {
                       const title = selectedSubjectModal.title;
                       setSelectedSubjectModal(null);
-                      onOpenTrialModal(title);
+                      openDirectWhatsAppBooking(title);
                     }}
                     className="flex-1 py-3 px-4 rounded-xl text-xs font-bold text-white bg-[#082D7B] hover:bg-[#051C4E] transition-all text-center cursor-pointer shadow-sm"
                   >
                     Enquire for this Subject
                   </button>
-                  <button
+                  {/* <button
                     onClick={() => {
                       setSelectedSubjectModal(null);
                       onOpenWhatsApp();
@@ -682,7 +930,7 @@ export const CurriculumPage: React.FC<CurriculumPageProps> = ({
                     className="py-3 px-4 rounded-xl text-xs font-semibold text-[#082D7B] bg-[#082D7B]/8 hover:bg-[#082D7B]/15 transition-all text-center cursor-pointer"
                   >
                     Ask on WhatsApp
-                  </button>
+                  </button> */}
                 </div>
               </div>
             </motion.div>

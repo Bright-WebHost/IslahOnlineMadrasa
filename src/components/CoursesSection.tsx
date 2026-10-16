@@ -8,6 +8,12 @@ interface CoursesSectionProps {
   onOpenTrialModal: (courseName?: string) => void;
   onOpenWhatsApp?: () => void;
 }
+const openDirectWhatsAppBooking = (courseName: string) => {
+  const message = encodeURIComponent(
+    `As-salamu alaykum Islah International Academy, I would like to enquire about ${courseName} admission.`
+  );
+  window.open(`https://wa.me/+919945002120?text=${message}`, '_blank');
+};
 
 const COURSE_IMAGES: Record<string, string> = {
   'noorani-qaida': 'https://images.unsplash.com/photo-1609599006353-e629aaabfeae?w=900&q=80&auto=format&fit=crop',
@@ -331,11 +337,8 @@ export const CoursesSection: React.FC<CoursesSectionProps> = ({
                 Learning Outcome: {selectedCourse.outcomes}
               </span>
               <button
-                onClick={() => {
-                  const courseName = selectedCourse.name;
-                  setSelectedCourse(null);
-                  onOpenTrialModal(courseName);
-                }}
+                onClick={() => openDirectWhatsAppBooking(selectedCourse.name)}
+
                 className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3 text-xs sm:text-xs font-bold text-[#082D7B] bg-[#C9A45C] hover:bg-white rounded-full transition-all shadow-md cursor-pointer active:scale-95"
               >
                 <span>Contact Now</span>

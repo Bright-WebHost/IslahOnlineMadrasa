@@ -95,9 +95,9 @@ export const TeachingApproachPage: React.FC<TeachingApproachPageProps> = ({
       description:
         "Every lesson begins with authentic Islamic knowledge rooted in the Holy Qur'an and verified Sunnah. Qualified, formally degreed teachers guide students through structured concepts step-by-step.",
       deliverables: [
-        "Pure knowledge from authentic classical sources without confusion",
-        "Clear phonetics, correct articulation (Makharij), and Tajweed",
-        "Gradual, bite-sized lessons suited to child cognitive attention spans"
+        "Gain authentic Islamic knowledge from the Qur'an and Sunnah.",
+        "Build a strong foundation in essential Islamic subjects.",
+        "Learn from qualified teachers through structured lessons."
       ]
     },
     {
@@ -110,9 +110,9 @@ export const TeachingApproachPage: React.FC<TeachingApproachPageProps> = ({
       description:
         "We never treat children like tape recorders. We unpack the meaning, the context, and the wisdom (Hikmah) behind commandments so children understand *why* we pray, fast, and speak truth.",
       deliverables: [
-        "Unpacking the translation and background of Surahs and Hadith",
-        "Encouraging students to ask questions freely in a warm, welcoming space",
-        "Cultivating an inner emotional bond with Allah and Prophet Muhammad ﷺ"
+        "Understand the meanings and wisdom behind Islamic teachings.",
+        "Connect what you learn with real-life situations.",
+        "Develop a deeper understanding of Islam through reflection and discussion."
       ]
     },
     {
@@ -125,9 +125,9 @@ export const TeachingApproachPage: React.FC<TeachingApproachPageProps> = ({
       description:
         "Education is only complete when it visibly shapes behavior. We provide practical habit trackers and real-world challenges so what is learned in class shines at home, school, and social interactions.",
       deliverables: [
-        "Daily Sunnah habit challenges (e.g. smiling, thanking parents, making Duas)",
-        "Live practical demonstrations of Wudu, Salah, and modest table manners",
-        "Developing strong moral conscience (Taqwa) that guides their choices"
+        "Apply Islamic teachings in everyday life.",
+        "Practise Islamic manners and develop good character.",
+        "Make the Qur'an and Sunnah a guiding light in daily decisions."
       ]
     }
   ];
@@ -356,13 +356,13 @@ export const TeachingApproachPage: React.FC<TeachingApproachPageProps> = ({
                         >
                           0{numChar}
                         </span>
-                        <div className="pt-0.5">
+                        <div className="pt-4.5">
                           <h3 className={`text-2xl sm:text-3xl font-bold tracking-tight mb-1.5 ${textColor}`}>
                             {step.title}
                           </h3>
-                          <p className={`text-xs sm:text-[13px] leading-snug font-normal ${subtitleColor}`}>
+                          {/* <p className={`text-xs sm:text-[13px] leading-snug font-normal ${subtitleColor}`}>
                             {step.tagline}
-                          </p>
+                          </p> */}
                         </div>
                       </div>
 
@@ -419,7 +419,7 @@ export const TeachingApproachPage: React.FC<TeachingApproachPageProps> = ({
               <Gamepad2 className="w-3.5 h-3.5 text-[#C9A45C]" />
               <span className="uppercase tracking-widest text-[10px] sm:text-[11px]">Engagement</span>
             </div>
-            <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-[#082D7B] leading-tight tracking-tight mb-4">
+            <h2 className=" text-3xl sm:text-4xl lg:text-5xl font-bold text-[#082D7B] leading-tight tracking-tight mb-4">
               Interactive Online Learning That Children Love
             </h2>
             <p className="text-sm sm:text-base text-[#475569] leading-relaxed">
@@ -445,7 +445,7 @@ export const TeachingApproachPage: React.FC<TeachingApproachPageProps> = ({
                       </span>
                     </div>
 
-                    <h3 className="font-serif text-lg font-bold text-[#082D7B] mb-2">
+                    <h3 className=" text-lg font-bold text-[#082D7B] mb-2">
                       {item.title}
                     </h3>
 
@@ -463,7 +463,7 @@ export const TeachingApproachPage: React.FC<TeachingApproachPageProps> = ({
 
 
       {/* 5. ALTERNATIVE MINIMAL SECTION: THE LIVING ISLAM ROADMAP */}
-      <section className="relative py-16 sm:py-24 bg-gradient-to-b from-[#082D7B] via-[#093282] to-[#051C4E] text-white overflow-hidden">
+      <section className="relative py-16 sm:py-24 bg-gradient-to-b from-[#082D7B] via-[#093282] to-[#051C4E] text-white overflow-hidden rounded-[20px] sm:rounded-[50px]">
         <HeroBgPattern isDark opacity={0.06} />
 
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">

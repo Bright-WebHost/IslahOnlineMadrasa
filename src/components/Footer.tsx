@@ -10,6 +10,13 @@ interface FooterProps {
   onNavigate?: (page: 'home' | 'about', hashTarget?: string) => void;
 }
 
+const openDirectWhatsAppBooking = () => {
+  const message = encodeURIComponent(
+    `As-salamu alaykum Islah International Academy, I would like to enquire about the admission process. Please provide details.`
+  );
+  window.open(`https://wa.me/+919945002120?text=${message}`, '_blank');
+};
+
 export const Footer: React.FC<FooterProps> = ({ onOpenWhatsApp, onOpenTrialModal, onNavigate }) => {
   const navigate = useNavigate();
   const { pathname } = useLocation();
@@ -64,7 +71,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenWhatsApp, onOpenTrialModal
               />
               <div className="flex flex-col text-left select-none">
                 <span className="font-sans font-bold text-2xl sm:text-[28px] tracking-tight text-white leading-none">
-                  islah
+                  ISLAH
                 </span>
                 <span className="font-mono text-[8px] sm:text-[9px] text-[#C9A45C] font-semibold tracking-widest uppercase leading-none mt-1">
                   International Academy
@@ -73,7 +80,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenWhatsApp, onOpenTrialModal
             </a>
 
             <p className="text-xs sm:text-sm text-white/70 max-w-sm leading-relaxed mb-6 font-sans">
-              Islah International Academy provides structured online Quran and authentic Islamic education for children, helping students learn, grow, and build a strong foundation in Deen.
+              Islah International Academy offers authentic online Quran and Islamic education, nurturing children’s faith and character.
             </p>
 
             {/* <div className="text-xs text-[#C9A45C] font-mono mb-6 bg-white/5 border border-white/10 px-3 py-1.5 rounded-md inline-block">
@@ -121,9 +128,9 @@ export const Footer: React.FC<FooterProps> = ({ onOpenWhatsApp, onOpenTrialModal
               Quick Links
             </h4>
             <ul className="space-y-2.5 text-xs sm:text-sm text-white/70 font-sans">
-              {/* <li>
+              <li>
                 <a href="/" onClick={(e) => handleLink(e, '/')} className="hover:text-white transition-colors cursor-pointer">Home</a>
-              </li> */}
+              </li>
               <li>
                 <a href="/about" onClick={(e) => handleLink(e, '/about')} className="hover:text-white transition-colors cursor-pointer">About Us</a>
               </li>
@@ -133,12 +140,12 @@ export const Footer: React.FC<FooterProps> = ({ onOpenWhatsApp, onOpenTrialModal
               <li>
                 <a href="/teaching-approach" onClick={(e) => handleLink(e, '/teaching-approach')} className="hover:text-white transition-colors cursor-pointer">Teaching Approach</a>
               </li>
-              <li>
+              {/* <li>
                 <a href="/workshops" onClick={(e) => handleLink(e, '/workshops')} className="hover:text-white transition-colors cursor-pointer">Workshops & Activities</a>
               </li>
               <li>
                 <a href="/student-achievements" onClick={(e) => handleLink(e, '/student-achievements')} className="hover:text-white transition-colors cursor-pointer">Student Achievements</a>
-              </li>
+              </li> */}
               {/* <li>
                 <a href="/contact" onClick={(e) => handleLink(e, '/contact')} className="hover:text-white transition-colors cursor-pointer">Contact Us</a>
               </li> */}
@@ -177,15 +184,15 @@ export const Footer: React.FC<FooterProps> = ({ onOpenWhatsApp, onOpenTrialModal
             <ul className="space-y-3 text-xs sm:text-sm text-white/70 font-sans">
               <li className="flex items-start gap-3">
                 <MapPin className="w-4 h-4 text-[#C9A45C] shrink-0 mt-0.5" />
-                <span className="leading-relaxed">Serving students globally across GCC, UK, USA, Canada & worldwide.</span>
+                <span className="leading-relaxed">Serving students globally across India, GCC, UK, USA, Canada & worldwide.</span>
               </li>
               <li className="flex items-center gap-3">
                 <Phone className="w-4 h-4 text-[#C9A45C] shrink-0" />
-                <a href="callto:+1234567890" className="hover:text-white transition-colors">123 456 7890</a>
+                <a href="callto:+917892670183" className="hover:text-white transition-colors">+91 7892670183</a>
               </li>
               <li className="flex items-center gap-3">
                 <Mail className="w-4 h-4 text-[#C9A45C] shrink-0" />
-                <a href={`mailto:${MADRASA_CONFIG.emailDisplay}`} className="hover:text-white transition-colors">
+                <a href={`mailto:[EMAIL_ADDRESS]`} className="hover:text-white transition-colors">
                   {MADRASA_CONFIG.emailDisplay}
                 </a>
               </li>
@@ -194,7 +201,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenWhatsApp, onOpenTrialModal
             <div className="mt-5">
               <button
                 type="button"
-                onClick={onOpenTrialModal}
+                onClick={openDirectWhatsAppBooking}
                 className="w-full py-2.5 px-4 bg-[#C9A45C] hover:bg-[#b8934b] text-[#082A61] font-bold text-xs uppercase tracking-wider rounded-md transition-all shadow-sm hover:shadow-md cursor-pointer"
               >
                 Enquiry Now

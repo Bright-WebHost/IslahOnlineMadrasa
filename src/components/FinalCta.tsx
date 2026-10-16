@@ -79,7 +79,7 @@ export const FinalCta: React.FC<FinalCtaProps> = ({
                 {/* Contact Us Button */}
                 <button
                   type="button"
-                  onClick={handleAction}
+                  onClick={() => navigate('/contact')}
                   className="px-8 sm:px-9 py-2.5 sm:py-3 rounded-xl font-sans font-semibold text-sm sm:text-base text-[#082A61] bg-[#E5A858] hover:bg-[#d99745] active:scale-[0.98] transition-all duration-200 shadow-md hover:shadow-lg cursor-pointer"
                 >
                   {buttonText}

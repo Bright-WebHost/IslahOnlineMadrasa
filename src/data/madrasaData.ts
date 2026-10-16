@@ -43,7 +43,7 @@ export interface Testimonial {
   parentName: string;
   childInfo: string;
   location: string;
-  content: string;
+  content: string | string[];
   videoDuration?: string;
   keyHighlight: string;
 }
@@ -57,9 +57,9 @@ export const MADRASA_CONFIG = {
   name: "Islah International Academy",
   domain: "www.islahonlinemadrasa.com",
   phoneDisplay: "[CLIENT PHONE NUMBER]",
-  phoneNumber: "447000000000", // Placeholder for wa.me link
+  phoneNumber: "9945002120", // Placeholder for wa.me link
   emailDisplay: "admissions@islahonlinemadrasa.com",
-  whatsappBaseUrl: "https://wa.me/447000000000",
+  whatsappBaseUrl: "https://wa.me/9945002120",
   instagramPlaceholder: "[INSTAGRAM URL - @islahonlinemadrasa]",
   youtubePlaceholder: "[YOUTUBE URL - Islah International Academy]",
   establishedYear: "[ESTABLISHED YEAR]",
@@ -555,40 +555,128 @@ export const TESTIMONIALS: Testimonial[] = [
   {
     id: "test-1",
     type: "text",
-    parentName: "Sister Amina K.",
-    childInfo: "Mother of 2 students (Ages 7 and 10)",
-    location: "London, United Kingdom",
-    content: "Finding an online madrasa where teachers are both academically qualified and genuinely kind was difficult until we found Islah. My 7-year-old was shy and hesitant to read Arabic; now she eagerly sits at her desk before the lesson starts. The progress reports on WhatsApp give us complete peace of mind.",
+    parentName: "Hadi and Hud",
+    childInfo: "Mother of 2 students",
+    location: "Saudi, Arabia",
+    content: ["Alhamdulillah, my sons Hadi (Grade 2) and Hud (Grade 1) have learned so much about Islam, the stories of our Prophets, Arabic words that they now use in their daily lives, Surahs, and how to perform Salah. I am truly grateful to the parent who recommended Islah Online Madrasa to us.",
+      "When our relatives heard my children reciting Surahs, they were so happy and impressed. They even asked which madrasa my children attend. In sha Allah, they may also enroll their children at Islah.",
+      "I would also like to sincerely thank all the teachers for their patience, kindness, and dedication in teaching the children. May Allah bless the teachers and the entire Islah team and reward them abundantly for their efforts. Ameen."
+    ],
     keyHighlight: "Patience and gentle encouragement transformed our daughter's confidence."
   },
   {
     id: "test-2",
-    type: "video",
-    parentName: "Brother Tariq M.",
+    type: "text",
+    parentName: "Saira",
     childInfo: "Father of a 9-year-old Hifz student",
-    location: "Ontario, Canada",
-    content: "The one-on-one attention is unmatched. The teacher focuses on correct Makharij from day one, not just rushing through pages. Having flexible scheduling that fits our school routine made all the difference for our family.",
+    location: "Saudi Arabia",
+    content: ["Alhamdulillah, we are very happy with Islah Online Madrasa. After years of searching for the right madrasa, we are truly grateful to have found one that meets our expectations. The limited number of students in each class ensures that every child receives individual attention. We also appreciate the way the teacher for the younger grades teaches, with a loud, clear, and easily understandable manner of speaking.",
+      "Jazakillahu khairan for all the effort and dedication you put into nurturing our children’s Islamic knowledge and values. May Allah bless the entire team and make Islah Online Madrasa a source of sadaqah jariyah. Ameen. 🤍"
+    ],
     videoDuration: "1:35",
     keyHighlight: "True one-on-one attention without rushing pages."
   },
   {
     id: "test-3",
     type: "text",
-    parentName: "Sister Fatima R.",
+    parentName: "Harzan, Zahran",
     childInfo: "Mother of a 6-year-old beginner",
-    location: "Texas, United States",
-    content: "As parents living in the West, establishing a strong Islamic foundation for our children is our highest priority. Islah International Academy provided that safe, respectful, and structured environment. The admission process over WhatsApp was refreshingly simple.",
+    location: "India",
+    content: ["Alhamdulillah, my two children have learned so much through Islah Online Madrasa. They have learned many duas, Surahs, and important Islamic teachings. I am especially happy to see them learning and memorizing Surahs and growing in their Islamic knowledge.",
+      "You are a wonderful teacher who teaches our children with so much love, patience, and care, making their learning experience enjoyable and meaningful.",
+      "Jazakillahu khairan for all your efforts and dedication in teaching our children and helping them learn and understand Islam. May Allah bless you, reward you abundantly for your hard work, and make your efforts a source of sadaqah jariyah. Ameen. 🤲❤️"
+    ],
     keyHighlight: "Safe, respectful environment that fits modern family schedules."
   },
   {
     id: "test-4",
-    type: "video",
-    parentName: "Brother Yusuf A.",
+    type: "text",
+    parentName: "Saad, Zayd",
     childInfo: "Father of two students (Ages 8 and 12)",
-    location: "Sydney, Australia",
-    content: "We appreciate the balance between Qur'an memorisation and character building. The teacher doesn't just teach the words; he explains the moral lessons behind the verses in a way that resonates with our boys.",
+    location: "Qatar",
+    content: "Alhamdulillah, I am extremely pleased with Islah Online madrasa. One of the biggest challenges with online classes is keeping children focused and engaged. However, the teachers here do an excellent job of capturing the children’s attention through fun, interactive, and engaging teaching methods. They make learning enjoyable while ensuring that children remain interested and actively participate in the lessons. I truly appreciate the teachers’ patience, dedication, and creativity in making Quranic and Islamic education a positive experience for kids. I would wholeheartedly recommend this online madrasa to any parent looking for quality Islamic education for their children.  May Allah bless them and reward them abundantly for their sincere efforts. Ameen. 🤍",
     videoDuration: "2:05",
     keyHighlight: "Harmonious balance of Quran recitation and Islamic manners."
+  },
+  {
+    id: "test-5",
+    type: "text",
+    parentName: "Eira",
+    childInfo: "Father of two students (Ages 8 and 12)",
+    location: "Dubai",
+    content: ["Alhamdulillah, this is my daughter's 5th year with Islamic Online Madrasa, and our experience throughout these years has been truly wonderful. We have seen her grow in her Quran recitation, Islamic knowledge, and understanding of our deen. The teachers have always been patient, dedicated, and encouraging, making learning enjoyable and comfortable for her. What we appreciate most is the consistency and care shown towards every child. We are very grateful to Islamic Online Madrasa for being a beautiful part of our daughter's learning journey over the past five years.🤍"
+    ],
+    keyHighlight: ""
+  },
+  {
+    id: "test-6",
+    type: "text",
+    parentName: "Anam, Aizah",
+    childInfo: "",
+    location: "Dubai",
+    content: ["Alhamdulillah, my kids have been studying with the Islamic Online Madrasa for the past 5 years, and it has been a wonderful journey.🌸",
+      "They have gained so much knowledge in Quran and Islamic studies, and we truly appreciate the dedication and patience of all the teachers. It has been a great platform for our children to learn and grow in their deen.",
+      "Jazakumullahu khairan for everything you do."
+    ],
+    keyHighlight: ""
+  },
+  {
+    id: "test-7",
+    type: "text",
+    parentName: "Maher",
+    childInfo: "",
+    location: "Dubai",
+    content: ["Alhamdulillah my two kids are studying at Islamic online madrasa. Son starter his madrasa life from Islamic online madrasa in 2020 since then never got to worry about his Deeni education Alhamdulillah.",
+      "Every year he is growing to be a better person in every possible way.",
+      "He gets to learn new everyday and have memorized many Suhras. Teachers are always really helpful and patient with kids also they make sure each and every kid in the class is taken care of about their studies",
+      "We parents are also at peace as they are getting the right Islamic education regularly Alhamdulillah."
+    ],
+    keyHighlight: ""
+  },
+  {
+    id: "test-8",
+    type: "text",
+    parentName: "Saira",
+    childInfo: "",
+    location: "Saudi Arabia",
+    content: ["Alhamdulillah my two kids are studying at Islamic online madrasa. Son starter his madrasa life from Islamic online madrasa in 2020 since then never got to worry about his Deeni education Alhamdulillah.",
+      "Every year he is growing to be a better person in every possible way.",
+      "He gets to learn new everyday and have memorized many Suhras. Teachers are always really helpful and patient with kids also they make sure each and every kid in the class is taken care of about their studies"
+    ],
+    keyHighlight: ""
+  },
+  {
+    id: "test-9",
+    type: "text",
+    parentName: "Zaroon",
+    childInfo: "",
+    location: "Dubai",
+    content: ["I have enrolled my son in IOM since 4yrs and Alhamdulillah we are very satisfied by the level of teaching. My son has been improved a lot in Quran. Barakallahu feekum and the teachers are outstanding, they monitor the kids individually.classes are held on time. Reply to our concerns immediately.. We would like to continue in IOM In Sha Allah. Highly recommended online class."
+    ],
+    keyHighlight: ""
+  },
+  {
+    id: "test-10",
+    type: "text",
+    parentName: "Latheen",
+    childInfo: "",
+    location: "India",
+    content: ["My child has completed 2years with IOM and the experience has only been pleasant. The teachers have been both kind and strict when they needed to be.",
+"The children nowadays get pampered so much in school, I felt the need to have a madrassa which had a similar environment. I wanted my child to love to learn about Islam and the Quran.",
+"Alhamdulillah my daughter has been enthusiastic about learning the Quran, not disappointing her teachers and looks forward to sitting for madrassa. The class is made fun with all the small games and the stories of the prophets that are included in the classes."
+
+    ],
+    keyHighlight: ""
+  },
+  {
+    id: "test-11",
+    type: "text",
+    parentName: "Mohammad Ayaan, Ibrahim Amaan, Aamina Ayat Shameeyulla",
+    childInfo: "",
+    location: "Saudi Arabia",
+    content: ["Alhumdulillah our 5-year journey with Islamic Online Madrasa has been an outstanding experience. Over these five years, my child has made wonderful progress, significantly improving both his Tajweed and his overall Islamic knowledge. The brilliant teaching methods and the dedicated teachers have been an immense help to our family. They make sure every single lesson is crystal clear, helping the students truly grasp the concepts. We deeply appreciate how approachable the teachers are, as they always take the time to answer any questions and clear the children's doubts with great patience. Furthermore, there is excellent interaction and coordination between parents and teachers, with frequent meetings that keep us closely involved in our child's learning journey."
+    ],
+    keyHighlight: ""
   }
 ];
 

@@ -51,15 +51,15 @@ export const AdmissionsPage: React.FC<AdmissionsPageProps> = ({
     const fullContact = `${countryCode} ${contactNumber}`.trim();
     const formattedMsg = encodeURIComponent(
       `As-salamu alaykum. I would like to enquire about admission at Islah International Academy:\n` +
-      `• Parent Name: ${fullName}\n` +
+      `• Name: ${fullName}\n` +
       `• Email: ${email || 'Not provided'}\n` +
       `• Contact: ${fullContact}\n` +
       `• Child Age: ${childAge || 'Not specified'}\n` +
-      `• Course of Interest: ${course}\n` +
-      `• Message / Inquiry: ${message || 'I would like to book a free trial session.'}\n\n` +
-      `Please provide details on schedule availability and complimentary trial booking.`
+      `• Subject of Interest: ${course}\n` +
+      `• Message / Inquiry: ${message || 'I would like to book session.'}\n\n` +
+      `Please provide details on schedule availability and booking.`
     );
-    window.open(`https://wa.me/${MADRASA_CONFIG.phoneNumber}?text=${formattedMsg}`, '_blank');
+    window.open(`https://wa.me/+919945002120?text=${formattedMsg}`, '_blank');
     setIsSubmitted(true);
   };
 
@@ -68,8 +68,8 @@ export const AdmissionsPage: React.FC<AdmissionsPageProps> = ({
 
       {/* 1. HERO INNER BANNER */}
       <InnerBanner
-        title="Contact Us & Admissions"
-        breadcrumb="Admissions & Contact"
+        title="Contact Us "
+        breadcrumb="Contact"
         subtitle="Join hundreds of happy families across the GCC and around the world. We are always here to help you choose the ideal course for your child."
       />
 
@@ -189,7 +189,7 @@ export const AdmissionsPage: React.FC<AdmissionsPageProps> = ({
 
                       <div>
                         <label className="block text-xs sm:text-sm font-semibold text-gray-800 mb-1.5">
-                          Course of Interest
+                          Subject of Interest
                         </label>
                         <div className="relative">
                           <select
@@ -197,12 +197,15 @@ export const AdmissionsPage: React.FC<AdmissionsPageProps> = ({
                             onChange={(e) => setCourse(e.target.value)}
                             className="w-full px-5 py-3 rounded-full border border-gray-200 bg-white text-xs sm:text-sm text-gray-700 focus:outline-none focus:ring-2 focus:ring-[#0D254C]/20 focus:border-[#0D254C] transition-all cursor-pointer appearance-none pr-10"
                           >
-                            <option value="Noorani Qaida (Beginners)">Noorani Qaida (Beginners)</option>
-                            <option value="Quran with Tajweed">Quran with Tajweed</option>
-                            <option value="Hifz (Quran Memorisation)">Hifz (Quran Memorisation)</option>
-                            <option value="Comprehensive Islamic Studies">Comprehensive Islamic Studies</option>
-                            <option value="Arabic Conversation">Arabic Conversation</option>
-                            <option value="Complimentary Assessment / Unsure">Complimentary Assessment / Unsure</option>
+                            <option value="Qur'an & Tajweed">Qur'an & Tajweed</option>
+                            <option value="Aqeedah (Islamic Creed)">Aqeedah (Islamic Creed)</option>
+                            <option value="Fiqh (Islamic Jurisprudence)">Fiqh (Islamic Jurisprudence)</option>
+                            <option value="Tafseer (Understanding the Qur'an)">Tafseer (Understanding the Qur'an)</option>
+                            <option value="Hadeeth (Teachings of Prophet Muhammad ﷺ)">Hadeeth (Teachings of Prophet Muhammad ﷺ)</option>
+                            <option value="Authentic Duas and Adhkar">Authentic Duas and Adhkar</option>
+                            <option value="Arabic Language">Arabic Language</option>
+                            <option value="Character Development Workshops">Character Development Workshops</option>
+                            <option value="Islamic Activities">Islamic Activities</option>
                           </select>
                           <ChevronDown className="w-4 h-4 text-gray-400 absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none" />
                         </div>
@@ -263,7 +266,7 @@ export const AdmissionsPage: React.FC<AdmissionsPageProps> = ({
 
                     {/* 1. Hotlines */}
                     <a
-                      href={`tel:${MADRASA_CONFIG.phoneNumber}`}
+                      href={`tel:+917892670183`}
                       className="group p-4 rounded-2xl bg-[#1C365C] hover:bg-[#224270] border border-white/10 flex items-center gap-4 transition-all block cursor-pointer"
                     >
                       <div className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-white shrink-0 group-hover:scale-105 transition-transform">
@@ -274,7 +277,10 @@ export const AdmissionsPage: React.FC<AdmissionsPageProps> = ({
                           Hotlines
                         </div>
                         <div className="text-xs sm:text-sm font-bold text-white tracking-wide">
-                          +971 56 490 1466
+                           +91 7892670183 
+                        </div>
+                        <div className="text-xs sm:text-sm font-bold text-white tracking-wide">
+                           +91 9945002120 
                         </div>
                       </div>
                     </a>
@@ -293,7 +299,7 @@ export const AdmissionsPage: React.FC<AdmissionsPageProps> = ({
                           SMS / Whatsapp
                         </div>
                         <div className="text-xs sm:text-sm font-bold text-white tracking-wide">
-                          +971 56 343 6433
+                          +91 9945002120
                         </div>
                       </div>
                     </button>

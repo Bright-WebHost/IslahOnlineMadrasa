@@ -96,10 +96,10 @@ export const Navbar: React.FC<NavbarProps> = ({
                 className="flex flex-col text-left select-none shrink-0 group focus-visible:outline-none cursor-pointer"
                 aria-label="Islah International Academy"
               >
-                <span className="font-impact font-extrabold text-2xl sm:text-xl md:text-2xl tracking-tight text-[#082D7B] group-hover:text-[#409EFF] transition-colors leading-none">
+                <span className="font-sans font-extrabold tracking-[0.12em] text-2xl sm:text-xl md:text-2xl  text-[#082D7B] group-hover:text-[#409EFF] transition-colors leading-none">
                   ISLAH
                 </span>
-                <span className="font-mono text-[6px] sm:text-[7px] text-[#082D7B] font-medium tracking-wide leading-none mt-1">
+                <span className="font-bold text-[6px] sm:text-[7px] text-[#082D7B] tracking-wide leading-none mt-1">
                   INTERNATIONAL ACADEMY
                 </span>
               </a>
@@ -181,7 +181,7 @@ export const Navbar: React.FC<NavbarProps> = ({
                       aria-label="Islah International Academy"
                     >
                       <span className="font-sans font-bold text-2xl sm:text-xl md:text-2xl tracking-tight text-[#082D7B] group-hover:text-[#2563EB] transition-colors leading-none">
-                        islah
+                        Islah
                       </span>
                       <span className="font-mono text-[6px] sm:text-[7px] text-[#082D7B] font-medium tracking-wide leading-none mt-1">
                         INTERNATIONAL ACADEMY
@@ -228,7 +228,7 @@ export const Navbar: React.FC<NavbarProps> = ({
                     }}
                     className="w-full flex items-center justify-center gap-2 py-3 px-4 bg-[#082D7B] hover:bg-[#062464] text-white rounded-full font-semibold text-sm shadow-sm transition-all"
                   >
-                    <span>Book Free Trial</span>
+                    <span>Admission</span>
                     <ArrowRight className="w-4 h-4" />
                   </button>
 
