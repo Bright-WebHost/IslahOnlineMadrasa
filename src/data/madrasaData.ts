@@ -526,7 +526,7 @@ export const STUDENT_PERFORMANCE_ITEMS: StudentPerformanceItem[] = [
     surahOrTopic: "Live Class",
     reflectionQuote: "Alhamdulillah, I used to struggle with joining the letters, but my teacher practiced with me every day until it became easy.",
     videoUrl: "/assets/video/student1.mp4",
-    thumbnailUrl: "/assets/video/student1.webp"
+    thumbnailUrl: "/assets/video/37.png"
   },
   {
     id: "perf-2",
@@ -539,7 +539,7 @@ export const STUDENT_PERFORMANCE_ITEMS: StudentPerformanceItem[] = [
     surahOrTopic: "Story telling competition",
     reflectionQuote: "The Manzil revision cycle helped me keep all my Surahs fresh in my mind.",
     videoUrl: "/assets/video/student2.mp4",
-    thumbnailUrl: "/assets/video/student2.webp"
+    thumbnailUrl: "/assets/video/38.png"
   },
   {
     id: "perf-3",
@@ -551,7 +551,7 @@ export const STUDENT_PERFORMANCE_ITEMS: StudentPerformanceItem[] = [
     duration: "3:39",
     surahOrTopic: "Story of Muhammad PBUH",
     videoUrl: "/assets/video/student3.mp4",
-    thumbnailUrl: "/assets/video/student3.webp"
+    thumbnailUrl: "/assets/video/39.png"
   },
   {
     id: "perf-4",
@@ -563,7 +563,7 @@ export const STUDENT_PERFORMANCE_ITEMS: StudentPerformanceItem[] = [
     duration: "2:26",
     surahOrTopic: "Qaida",
     videoUrl: "/assets/video/student4.mp4",
-    thumbnailUrl: "/assets/video/student4.webp"
+    thumbnailUrl: "/assets/video/40.png"
   },
   {
     id: "perf-5",
@@ -575,7 +575,7 @@ export const STUDENT_PERFORMANCE_ITEMS: StudentPerformanceItem[] = [
     duration: "0:16",
     surahOrTopic: "Activity",
     videoUrl: "/assets/video/student5.mp4",
-    thumbnailUrl: "/assets/video/student5.webp"
+    thumbnailUrl: "/assets/video/41.png"
   }
 ];
 
