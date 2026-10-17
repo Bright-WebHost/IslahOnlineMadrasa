@@ -78,7 +78,7 @@ export const CurriculumPage: React.FC<CurriculumPageProps> = ({
       title: "Aqeedah (Islamic Creed)",
       arabicTitle: "العقيدة الإسلامية",
       category: "quran-aqeedah",
-      image: "https://images.unsplash.com/photo-1542816417-0983c9c9ad53?auto=format&fit=crop&w=900&q=80",
+      image: "/assets/img/29.webp",
       tagline: "Build your faith upon authentic Islamic teachings.",
       summary: ["Students learn the fundamental beliefs of Islam based on the Qur'an and authentic Sunnah. They develop an understanding of Tawheed, the purpose of their creation, belief in Allah and the pillars of Iman, and the importance of worshipping Allah alone.",
         "Our aim is to nurture students with sound Islamic beliefs and a clear understanding of their relationship with their Creator."
@@ -98,7 +98,7 @@ export const CurriculumPage: React.FC<CurriculumPageProps> = ({
       title: "Fiqh (Islamic Jurisprudence)",
       arabicTitle: "الفقه الإسلامي العملي",
       category: "fiqh-sunnah",
-      image: "https://images.unsplash.com/photo-1564769625905-50e93615e769?auto=format&fit=crop&w=900&q=80",
+      image: "/assets/img/30.webp",
       tagline: "Learn how to practise Islam in everyday life.",
       summary: ["Students learn the essential rulings of Islamic worship and daily practices. Topics include purification, Salah, fasting, Zakah, Hajj, and other age-appropriate matters.",
         "Through structured lessons, students understand not only what to do but also how to perform acts of worship correctly according to authentic Islamic teachings."
@@ -118,7 +118,7 @@ export const CurriculumPage: React.FC<CurriculumPageProps> = ({
       title: "Tafseer (Understanding the Qur'an)",
       arabicTitle: "تفسير القرآن الكريم",
       category: "fiqh-sunnah",
-      image: "https://images.unsplash.com/photo-1585036156171-384164a8c675?auto=format&fit=crop&w=900&q=80",
+      image: "/assets/img/31.webp",
       tagline: "Understand the message of Allah's Book.",
       summary: ["Students explore selected Surahs and verses of the Qur'an, learning their meanings, explanations, and practical lessons. Through age-appropriate Tafseer, they discover the guidance, wisdom, and reminders contained in Allah's words.",
         "Our aim is to help students move beyond recitation towards understanding, reflection, and applying Qur'anic guidance in their lives."
@@ -138,7 +138,7 @@ export const CurriculumPage: React.FC<CurriculumPageProps> = ({
       title: "Hadeeth (Teachings of Prophet Muhammad ﷺ)",
       arabicTitle: "الحديث (تعاليم النبي محمد ﷺ)",
       category: "language-adab",
-      image: "https://images.unsplash.com/photo-1519791883288-dc8bd696e667?auto=format&fit=crop&w=900&q=80",
+      image: "/assets/img/32.webp",
       tagline: "Learn from the words and guidance of the Messenger of Allah ﷺ.",
       summary: ["Students study authentic Hadith that teach important Islamic beliefs, acts of worship, manners, and everyday conduct. They learn the meanings of these narrations and understand how to apply their lessons in daily life.",
         "Through the authentic Sunnah, students develop a deeper understanding of Islam and learn to follow the example of Prophet Muhammad ﷺ."
@@ -158,7 +158,7 @@ export const CurriculumPage: React.FC<CurriculumPageProps> = ({
       title: "Authentic Duas and Adhkar",
       arabicTitle: "الأدعية والأذكار الصحيحة",
       category: "language-adab",
-      image: "https://images.unsplash.com/photo-1590076212450-482d790479fb?auto=format&fit=crop&w=900&q=80",
+      image: "/assets/img/33.webp",
       tagline: "Remember Allah throughout the day.",
       summary: ["Students memorise authentic supplications and words of remembrance from the Qur'an and Sunnah. These include Duas for daily activities, Salah, seeking knowledge, protection, gratitude, and other important occasions.",
         "Students learn the Arabic text, meanings, and appropriate occasions for reciting these Duas, helping them develop the habit of remembering Allah in their everyday lives."
@@ -178,7 +178,7 @@ export const CurriculumPage: React.FC<CurriculumPageProps> = ({
       title: "Arabic Language",
       arabicTitle: "اللغة العربية",
       category: "language-adab",
-      image: "https://images.unsplash.com/photo-1590076212450-482d790479fb?auto=format&fit=crop&w=900&q=80",
+      image: "/assets/img/34.webp",
       tagline: "Connect with the language of the Qur'an",
       summary: ["Students develop their Arabic language skills through age-appropriate vocabulary, essential expressions, and simple conversations. As they progress, they build familiarity with Arabic words and structures that support their Islamic learning.",
         "Our aim is to make Arabic learning engaging and meaningful while helping students develop a stronger connection with the language of the Qur'an."
@@ -198,7 +198,7 @@ export const CurriculumPage: React.FC<CurriculumPageProps> = ({
       title: "Character Development Workshops",
       arabicTitle: "تطوير الشخصية",
       category: "character-development",
-      image: "https://images.unsplash.com/photo-1590076212450-482d790479fb?auto=format&fit=crop&w=900&q=80",
+      image: "/assets/img/35.webp",
       tagline: "Transform Islamic knowledge into everyday character.",
       summary: ["Islamic education should be reflected in a student's behaviour, choices, and interactions with others.",
         "Our character development workshops focus on helping students practise Islamic manners and values, including honesty, kindness, patience, humility, respect, responsibility, and self-discipline.",
@@ -220,7 +220,7 @@ export const CurriculumPage: React.FC<CurriculumPageProps> = ({
       title: "Islamic Activities",
       arabicTitle: "الأنشطة الإسلامية",
       category: "activities",
-      image: "https://images.unsplash.com/photo-1590076212450-482d790479fb?auto=format&fit=crop&w=900&q=80",
+      image: "/assets/img/36.webp",
       tagline: "Learn Islam through participation and practice.",
       summary: ["Our Islamic activities make learning enjoyable, engaging, and practical. Students participate in age-appropriate activities that reinforce what they learn in their lessons and encourage active participation.",
         "These may include Islamic projects, creative assignments, group activities, knowledge-based games, presentations, and practical learning tasks.",
@@ -395,7 +395,7 @@ export const CurriculumPage: React.FC<CurriculumPageProps> = ({
                         {/* Inner clipped image container */}
                         <div className="w-full h-full rounded-full overflow-hidden bg-[#F0EDE6] shadow-sm relative group">
                           <img
-                            src="/assets/img/HomeAbout Us.webp"
+                            src="/assets/img/home-about.webp"
                             alt="Muslim student learning enthusiastically in online Islamic workshop"
                             className="w-full h-full object-cover object-[center_30%] transition-transform duration-700 group-hover:scale-105"
                             loading="eager"

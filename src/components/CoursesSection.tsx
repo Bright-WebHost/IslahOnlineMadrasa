@@ -16,7 +16,7 @@ const openDirectWhatsAppBooking = (courseName: string) => {
 };
 
 const COURSE_IMAGES: Record<string, string> = {
-  'noorani-qaida': 'https://images.unsplash.com/photo-1609599006353-e629aaabfeae?w=900&q=80&auto=format&fit=crop',
+  'noorani-qaida': 'https://i.postimg.cc/qB9sH82b/23.jpg',
   'quran-reading': 'https://images.unsplash.com/photo-1585036156171-384164a8c675?w=900&q=80&auto=format&fit=crop',
   'quran-memorisation': 'https://images.unsplash.com/photo-1542816417-0983c9c9ad53?w=900&q=80&auto=format&fit=crop',
   'tajweed-mastery': 'https://images.unsplash.com/photo-1519817650390-64a93db51149?w=900&q=80&auto=format&fit=crop',
@@ -75,7 +75,7 @@ export const CoursesSection: React.FC<CoursesSectionProps> = ({
 
   const carouselItems = useMemo(() => {
     return COURSES.map(course => ({
-      src: COURSE_IMAGES[course.id] || 'https://images.unsplash.com/photo-1609599006353-e629aaabfeae?w=900&q=80&auto=format&fit=crop',
+      src: COURSE_IMAGES[course.id] || course.img || '',
       alt: course.name,
       title: course.name,
       subtitle: `${course.level} · ${course.ageGroup}`,

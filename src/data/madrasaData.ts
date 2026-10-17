@@ -4,6 +4,7 @@ export interface Course {
   arabicName?: string;
   shortDescription: string;
   fullDescription: string | string[];
+  img?: string;
   ageGroup: string;
   level: string;
   format: string;
@@ -28,13 +29,17 @@ export interface Teacher {
 export interface StudentPerformanceItem {
   id: string;
   title: string;
-  category: 'Quran Recitation' | 'Hifz' | 'Tajweed' | 'Islamic Activities' | 'Student Reflections';
+  category: 'Quran Recitation' | 'Hifz' | 'Tajweed' | 'Islamic Activities' | 'Student Reflections' | 'Live Class' | 'Story telling competition' | 'Story of Muhammad PBUH' | 'Qaida' | 'Activity';
   studentName: string;
   ageLevel: string;
   description: string;
   duration: string;
   surahOrTopic: string;
   reflectionQuote?: string;
+  /** YouTube embed URL, e.g. https://www.youtube.com/embed/VIDEO_ID */
+  videoUrl?: string;
+  /** Thumbnail image URL shown on the card before the video loads */
+  thumbnailUrl?: string;
 }
 
 export interface Testimonial {
@@ -153,6 +158,7 @@ export const COURSES: Course[] = [
       "Through engaging lessons, guided learning, and regular interaction with teachers, students gradually build their Islamic knowledge, improve their Qur’an recitation, and develop good manners based on the Qur’an and authentic Sunnah.",
       "Our goal is not simply to teach children what Islam says, but to help them understand its teachings and apply them in their daily lives."
     ],
+    img: '/assets/img/23.webp',
     ageGroup: "School-going children (5 - 18 years)",
     level: "Evening Online Madrasa",
     format: "Live online group interactive classes",
@@ -170,6 +176,7 @@ export const COURSES: Course[] = [
       "With regular classes and a planned curriculum, children develop consistency in their learning while building a stronger connection with their religion.",
       "Whether your child is beginning their Islamic education or continuing their learning journey, our program aims to nurture knowledge, discipline, and good character."
     ],
+    img:'/assets/img/24.webp',
     ageGroup: "Children whose daily schedules suit morning classes (5 - 18 years )",
     level: "Morning Online Madrasa",
     format: "Live online group interactive classes",
@@ -190,6 +197,7 @@ export const COURSES: Course[] = [
       "A. Qaida — Learn to Read Arabic",
       "Ideal for children who are beginners or need to strengthen their Arabic reading foundation."
     ],
+    img: '/assets/img/25.webp',
     ageGroup: "5 - 8 years",
     level: "Qur’an Classes for Kids",
     format: "Live 1-to-1 / small group online classes",
@@ -207,6 +215,7 @@ export const COURSES: Course[] = [
       "Whether you wish to learn the Arabic alphabet from the beginning or refine your Qur’an recitation, our classes are structured around your current level and learning needs.",
       "We offer two learning pathways: Qaida and Qur’an Tilawa."
     ],
+    img: '/assets/img/26.webp',
     ageGroup: "Ladies and women of all adult age groups",
     level: "Qur’an Classes for Ladies",
     format: "Live online classes",
@@ -224,6 +233,7 @@ export const COURSES: Course[] = [
       "Students work towards their memorisation goals through structured lessons, regular revision, and recitation assessments. Equal importance is given to strengthening previously memorised portions so that students can retain and confidently recite what they have learnt.",
       "We aim to help students develop discipline, patience, and a lifelong connection with the Book of Allah."
     ],
+    img: '/assets/img/27.webp',
     ageGroup: "Children and students who are ready for Qur’an memorisation; eligibility to be confirmed",
     level: "Hifdh Batches",
     format: " Live online memorisation classes",
@@ -241,6 +251,7 @@ export const COURSES: Course[] = [
       "With an emphasis on Islamic values, personal responsibility, and practical solutions, the programme seeks to help students grow in confidence, character, and self-discipline.",
       "The counselling approach and session format can be tailored to the student's age and individual needs."
     ],
+    img: '/assets/img/28.webp',
     ageGroup: "School-going students and teenagers.",
     level: "Student Counselling",
     format: "Online one-to-one counselling sessions",
@@ -258,6 +269,7 @@ export const COURSES: Course[] = [
       "Through engaging lessons, guided learning, and regular interaction with teachers, students gradually build their Islamic knowledge, improve their Qur’an recitation, and develop good manners based on the Qur’an and authentic Sunnah.",
       "Our goal is not simply to teach children what Islam says, but to help them understand its teachings and apply them in their daily lives."
     ],
+    img: '/assets/img/23.webp',
     ageGroup: "School-going children (5 - 18 years)",
     level: "Evening Online Madrasa",
     format: "Live online group interactive classes",
@@ -275,6 +287,7 @@ export const COURSES: Course[] = [
       "With regular classes and a planned curriculum, children develop consistency in their learning while building a stronger connection with their religion.",
       "Whether your child is beginning their Islamic education or continuing their learning journey, our program aims to nurture knowledge, discipline, and good character."
     ],
+    img:'/assets/img/24.webp',
     ageGroup: "Children whose daily schedules suit morning classes (5 - 18 years )",
     level: "Morning Online Madrasa",
     format: "Live online group interactive classes",
@@ -295,6 +308,7 @@ export const COURSES: Course[] = [
       "A. Qaida — Learn to Read Arabic",
       "Ideal for children who are beginners or need to strengthen their Arabic reading foundation."
     ],
+    img: '/assets/img/25.webp',
     ageGroup: "5 - 8 years",
     level: "Qur’an Classes for Kids",
     format: "Live 1-to-1 / small group online classes",
@@ -312,6 +326,7 @@ export const COURSES: Course[] = [
       "Whether you wish to learn the Arabic alphabet from the beginning or refine your Qur’an recitation, our classes are structured around your current level and learning needs.",
       "We offer two learning pathways: Qaida and Qur’an Tilawa."
     ],
+    img: '/assets/img/26.webp',
     ageGroup: "Ladies and women of all adult age groups",
     level: "Qur’an Classes for Ladies",
     format: "Live online classes",
@@ -329,6 +344,7 @@ export const COURSES: Course[] = [
       "Students work towards their memorisation goals through structured lessons, regular revision, and recitation assessments. Equal importance is given to strengthening previously memorised portions so that students can retain and confidently recite what they have learnt.",
       "We aim to help students develop discipline, patience, and a lifelong connection with the Book of Allah."
     ],
+    img: '/assets/img/27.webp',
     ageGroup: "Children and students who are ready for Qur’an memorisation; eligibility to be confirmed",
     level: "Hifdh Batches",
     format: " Live online memorisation classes",
@@ -346,6 +362,7 @@ export const COURSES: Course[] = [
       "With an emphasis on Islamic values, personal responsibility, and practical solutions, the programme seeks to help students grow in confidence, character, and self-discipline.",
       "The counselling approach and session format can be tailored to the student's age and individual needs."
     ],
+    img: '/assets/img/28.webp',
     ageGroup: "School-going students and teenagers.",
     level: "Student Counselling",
     format: "Online one-to-one counselling sessions",
@@ -353,6 +370,7 @@ export const COURSES: Course[] = [
     keyTopics: ["Understanding the Student's Needs", "Academic Guidance", "Personal Development", "Islamic Character Development", "Progress and Follow-Up"],
     outcomes: "A student who is better equipped to manage everyday challenges, develop positive habits, and work towards academic and personal goals."
   },
+  
 ];
 
 export const LEARNING_JOURNEY_STEPS = [
@@ -500,54 +518,64 @@ export const STUDENT_PERFORMANCE_ITEMS: StudentPerformanceItem[] = [
   {
     id: "perf-1",
     title: "Surah Ad-Duha with Measured Tajweed",
-    category: "Quran Recitation",
+    category: "Live Class",
     studentName: "[STUDENT - AGE 9]",
     ageLevel: "Level 3 - Tajweed Course",
     description: "Demonstrating clear articulation of difficult letters (Daad and Haa) and smooth melodic pacing during online review.",
-    duration: "1:45",
-    surahOrTopic: "Surah Ad-Duha (93)",
-    reflectionQuote: "Alhamdulillah, I used to struggle with joining the letters, but my teacher practiced with me every day until it became easy."
+    duration: "0:37",
+    surahOrTopic: "Live Class",
+    reflectionQuote: "Alhamdulillah, I used to struggle with joining the letters, but my teacher practiced with me every day until it became easy.",
+    videoUrl: "/assets/video/student1.mp4",
+    thumbnailUrl: "/assets/video/student1.webp"
   },
   {
     id: "perf-2",
     title: "Juz Amma Completion Milestone",
-    category: "Hifz",
+    category: "Story telling competition",
     studentName: "[STUDENT - AGE 11]",
-    ageLevel: "Hifz Track - Stage 1",
+    ageLevel: "Kids Activity",
     description: "Reciting consecutive Surahs from memory during the quarterly oral retention examination without hesitation.",
-    duration: "2:30",
-    surahOrTopic: "Surah Al-Alaq & Al-Qadr",
-    reflectionQuote: "The Manzil revision cycle helped me keep all my Surahs fresh in my mind."
+    duration: "1:54",
+    surahOrTopic: "Story telling competition",
+    reflectionQuote: "The Manzil revision cycle helped me keep all my Surahs fresh in my mind.",
+    videoUrl: "/assets/video/student2.mp4",
+    thumbnailUrl: "/assets/video/student2.webp"
   },
   {
     id: "perf-3",
     title: "Makharij & Noon Sakinah Precision Drill",
-    category: "Tajweed",
+    category: "Story of Muhammad PBUH",
     studentName: "[STUDENT - AGE 8]",
-    ageLevel: "Noorani Qaida Graduate",
+    ageLevel: "Kids Activity",
     description: "Clear practical differentiation between Idgham with Ghunnah and Izhar during live oral recitation.",
-    duration: "1:15",
-    surahOrTopic: "Surah Al-Balad Excerpt"
+    duration: "3:39",
+    surahOrTopic: "Story of Muhammad PBUH",
+    videoUrl: "/assets/video/student3.mp4",
+    thumbnailUrl: "/assets/video/student3.webp"
   },
   {
     id: "perf-4",
     title: "Sunnah Morning & Evening Athkar Presentation",
-    category: "Islamic Activities",
+    category: "Qaida",
     studentName: "[STUDENT - AGE 7]",
     ageLevel: "Daily Duas & Manners",
     description: "Reciting protective supplications with their clear English meanings and reflection on thanking Allah.",
-    duration: "1:50",
-    surahOrTopic: "Sayyid al-Istighfar & Protection Duas"
+    duration: "2:26",
+    surahOrTopic: "Qaida",
+    videoUrl: "/assets/video/student4.mp4",
+    thumbnailUrl: "/assets/video/student4.webp"
   },
   {
     id: "perf-5",
     title: "Why I Love My Quran Class",
-    category: "Student Reflections",
+    category: "Activity",
     studentName: "[STUDENT - AGE 10]",
-    ageLevel: "Quran & Islamic Studies",
+    ageLevel: "Kids Activity",
     description: "Sharing how learning online with Islah helped build confidence at school and love for Salah.",
-    duration: "1:20",
-    surahOrTopic: "Student Voice Reflection"
+    duration: "0:16",
+    surahOrTopic: "Activity",
+    videoUrl: "/assets/video/student5.mp4",
+    thumbnailUrl: "/assets/video/student5.webp"
   }
 ];
 

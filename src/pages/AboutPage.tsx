@@ -493,9 +493,9 @@ export const AboutPage: React.FC<AboutPageProps> = ({
                   {/* Stylized Eye Image (11.png) attached directly to the bottom right of card */}
                   <div className="absolute right-0 bottom-0 select-none pointer-events-none group-hover:scale-105 transition-transform duration-300">
                     <img
-                      src="/assets/img/11.png"
+                      src="/assets/img/22.webp"
                       alt="Vision Eye"
-                      className="w-36 h-36 sm:w-48 sm:h-48 lg:w-56 lg:h-56 object-contain object-bottom-right"
+                      className="w-36 h-36 sm:w-48 sm:h-48 lg:w-64 lg:h-64 object-contain object-bottom-right"
                     />
                   </div>
 
