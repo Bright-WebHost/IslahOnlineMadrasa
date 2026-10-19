@@ -332,7 +332,7 @@ export const AdmissionsPage: React.FC<AdmissionsPageProps> = ({
                   </div>
 
                   <div className="flex items-center gap-4 text-white">
-                    <a
+                    {/* <a
                       href="#"
                       onClick={(e) => { e.preventDefault(); alert("Facebook: @islahonlinemadrasa"); }}
                       className="w-8 h-8 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center text-white transition-colors"
@@ -340,11 +340,11 @@ export const AdmissionsPage: React.FC<AdmissionsPageProps> = ({
                       aria-label="Facebook"
                     >
                       <Facebook className="w-4 h-4" />
-                    </a>
+                    </a> */}
 
                     <a
-                      href="#"
-                      onClick={(e) => { e.preventDefault(); alert(`Instagram: ${MADRASA_CONFIG.instagramPlaceholder}`); }}
+                      href="https://www.instagram.com/islamiconlinemadrasa?utm_source=qr&stkn=N292MjJ0eTJhN2di"
+                      target="_blank"
                       className="w-8 h-8 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center text-white transition-colors"
                       title="Instagram"
                       aria-label="Instagram"
@@ -352,7 +352,7 @@ export const AdmissionsPage: React.FC<AdmissionsPageProps> = ({
                       <Instagram className="w-4 h-4" />
                     </a>
 
-                    <a
+                    {/* <a
                       href="#"
                       onClick={(e) => { e.preventDefault(); alert("Twitter / X: @islahonlinemadrasa"); }}
                       className="w-8 h-8 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center text-white transition-colors"
@@ -370,7 +370,7 @@ export const AdmissionsPage: React.FC<AdmissionsPageProps> = ({
                       aria-label="YouTube"
                     >
                       <Youtube className="w-4 h-4" />
-                    </a>
+                    </a> */}
                   </div>
                 </div>
 

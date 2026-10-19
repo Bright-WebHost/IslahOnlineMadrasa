@@ -89,26 +89,23 @@ export const Footer: React.FC<FooterProps> = ({ onOpenWhatsApp, onOpenTrialModal
 
             {/* Social Channels */}
             <div className="flex items-center gap-3">
-              <button
+              {/* <button
                 type="button"
                 onClick={onOpenWhatsApp}
                 className="w-9 h-9 rounded-md bg-white/5 hover:bg-[#25D366]/20 border border-white/10 flex items-center justify-center text-white hover:text-[#25D366] transition-colors cursor-pointer"
                 title="Chat on WhatsApp"
               >
                 <MessageCircle className="w-4 h-4" />
-              </button>
+              </button> */}
               <a
-                href="#"
-                onClick={(e) => {
-                  e.preventDefault();
-                  alert(`Instagram: ${MADRASA_CONFIG.instagramPlaceholder || '@islahonlinemadrasa'}`);
-                }}
+                href="https://www.instagram.com/islamiconlinemadrasa?utm_source=qr&stkn=N292MjJ0eTJhN2di"
+                target="_blank"
                 className="w-9 h-9 rounded-md bg-white/5 hover:bg-[#E1306C]/20 border border-white/10 flex items-center justify-center text-white hover:text-[#E1306C] transition-colors"
                 title="Instagram Channel"
               >
                 <Instagram className="w-4 h-4" />
               </a>
-              <a
+              {/* <a
                 href="#"
                 onClick={(e) => {
                   e.preventDefault();
@@ -118,7 +115,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenWhatsApp, onOpenTrialModal
                 title="YouTube Channel"
               >
                 <Youtube className="w-4 h-4" />
-              </a>
+              </a> */}
             </div>
           </div>
 

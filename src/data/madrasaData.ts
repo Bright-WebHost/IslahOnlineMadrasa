@@ -63,9 +63,9 @@ export const MADRASA_CONFIG = {
   domain: "www.islahonlinemadrasa.com",
   phoneDisplay: "[CLIENT PHONE NUMBER]",
   phoneNumber: "9945002120", // Placeholder for wa.me link
-  emailDisplay: "admissions@islahonlinemadrasa.com",
+  emailDisplay: "[EMAIL_ADDRESS]",
   whatsappBaseUrl: "https://wa.me/9945002120",
-  instagramPlaceholder: "[INSTAGRAM URL - @islahonlinemadrasa]",
+  instagramPlaceholder: "https://www.instagram.com/islamiconlinemadrasa?utm_source=qr&stkn=N292MjJ0eTJhN2di",
   youtubePlaceholder: "[YOUTUBE URL - Islah International Academy]",
   establishedYear: "[ESTABLISHED YEAR]",
   studentsCount: "[NUMBER OF STUDENTS]",
