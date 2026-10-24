@@ -244,42 +244,42 @@ export const CurriculumPage: React.FC<CurriculumPageProps> = ({
       title: "Tajweed Precision",
       arabic: "أحكام التجويد",
       tag: "Qur'an Lab",
-      image: "https://images.unsplash.com/photo-1609599006353-e629aaabfeae?auto=format&fit=crop&w=800&q=80",
+      image: "/assets/img/book1.webp",
       caption: "Measured articulation, Ghunnah & Makharij rules"
     },
     {
       title: "Young Reciters",
       arabic: "جيل القرآن",
       tag: "Ages 5–7",
-      image: "https://images.unsplash.com/photo-1584286595398-a59f21d313f5?auto=format&fit=crop&w=800&q=80",
+      image: "/assets/img/book2.webp",
       caption: "Gentle phonetics and Noorani Qaida foundational joy"
     },
     {
       title: "Sacred Classical Roots",
       arabic: "التراث الأصيل",
       tag: "Heritage",
-      image: "https://images.unsplash.com/photo-1542816417-0983c9c9ad53?auto=format&fit=crop&w=800&q=80",
+      image: "/assets/img/book3.webp",
       caption: "Authentic text study rooted in sound scholarship"
     },
     {
       title: "Daily Masnoon Adhkar",
       arabic: "أذكار الصباح",
       tag: "Daily Duas",
-      image: "https://images.unsplash.com/photo-1590076212450-482d790479fb?auto=format&fit=crop&w=800&q=80",
+      image: "/assets/img/book4.webp",
       caption: "Connecting waking, eating, and resting routines to Allah"
     },
     {
       title: "Prophetic Seerah",
       arabic: "السيرة العطرة",
       tag: "Role Models",
-      image: "https://images.unsplash.com/photo-1585036156171-384164a8c675?auto=format&fit=crop&w=800&q=80",
+      image: "/assets/img/book5.webp",
       caption: "Living the mercy and resilience of Rasulullah ﷺ"
     },
     {
       title: "Qur'anic Arabic Phrasing",
       arabic: "لغة القرآن",
       tag: "Vocabulary",
-      image: "https://images.unsplash.com/photo-1519791883288-dc8bd696e667?auto=format&fit=crop&w=800&q=80",
+      image: "/assets/img/book6.webp",
       caption: "Understanding high-frequency words recited in Salah"
     }
   ];
@@ -345,6 +345,97 @@ export const CurriculumPage: React.FC<CurriculumPageProps> = ({
         breadcrumb="Curriculum"
         subtitle="A progressive, 6-pillar Islamic education crafted for modern diaspora children—balancing correct Qur'anic articulation with living Sunnah character."
       />
+
+      
+
+
+      {/* ============================================================== */}
+      {/* 3. IMAGES SCROLLING SECTION ANIMATIONS (Continuous Marquee)     */}
+      {/* ============================================================== */}
+      <section className="relative py-16 sm:py-24 overflow-hidden">
+        <HeroBgPattern opacity={0.02} />
+
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-8 sm:mb-12 text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 15 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+            className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#082D7B]/6 border border-[#082D7B]/12 text-xs text-[#082D7B] font-semibold mb-3"
+          >
+            <Sparkles className="w-3.5 h-3.5 text-[#C9A45C]" />
+            <span className="uppercase tracking-widest text-[10px] sm:text-[11px]">Living Classroom Journey</span>
+          </motion.div>
+
+          <motion.h2
+            initial={{ opacity: 0, y: 15 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.1 }}
+            className=" text-2xl sm:text-4xl lg:text-5xl font-bold text-[#082D7B] tracking-tight mb-3"
+          >
+            A Sanctuary of Authentic Islamic Learning
+          </motion.h2>
+
+          <motion.p
+            initial={{ opacity: 0, y: 12 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+            className="text-xs sm:text-sm md:text-base text-slate-600 max-w-xl mx-auto"
+          >
+            Step into our study moments—from gentle Noorani Qaida phonetics to fluent Tajweed recitations and daily living Akhlaaq.
+          </motion.p>
+        </div>
+
+        {/* Dual-Track Flowing Image Marquee */}
+        <div className="space-y-4 sm:space-y-5 relative">
+          
+          {/* Subtle edge vignette fades */}
+          <div className="absolute left-0 inset-y-0 w-12 sm:w-28 bg-gradient-to-r from-[#FAF8F5] to-transparent z-10 pointer-events-none" />
+          <div className="absolute right-0 inset-y-0 w-12 sm:w-28 bg-gradient-to-l from-[#FAF8F5] to-transparent z-10 pointer-events-none" />
+
+          {/* Row 1: Leftward Flow */}
+          <div className="overflow-hidden flex">
+            <div className="animate-marquee flex gap-4 sm:gap-5">
+              {[...SCROLLING_IMAGES_ROW_1, ...SCROLLING_IMAGES_ROW_1].map((item, idx) => (
+                <div
+                  key={`r1-${idx}`}
+                  className="w-[270px] sm:w-[310px] h-[180px] sm:h-[195px] rounded-2xl overflow-hidden relative group shrink-0 shadow-sm hover:shadow-md border border-[#082D7B]/10 bg-white"
+                >
+                  <img
+                    src={item.image}
+                    alt={item.title}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    loading="lazy"
+                  />
+                  {/* <div className="absolute inset-0 bg-gradient-to-t from-[#061C48]/90 via-[#061C48]/30 to-transparent" /> */}
+                  
+                  {/* Arabic Badge Top Right */}
+                  {/* <div className="absolute top-2.5 right-3 px-2 py-0.5 rounded-full bg-white/20 backdrop-blur-md border border-white/25 text-[10.5px] font-arabic text-white">
+                    {item.arabic}
+                  </div> */}
+
+                  {/* Caption Bottom */}
+                  {/* <div className="absolute bottom-3 left-3.5 right-3.5 text-white">
+                    <span className="text-[9.5px] font-bold uppercase tracking-wider text-[#DFBA74] block mb-0.5">
+                      {item.tag}
+                    </span>
+                    <h4 className=" text-sm sm:text-base font-bold leading-tight drop-shadow-xs">
+                      {item.title}
+                    </h4>
+                    <p className="text-[11px] text-white/80 line-clamp-1 mt-0.5">
+                      {item.caption}
+                    </p>
+                  </div> */}
+                </div>
+              ))}
+            </div>
+          </div>
+
+
+        </div>
+      </section>
 
       <section className="relative py-16 sm:py-24 bg-white overflow-hidden">
               <HeroBgPattern opacity={0.02} />
@@ -445,95 +536,6 @@ export const CurriculumPage: React.FC<CurriculumPageProps> = ({
                 </div>
               </div>
             </section>
-
-
-      {/* ============================================================== */}
-      {/* 3. IMAGES SCROLLING SECTION ANIMATIONS (Continuous Marquee)     */}
-      {/* ============================================================== */}
-      <section className="relative py-16 sm:py-24 overflow-hidden">
-        <HeroBgPattern opacity={0.02} />
-
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-8 sm:mb-12 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 15 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
-            className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#082D7B]/6 border border-[#082D7B]/12 text-xs text-[#082D7B] font-semibold mb-3"
-          >
-            <Sparkles className="w-3.5 h-3.5 text-[#C9A45C]" />
-            <span className="uppercase tracking-widest text-[10px] sm:text-[11px]">Living Classroom Journey</span>
-          </motion.div>
-
-          <motion.h2
-            initial={{ opacity: 0, y: 15 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.1 }}
-            className=" text-2xl sm:text-4xl lg:text-5xl font-bold text-[#082D7B] tracking-tight mb-3"
-          >
-            A Sanctuary of Authentic Islamic Learning
-          </motion.h2>
-
-          <motion.p
-            initial={{ opacity: 0, y: 12 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.2 }}
-            className="text-xs sm:text-sm md:text-base text-slate-600 max-w-xl mx-auto"
-          >
-            Step into our study moments—from gentle Noorani Qaida phonetics to fluent Tajweed recitations and daily living Akhlaaq.
-          </motion.p>
-        </div>
-
-        {/* Dual-Track Flowing Image Marquee */}
-        <div className="space-y-4 sm:space-y-5 relative">
-          
-          {/* Subtle edge vignette fades */}
-          <div className="absolute left-0 inset-y-0 w-12 sm:w-28 bg-gradient-to-r from-[#FAF8F5] to-transparent z-10 pointer-events-none" />
-          <div className="absolute right-0 inset-y-0 w-12 sm:w-28 bg-gradient-to-l from-[#FAF8F5] to-transparent z-10 pointer-events-none" />
-
-          {/* Row 1: Leftward Flow */}
-          <div className="overflow-hidden flex">
-            <div className="animate-marquee flex gap-4 sm:gap-5">
-              {[...SCROLLING_IMAGES_ROW_1, ...SCROLLING_IMAGES_ROW_1].map((item, idx) => (
-                <div
-                  key={`r1-${idx}`}
-                  className="w-[270px] sm:w-[310px] h-[180px] sm:h-[195px] rounded-2xl overflow-hidden relative group shrink-0 shadow-sm hover:shadow-md border border-[#082D7B]/10 bg-white"
-                >
-                  <img
-                    src={item.image}
-                    alt={item.title}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                    loading="lazy"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#061C48]/90 via-[#061C48]/30 to-transparent" />
-                  
-                  {/* Arabic Badge Top Right */}
-                  <div className="absolute top-2.5 right-3 px-2 py-0.5 rounded-full bg-white/20 backdrop-blur-md border border-white/25 text-[10.5px] font-arabic text-white">
-                    {item.arabic}
-                  </div>
-
-                  {/* Caption Bottom */}
-                  <div className="absolute bottom-3 left-3.5 right-3.5 text-white">
-                    <span className="text-[9.5px] font-bold uppercase tracking-wider text-[#DFBA74] block mb-0.5">
-                      {item.tag}
-                    </span>
-                    <h4 className=" text-sm sm:text-base font-bold leading-tight drop-shadow-xs">
-                      {item.title}
-                    </h4>
-                    <p className="text-[11px] text-white/80 line-clamp-1 mt-0.5">
-                      {item.caption}
-                    </p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-
-
-        </div>
-      </section>
 
       {/* ============================================================== */}
       {/* 4. THE 6 CORE DISCIPLINE PILLARS (Minimalist Bento Layout)       */}
