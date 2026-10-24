@@ -140,14 +140,16 @@ export const Navbar: React.FC<NavbarProps> = ({
                   <span>WhatsApp</span>
                 </button> */}
 
-                {/* Book Free Trial Button (Solid Royal Blue Pill from screenshot) */}
-                <button
-                  onClick={() => onOpenTrialModal()}
-                  className="hidden sm:inline-flex items-center gap-2 px-3 sm:px-4 py-1 rounded-full text-xs sm:text-sm font-semibold text-[#082D7B] bg-white border border-[#082D7B]/30 hover:bg-[#082D7B]/5 transition-all duration-200 shadow-2xs whitespace-nowrap focus-visible:outline-2 focus-visible:outline-[#082D7B]"
+                {/* Admission Button (Opens Google Form) */}
+                <a
+                  href={MADRASA_CONFIG.admissionFormUrl || 'https://forms.gle/pmWDLDPV3xLQLUTEA'}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hidden sm:inline-flex items-center gap-2 px-3 sm:px-4 py-1 rounded-full text-xs sm:text-sm font-semibold text-[#082D7B] bg-white border border-[#082D7B]/30 hover:bg-[#082D7B]/5 transition-all duration-200 shadow-2xs whitespace-nowrap focus-visible:outline-2 focus-visible:outline-[#082D7B] cursor-pointer"
                 >
                   <span>Admission</span>
                   <ArrowRight className="w-3.5 h-3.5 sm:w-4 sm:h-4 stroke-[2.2]" />
-                </button>
+                </a>
 
                 {/* Mobile Menu Hamburger Toggle */}
                 <button
@@ -221,16 +223,16 @@ export const Navbar: React.FC<NavbarProps> = ({
 
                 {/* Mobile CTA Buttons */}
                 <div className="pt-3 border-t border-[#082D7B]/10 flex flex-col gap-2.5">
-                  <button
-                    onClick={() => {
-                      setIsMobileMenuOpen(false);
-                      onOpenTrialModal();
-                    }}
-                    className="w-full flex items-center justify-center gap-2 py-3 px-4 bg-[#082D7B] hover:bg-[#062464] text-white rounded-full font-semibold text-sm shadow-sm transition-all"
+                  <a
+                    href={MADRASA_CONFIG.admissionFormUrl || 'https://forms.gle/pmWDLDPV3xLQLUTEA'}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                    className="w-full flex items-center justify-center gap-2 py-3 px-4 bg-[#082D7B] hover:bg-[#062464] text-white rounded-full font-semibold text-sm shadow-sm transition-all cursor-pointer"
                   >
                     <span>Admission</span>
                     <ArrowRight className="w-4 h-4" />
-                  </button>
+                  </a>
 
                   <button
                     onClick={() => {

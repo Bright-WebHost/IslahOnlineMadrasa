@@ -65,6 +65,7 @@ export const MADRASA_CONFIG = {
   phoneNumber: "9945002120", // Placeholder for wa.me link
   emailDisplay: "[EMAIL_ADDRESS]",
   whatsappBaseUrl: "https://wa.me/9945002120",
+  admissionFormUrl: "https://forms.gle/pmWDLDPV3xLQLUTEA",
   instagramPlaceholder: "https://www.instagram.com/islamiconlinemadrasa?utm_source=qr&stkn=N292MjJ0eTJhN2di",
   youtubePlaceholder: "[YOUTUBE URL - Islah International Academy]",
   establishedYear: "[ESTABLISHED YEAR]",
