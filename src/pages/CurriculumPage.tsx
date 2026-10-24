@@ -392,8 +392,8 @@ export const CurriculumPage: React.FC<CurriculumPageProps> = ({
         <div className="space-y-4 sm:space-y-5 relative">
           
           {/* Subtle edge vignette fades */}
-          <div className="absolute left-0 inset-y-0 w-12 sm:w-28 bg-gradient-to-r from-[#FAF8F5] to-transparent z-10 pointer-events-none" />
-          <div className="absolute right-0 inset-y-0 w-12 sm:w-28 bg-gradient-to-l from-[#FAF8F5] to-transparent z-10 pointer-events-none" />
+          {/* <div className="absolute left-0 inset-y-0 w-12 sm:w-28 bg-gradient-to-r from-[#FAF8F5] to-transparent z-10 pointer-events-none" />
+          <div className="absolute right-0 inset-y-0 w-12 sm:w-28 bg-gradient-to-l from-[#FAF8F5] to-transparent z-10 pointer-events-none" /> */}
 
           {/* Row 1: Leftward Flow */}
           <div className="overflow-hidden flex">
