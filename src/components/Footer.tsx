@@ -210,7 +210,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenWhatsApp, onOpenTrialModal
 
         {/* Bottom Bar */}
         <div className="pt-4 flex flex-col sm:flex-row items-center justify-between text-xs text-white/50 font-sans gap-4">
-          <p>© {new Date().getFullYear()} Islah International Academy. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} Islah International Academy. Designed by <a href='https://www.brightmedia.tech' target='blank' style={{fontWeight: '700', color: '#C9A45C'}}>Bright Media</a></p>
 
           <div className="flex items-center gap-6">
             {/* <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
