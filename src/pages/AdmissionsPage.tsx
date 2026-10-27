@@ -306,7 +306,7 @@ export const AdmissionsPage: React.FC<AdmissionsPageProps> = ({
 
                     {/* 3. Email */}
                     <a
-                      href={`mailto:${MADRASA_CONFIG.emailDisplay}`}
+                      href={`mailto:islahonlinemadrasaiom@gmail.com`}
                       className="group p-4 rounded-2xl bg-[#1C365C] hover:bg-[#224270] border border-white/10 flex items-center gap-4 transition-all block cursor-pointer"
                     >
                       <div className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-white shrink-0 group-hover:scale-105 transition-transform">
@@ -317,7 +317,7 @@ export const AdmissionsPage: React.FC<AdmissionsPageProps> = ({
                           Email:
                         </div>
                         <div className="text-xs sm:text-sm font-bold text-white truncate">
-                          {MADRASA_CONFIG.emailDisplay}
+                          islahonlinemadrasaiom@gmail.com
                         </div>
                       </div>
                     </a>

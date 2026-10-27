@@ -189,8 +189,8 @@ export const Footer: React.FC<FooterProps> = ({ onOpenWhatsApp, onOpenTrialModal
               </li>
               <li className="flex items-center gap-3">
                 <Mail className="w-4 h-4 text-[#C9A45C] shrink-0" />
-                <a href={`mailto:[EMAIL_ADDRESS]`} className="hover:text-white transition-colors">
-                  {MADRASA_CONFIG.emailDisplay}
+                <a href={`mailto:islahonlinemadrasaiom@gmail.com`} className="hover:text-white transition-colors">
+                  islahonlinemadrasaiom@gmail.com
                 </a>
               </li>
             </ul>

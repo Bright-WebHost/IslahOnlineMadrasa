@@ -38,7 +38,7 @@ export const StudentPerformance: React.FC<StudentPerformanceProps> = ({ onSelect
         </div>
 
         {/* Video Cards Grid */}
-        <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4 sm:gap-6">
+        <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-4 sm:gap-6">
           {filteredItems.map((item) => {
             const isHovered = hoveredId === item.id;
             const hasThumbnail = !!item.thumbnailUrl;

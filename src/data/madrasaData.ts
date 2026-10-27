@@ -29,7 +29,7 @@ export interface Teacher {
 export interface StudentPerformanceItem {
   id: string;
   title: string;
-  category: 'Quran Recitation' | 'Hifz' | 'Tajweed' | 'Islamic Activities' | 'Student Reflections' | 'Live Class' | 'Story telling competition' | 'Story of Muhammad PBUH' | 'Qaida' | 'Activity';
+  category: 'Quran Recitation' | 'Hifz' | 'Tajweed' | 'Islamic Activities' | 'Student Reflections' | 'Live Class' | 'Story telling competition' | 'Story of Muhammad PBUH' | 'Qaida' | 'Activity' | 'Teaching Honesty to our students';
   studentName: string;
   ageLevel: string;
   description: string;
@@ -577,7 +577,19 @@ export const STUDENT_PERFORMANCE_ITEMS: StudentPerformanceItem[] = [
     surahOrTopic: "Activity",
     videoUrl: "/assets/video/student5.mp4",
     thumbnailUrl: "/assets/video/41.png"
-  }
+  },
+  {
+    id: "perf-6",
+    title: "Why I Love My Quran Class",
+    category: "Teaching Honesty to our students",
+    studentName: "[STUDENT - AGE 10]",
+    ageLevel: "Kids Activity",
+    description: "Sharing how learning online with Islah helped build confidence at school and love for Salah.",
+    duration: "0:16",
+    surahOrTopic: "Teaching Honesty to our students",
+    videoUrl: "/assets/video/student 6.mp4",
+    thumbnailUrl: "/assets/video/42.png"
+  },
 ];
 
 export const TESTIMONIALS: Testimonial[] = [
